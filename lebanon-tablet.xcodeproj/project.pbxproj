@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B29B83E16B19F9400EFC77D /* bodymockup.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B29B83C16B19F9400EFC77D /* bodymockup.png */; };
+		6B29B83F16B19F9400EFC77D /* portraitmockup.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B29B83D16B19F9400EFC77D /* portraitmockup.png */; };
+		6B29B84316B1A10700EFC77D /* lebanon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B29B84116B1A10700EFC77D /* lebanon.png */; };
+		6B29B84416B1A10700EFC77D /* nc.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B29B84216B1A10700EFC77D /* nc.png */; };
+		6B29B84616B1A28400EFC77D /* storypanels.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B29B84516B1A28400EFC77D /* storypanels.png */; };
 		B4F9441B16B0A1F90092EFFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F9441A16B0A1F90092EFFF /* UIKit.framework */; };
 		B4F9441D16B0A1F90092EFFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F9441C16B0A1F90092EFFF /* Foundation.framework */; };
 		B4F9441F16B0A1F90092EFFF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F9441E16B0A1F90092EFFF /* CoreGraphics.framework */; };
@@ -33,6 +38,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B29B83C16B19F9400EFC77D /* bodymockup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bodymockup.png; sourceTree = "<group>"; };
+		6B29B83D16B19F9400EFC77D /* portraitmockup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portraitmockup.png; sourceTree = "<group>"; };
+		6B29B84116B1A10700EFC77D /* lebanon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lebanon.png; sourceTree = "<group>"; };
+		6B29B84216B1A10700EFC77D /* nc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nc.png; sourceTree = "<group>"; };
+		6B29B84516B1A28400EFC77D /* storypanels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = storypanels.png; sourceTree = "<group>"; };
 		B4F9441616B0A1F90092EFFF /* lebanon-tablet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lebanon-tablet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F9441A16B0A1F90092EFFF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B4F9441C16B0A1F90092EFFF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -180,6 +190,11 @@
 		B4F9446D16B0C6E70092EFFF /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6B29B84516B1A28400EFC77D /* storypanels.png */,
+				6B29B84116B1A10700EFC77D /* lebanon.png */,
+				6B29B84216B1A10700EFC77D /* nc.png */,
+				6B29B83C16B19F9400EFC77D /* bodymockup.png */,
+				6B29B83D16B19F9400EFC77D /* portraitmockup.png */,
 				B4FEF57E16B0CF8B00BFB174 /* TITANIC-3D-Movie-HQ-Stills-titanic-29824758-2048-1556.jpg */,
 			);
 			name = images;
@@ -244,6 +259,11 @@
 				B4F9446816B0C0740092EFFF /* cedaricon72.png in Resources */,
 				B4F9446A16B0C07F0092EFFF /* cedaricon144.png in Resources */,
 				B4FEF57F16B0CF8B00BFB174 /* TITANIC-3D-Movie-HQ-Stills-titanic-29824758-2048-1556.jpg in Resources */,
+				6B29B83E16B19F9400EFC77D /* bodymockup.png in Resources */,
+				6B29B83F16B19F9400EFC77D /* portraitmockup.png in Resources */,
+				6B29B84316B1A10700EFC77D /* lebanon.png in Resources */,
+				6B29B84416B1A10700EFC77D /* nc.png in Resources */,
+				6B29B84616B1A28400EFC77D /* storypanels.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
