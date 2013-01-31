@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StoryPoint : NSObject {
-	NSString	*title;
-	int			 year;
-	NSString	*description;
-}
+@interface StoryPoint : NSObject
+
+@property (nonatomic, retain) NSString		*title;
+@property (readwrite)		  int			year;
+@property (nonatomic, retain) NSString		*description;
+@property (nonatomic, retain) UIImage		*illustration;
+@property (nonatomic, retain) StoryPoint	*nextStoryPoint;
+@property (nonatomic, retain) UIImage		*emigrationStoryPoint;
 
 @end

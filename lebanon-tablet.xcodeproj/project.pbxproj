@@ -12,6 +12,8 @@
 		6B29B84316B1A10700EFC77D /* lebanon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B29B84116B1A10700EFC77D /* lebanon.png */; };
 		6B29B84416B1A10700EFC77D /* nc.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B29B84216B1A10700EFC77D /* nc.png */; };
 		6B29B84616B1A28400EFC77D /* storypanels.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B29B84516B1A28400EFC77D /* storypanels.png */; };
+		B43B7FD916BA00EE00311DC3 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B7FD816BA00EE00311DC3 /* Character.m */; };
+		B43B7FDC16BA026A00311DC3 /* GameStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B7FDB16BA026A00311DC3 /* GameStateManager.m */; };
 		B4F9441B16B0A1F90092EFFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F9441A16B0A1F90092EFFF /* UIKit.framework */; };
 		B4F9441D16B0A1F90092EFFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F9441C16B0A1F90092EFFF /* Foundation.framework */; };
 		B4F9441F16B0A1F90092EFFF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F9441E16B0A1F90092EFFF /* CoreGraphics.framework */; };
@@ -43,6 +45,10 @@
 		6B29B84116B1A10700EFC77D /* lebanon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lebanon.png; sourceTree = "<group>"; };
 		6B29B84216B1A10700EFC77D /* nc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nc.png; sourceTree = "<group>"; };
 		6B29B84516B1A28400EFC77D /* storypanels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = storypanels.png; sourceTree = "<group>"; };
+		B43B7FD716BA00EE00311DC3 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		B43B7FD816BA00EE00311DC3 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
+		B43B7FDA16BA026A00311DC3 /* GameStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStateManager.h; sourceTree = "<group>"; };
+		B43B7FDB16BA026A00311DC3 /* GameStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStateManager.m; sourceTree = "<group>"; };
 		B4F9441616B0A1F90092EFFF /* lebanon-tablet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lebanon-tablet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F9441A16B0A1F90092EFFF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B4F9441C16B0A1F90092EFFF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -158,6 +164,10 @@
 			children = (
 				B4F9443D16B0A2250092EFFF /* StoryPoint.h */,
 				B4F9443E16B0A2250092EFFF /* StoryPoint.m */,
+				B43B7FD716BA00EE00311DC3 /* Character.h */,
+				B43B7FD816BA00EE00311DC3 /* Character.m */,
+				B43B7FDA16BA026A00311DC3 /* GameStateManager.h */,
+				B43B7FDB16BA026A00311DC3 /* GameStateManager.m */,
 			);
 			name = "Game Classes";
 			sourceTree = "<group>";
@@ -286,6 +296,8 @@
 				B4F9445316B0A3D40092EFFF /* HistoricalViewController.m in Sources */,
 				B4F9445616B0A3DD0092EFFF /* GameOverViewController.m in Sources */,
 				B4F9445916B0B0D20092EFFF /* ChoiceViewController.m in Sources */,
+				B43B7FD916BA00EE00311DC3 /* Character.m in Sources */,
+				B43B7FDC16BA026A00311DC3 /* GameStateManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

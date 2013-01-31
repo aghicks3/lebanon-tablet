@@ -7,6 +7,8 @@
 //
 
 #import "CharacterDetailViewController.h"
+#import "GameStateManager.h"
+#import "Character.h"
 
 @interface CharacterDetailViewController ()
 
@@ -26,7 +28,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
+	//get the selected character from the GameStateManager
+	Character *selectedCharacter = [[GameStateManager instance] currentCharacter];
+	self.nameLabel.text = selectedCharacter.name;
 }
 
 - (void)didReceiveMemoryWarning

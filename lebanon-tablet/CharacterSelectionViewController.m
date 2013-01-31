@@ -7,6 +7,8 @@
 //
 
 #import "CharacterSelectionViewController.h"
+#import "GameStateManager.h"
+#import "Character.h"
 
 @interface CharacterSelectionViewController ()
 
@@ -27,9 +29,16 @@
 -(IBAction)characterIconTouched:(id)sender {
 	UIButton *sendingButton = (UIButton *)sender;
 	NSLog(@"%@", [sendingButton titleForState:UIControlStateNormal]);
-	
-	//update the current player character to the character whose button was pressed
 
+	//update the current player character to the character whose button was pressed
+	Character *character = [[Character alloc] init];
+
+	// TODO: get full character info from a plist or SQLite
+	NSString *characterName = [sendingButton titleForState:UIControlStateNormal];
+	character.name = characterName;
+	
+	[GameStateManager instance].currentCharacter = character;
+	
 	[self performSegueWithIdentifier:@"SelectCharacterSegue" sender:sender];
 }
 
