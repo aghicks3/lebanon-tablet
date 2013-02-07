@@ -70,8 +70,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVW-Zy-Ejg">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="bpv-l8-Aeo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Character D">
+                                <state key="normal" title="Zahiyee">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -83,6 +86,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T20-5N-9tO">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="V7c-1X-Bgs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Character E">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -96,8 +102,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xcs-4H-hR4">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="to5-Zk-XEF"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Character B">
+                                <state key="normal" title="Hind">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -109,8 +118,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73d-L1-gfU">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="vdf-Cc-jPa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Character C">
+                                <state key="normal" title="Youssef">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -122,8 +134,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSh-h3-LBc">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="LiD-vT-36R"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Character A">
+                                <state key="normal" title="As'ad">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -147,16 +162,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QVW-Zy-Ejg" firstAttribute="bottom" secondItem="Xcs-4H-hR4" secondAttribute="bottom" type="default" id="873-dW-Skl"/>
+                            <constraint firstAttribute="trailing" secondItem="QVW-Zy-Ejg" secondAttribute="trailing" constant="255" id="43I-w5-sOz"/>
                             <constraint firstItem="mSh-h3-LBc" firstAttribute="baseline" secondItem="T20-5N-9tO" secondAttribute="baseline" type="default" id="BmX-iT-DT2"/>
                             <constraint firstItem="Xcs-4H-hR4" firstAttribute="top" secondItem="2Fj-dr-jQE" secondAttribute="top" constant="347" id="ElL-Bk-fLx"/>
                             <constraint firstItem="mSh-h3-LBc" firstAttribute="top" secondItem="2Fj-dr-jQE" secondAttribute="top" constant="296" id="Ygi-98-Qir"/>
-                            <constraint firstAttribute="trailing" secondItem="T20-5N-9tO" secondAttribute="trailing" constant="103" id="l5G-gE-bUU"/>
-                            <constraint firstItem="Qfo-qr-eiO" firstAttribute="centerX" secondItem="2Fj-dr-jQE" secondAttribute="centerX" type="default" id="og7-gL-0hU"/>
+                            <constraint firstItem="QVW-Zy-Ejg" firstAttribute="baseline" secondItem="Xcs-4H-hR4" secondAttribute="baseline" type="default" id="bok-WS-oW5"/>
+                            <constraint firstAttribute="trailing" secondItem="T20-5N-9tO" secondAttribute="trailing" constant="102" id="dfL-tq-8hq"/>
+                            <constraint firstItem="0du-nj-4ah" firstAttribute="centerX" secondItem="2Fj-dr-jQE" secondAttribute="centerX" type="default" id="n92-Hp-XfX"/>
+                            <constraint firstItem="Xcs-4H-hR4" firstAttribute="leading" secondItem="2Fj-dr-jQE" secondAttribute="leading" constant="285" id="nWr-nc-Dhn"/>
                             <constraint firstAttribute="bottom" secondItem="73d-L1-gfU" secondAttribute="bottom" constant="307" id="p5y-Y9-ELL"/>
-                            <constraint firstItem="Xcs-4H-hR4" firstAttribute="leading" secondItem="2Fj-dr-jQE" secondAttribute="leading" constant="245" id="rBh-e0-NJ5"/>
-                            <constraint firstItem="0du-nj-4ah" firstAttribute="centerX" secondItem="73d-L1-gfU" secondAttribute="centerX" type="default" id="saE-1b-RTV"/>
-                            <constraint firstAttribute="trailing" secondItem="QVW-Zy-Ejg" secondAttribute="trailing" constant="245" id="uI8-B5-RnN"/>
+                            <constraint firstItem="73d-L1-gfU" firstAttribute="leading" secondItem="2Fj-dr-jQE" secondAttribute="leading" constant="471" id="qD3-pl-foQ"/>
                             <constraint firstAttribute="bottom" secondItem="Qfo-qr-eiO" secondAttribute="bottom" constant="103" id="wHl-NX-Ymz"/>
                             <constraint firstItem="Qfo-qr-eiO" firstAttribute="top" secondItem="0du-nj-4ah" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wpY-zI-n5H"/>
                             <constraint firstItem="Qfo-qr-eiO" firstAttribute="centerX" secondItem="0du-nj-4ah" secondAttribute="centerX" type="default" id="xCX-VZ-hUC"/>
@@ -172,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YHz-b9-wrk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1383" y="-1767"/>
+            <point key="canvasLocation" x="-1399" y="-1767"/>
         </scene>
         <!--Character Detail View Controller-->
         <scene sceneID="6bq-kh-dsh">

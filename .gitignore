@@ -1,0 +1,8 @@
+# OS X stuff
+.DS_Store
+
+# XCode stuff
+*.xcworkspacedata
+*.xcuserstate
+*.xcscheme
+xcschememanagement.plist
