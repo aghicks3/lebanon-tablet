@@ -404,6 +404,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="VFY-SO-Cdy"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="Gx2-yp-zc3" id="saR-A9-95T"/>
+                        <outlet property="illustrationImageView" destination="FnJ-1j-KZ1" id="z31-8u-DH1"/>
+                        <outlet property="yearLabel" destination="IOh-e3-QpH" id="KNx-Sd-lT9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQr-AZ-aTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -691,6 +696,12 @@
         </class>
         <class className="StoryPointViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/StoryPointViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dateOfBirthLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="illustrationImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="yearLabel" candidateClass="UILabel"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

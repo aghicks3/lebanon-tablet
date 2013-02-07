@@ -7,6 +7,7 @@
 //
 
 #import "StoryPointViewController.h"
+#import "StoryPoint.h"
 
 @interface StoryPointViewController ()
 
@@ -27,6 +28,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+	
+	//get the current StoryPoint from the GameStateManager
+	StoryPoint *currentStoryPoint = [[GameStateManager instance] currentStoryPoint];
+	
+	//populate the interface elements with the current story point's info
+	self.yearLabel.text = [NSString stringWithFormat:@"%i", currentStoryPoint.year];
+	self.descriptionTextView.text = currentStoryPoint.description;
+	self.illustrationImageView.image = currentStoryPoint.illustration;
 }
 
 - (void)didReceiveMemoryWarning

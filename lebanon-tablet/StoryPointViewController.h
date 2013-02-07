@@ -10,4 +10,8 @@
 
 @interface StoryPointViewController : UIViewController
 
+@property (nonatomic, retain) IBOutlet UILabel *yearLabel;
+@property (nonatomic, retain) IBOutlet UITextView *descriptionTextView;
+@property (nonatomic, retain) IBOutlet UIImageView *illustrationImageView;
+
 @end
