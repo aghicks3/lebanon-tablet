@@ -8,6 +8,7 @@
 
 #import "StoryPointViewController.h"
 #import "StoryPoint.h"
+#import "GameStateManager.h"
 
 @interface StoryPointViewController ()
 
