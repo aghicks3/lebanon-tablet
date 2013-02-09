@@ -33,9 +33,10 @@
 	//get the current StoryPoint from the GameStateManager
 	StoryPoint *currentStoryPoint = [[GameStateManager instance] currentStoryPoint];
 	
+	NSLog(@"%i", currentStoryPoint.year);
+	
 	//populate the interface elements with the current story point's info
 	self.yearLabel.text = [NSString stringWithFormat:@"%i", currentStoryPoint.year];
-	self.descriptionTextView.text = currentStoryPoint.description;
 	self.illustrationImageView.image = currentStoryPoint.illustration;
 }
 

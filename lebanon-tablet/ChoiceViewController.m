@@ -7,6 +7,8 @@
 //
 
 #import "ChoiceViewController.h"
+#import "GameStateManager.h"
+#import "StoryPoint.h"
 
 @interface ChoiceViewController ()
 
@@ -29,6 +31,7 @@
 	NSLog(@"%@", [sendingButton titleForState:UIControlStateNormal]);
 	
 	//update the game state
+	[GameStateManager instance].currentStoryPoint = [GameStateManager instance].currentStoryPoint.nextStoryPoint;
 	
 	//perform the appropriate segue based on the game state
 	// TODO: this should not neccessarily perform this segue
