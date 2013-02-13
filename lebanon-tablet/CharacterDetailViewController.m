@@ -16,6 +16,7 @@
 @end
 
 @implementation CharacterDetailViewController
+@synthesize lblAge, lblDoB, lblGender, lblEducation, lblEcon, lblOcc, tvFamily;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,7 +33,17 @@
 	
 	//get the selected character from the GameStateManager
 	Character *selectedCharacter = [[GameStateManager instance] currentCharacter];
-	self.nameLabel.text = selectedCharacter.name;
+	self.lblName.text = selectedCharacter.name;
+    self.lblAge.text = [NSString stringWithFormat:@"%d",selectedCharacter.age];
+    self.lblDoB.text = selectedCharacter.dateOfBirth;
+    self.lblGender.text = selectedCharacter.gender;
+    self.lblEducation.text = selectedCharacter.education;
+    self.lblEcon.text = selectedCharacter.economicStatus;
+    self.lblOcc.text = selectedCharacter.occupation;
+    self.tvFamily.text = selectedCharacter.family;
+    
+    self.tvFamily.opaque = NO;
+    self.tvFamily.backgroundColor = [UIColor clearColor];
 	
 	//get the initial story point
 	//this is hardcoded now until we have the data loading

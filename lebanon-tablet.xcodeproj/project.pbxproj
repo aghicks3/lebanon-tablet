@@ -47,6 +47,13 @@
 		B4F9445916B0B0D20092EFFF /* ChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9445816B0B0D20092EFFF /* ChoiceViewController.m */; };
 		B4F9446816B0C0740092EFFF /* cedaricon72.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F9446716B0C0740092EFFF /* cedaricon72.png */; };
 		B4F9446A16B0C07F0092EFFF /* cedaricon144.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F9446916B0C07F0092EFFF /* cedaricon144.png */; };
+<<<<<<< HEAD
+=======
+		B4FEF57F16B0CF8B00BFB174 /* TITANIC-3D-Movie-HQ-Stills-titanic-29824758-2048-1556.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4FEF57E16B0CF8B00BFB174 /* TITANIC-3D-Movie-HQ-Stills-titanic-29824758-2048-1556.jpg */; };
+		DC7A2F3816C8D55E00005F69 /* Journey in Resources */ = {isa = PBXBuildFile; fileRef = DC7A2F3716C8D55E00005F69 /* Journey */; };
+		DC90E47C16C83E580054B704 /* As'ad.png in Resources */ = {isa = PBXBuildFile; fileRef = DC90E47B16C83E580054B704 /* As'ad.png */; };
+		DC90E47E16C83F990054B704 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DC90E47D16C83F990054B704 /* libsqlite3.0.dylib */; };
+>>>>>>> Added database support for characterDetailView and CharacterSelectionView
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +113,13 @@
 		B4F9445816B0B0D20092EFFF /* ChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceViewController.m; sourceTree = "<group>"; };
 		B4F9446716B0C0740092EFFF /* cedaricon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cedaricon72.png; sourceTree = "<group>"; };
 		B4F9446916B0C07F0092EFFF /* cedaricon144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cedaricon144.png; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
+		B4FEF57E16B0CF8B00BFB174 /* TITANIC-3D-Movie-HQ-Stills-titanic-29824758-2048-1556.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "TITANIC-3D-Movie-HQ-Stills-titanic-29824758-2048-1556.jpg"; sourceTree = "<group>"; };
+		DC7A2F3716C8D55E00005F69 /* Journey */ = {isa = PBXFileReference; lastKnownFileType = text; name = Journey; path = "../../../../../../../../lebanon-tablet/lebanon-tablet/Journey"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC90E47B16C83E580054B704 /* As'ad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "As'ad.png"; path = "../../Downloads/As'ad.png"; sourceTree = "<group>"; };
+		DC90E47D16C83F990054B704 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+>>>>>>> Added database support for characterDetailView and CharacterSelectionView
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC90E47E16C83F990054B704 /* libsqlite3.0.dylib in Frameworks */,
 				B4F9441B16B0A1F90092EFFF /* UIKit.framework in Frameworks */,
 				B4F9441D16B0A1F90092EFFF /* Foundation.framework in Frameworks */,
 				B4F9441F16B0A1F90092EFFF /* CoreGraphics.framework in Frameworks */,
@@ -125,6 +140,7 @@
 		B4F9440B16B0A1F90092EFFF = {
 			isa = PBXGroup;
 			children = (
+				DC90E47D16C83F990054B704 /* libsqlite3.0.dylib */,
 				B4F9446916B0C07F0092EFFF /* cedaricon144.png */,
 				B4F9446716B0C0740092EFFF /* cedaricon72.png */,
 				B4F9442016B0A1F90092EFFF /* lebanon-tablet */,
@@ -168,6 +184,7 @@
 		B4F9442116B0A1F90092EFFF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DC7A2F3716C8D55E00005F69 /* Journey */,
 				B4F9442216B0A1F90092EFFF /* lebanon-tablet-Info.plist */,
 				B4F9442316B0A1F90092EFFF /* InfoPlist.strings */,
 				B4F9442616B0A1F90092EFFF /* main.m */,
@@ -220,12 +237,16 @@
 		B4F9446D16B0C6E70092EFFF /* images */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				B4AC15DA16CC62A6008F29B3 /* asad_e_2.png */,
 				B4AC15DB16CC62A6008F29B3 /* asad_e_3.png */,
 				B4AC15DC16CC62A6008F29B3 /* asad_e_4.png */,
 				B4AC15DD16CC62A6008F29B3 /* asad_s_3.png */,
 				B4AC15DE16CC62A6008F29B3 /* asad_s_4.png */,
 				B444836016C9BB3F00495A08 /* blank_portrait.png */,
+=======
+				DC90E47B16C83E580054B704 /* As'ad.png */,
+>>>>>>> Added database support for characterDetailView and CharacterSelectionView
 				B482F17D16C554C600A42760 /* asad_e_1.png */,
 				B482F17E16C554C600A42760 /* asad_s_2.png */,
 				B482F17F16C554C600A42760 /* asad_portrait.png */,
@@ -308,12 +329,17 @@
 				B482F18416C554C700A42760 /* asad_portrait.png in Resources */,
 				B482F18516C554C700A42760 /* asad_full.png in Resources */,
 				B482F18616C554C700A42760 /* asad_s_1.png in Resources */,
+<<<<<<< HEAD
 				B444836116C9BB3F00495A08 /* blank_portrait.png in Resources */,
 				B4AC15DF16CC62A6008F29B3 /* asad_e_2.png in Resources */,
 				B4AC15E016CC62A6008F29B3 /* asad_e_3.png in Resources */,
 				B4AC15E116CC62A6008F29B3 /* asad_e_4.png in Resources */,
 				B4AC15E216CC62A6008F29B3 /* asad_s_3.png in Resources */,
 				B4AC15E316CC62A6008F29B3 /* asad_s_4.png in Resources */,
+=======
+				DC90E47C16C83E580054B704 /* As'ad.png in Resources */,
+				DC7A2F3816C8D55E00005F69 /* Journey in Resources */,
+>>>>>>> Added database support for characterDetailView and CharacterSelectionView
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
