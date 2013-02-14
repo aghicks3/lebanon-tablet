@@ -44,7 +44,8 @@
 	NSLog(@"%@", [sendingButton titleForState:UIControlStateNormal]);
 	
 	//update the game state
-	
+	[GameStateManager instance].currentStoryPoint = [GameStateManager instance].currentStoryPoint.emigrationStoryPoint;
+
 	//perform the appropriate segue based on the game state
 	// TODO: this should not neccessarily perform this segue
 	[self performSegueWithIdentifier:@"ConclusionSeque" sender:sender];

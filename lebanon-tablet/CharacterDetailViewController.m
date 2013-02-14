@@ -44,8 +44,39 @@
 	storyPoint2.year = 1894;
 	storyPoint2.illustration = [UIImage imageNamed:@"asad_s_2.png"];
 	
+	StoryPoint *storyPoint3 = [[StoryPoint alloc] init];
+	storyPoint3.year = 1897;
+	storyPoint3.illustration = [UIImage imageNamed:@"asad_s_3.png"];
+	
+	StoryPoint *storyPoint4 = [[StoryPoint alloc] init];
+	storyPoint4.year = 1901;
+	storyPoint4.illustration = [UIImage imageNamed:@"asad_s_4.png"];
+	
+	StoryPoint *emigration1 = [[StoryPoint alloc] init];
+	emigration1.year = 1890;
+	emigration1.illustration = [UIImage imageNamed:@"asad_e_1.png"];
+	
+	StoryPoint *emigration2 = [[StoryPoint alloc] init];
+	emigration2.year = 1894;
+	emigration2.illustration = [UIImage imageNamed:@"asad_e_2.png"];
+	
+	StoryPoint *emigration3 = [[StoryPoint alloc] init];
+	emigration3.year = 1897;
+	emigration3.illustration = [UIImage imageNamed:@"asad_e_3.png"];
+
+	StoryPoint *emigration4 = [[StoryPoint alloc] init];
+	emigration4.year = 1901;
+	emigration4.illustration = [UIImage imageNamed:@"asad_e_4.png"];
+	
 	storyPoint1.nextStoryPoint = storyPoint2;
-	storyPoint2.nextStoryPoint = storyPoint2;
+	storyPoint2.nextStoryPoint = storyPoint3;
+	storyPoint3.nextStoryPoint = storyPoint4;
+	storyPoint4.nextStoryPoint = storyPoint4;
+	
+	storyPoint1.emigrationStoryPoint = emigration1;
+	storyPoint2.emigrationStoryPoint = emigration2;
+	storyPoint3.emigrationStoryPoint = emigration3;
+	storyPoint4.emigrationStoryPoint = emigration4;
 	
 	[GameStateManager instance].currentStoryPoint = storyPoint1;
 }

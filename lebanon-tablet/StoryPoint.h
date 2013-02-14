@@ -15,6 +15,6 @@
 @property (nonatomic, retain) NSString		*description;
 @property (nonatomic, retain) UIImage		*illustration;
 @property (nonatomic, retain) StoryPoint	*nextStoryPoint;
-@property (nonatomic, retain) UIImage		*emigrationStoryPoint;
+@property (nonatomic, retain) StoryPoint	*emigrationStoryPoint;
 
 @end

@@ -10,4 +10,7 @@
 
 @interface ConclusionViewController : UIViewController
 
+@property (nonatomic, retain) IBOutlet UILabel *yearLabel;
+@property (nonatomic, retain) IBOutlet UIImageView *illustrationImageView;
+
 @end
