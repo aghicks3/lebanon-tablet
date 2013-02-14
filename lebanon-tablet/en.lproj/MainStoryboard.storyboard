@@ -38,7 +38,10 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Description description blah blah blah" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEt-yv-6qK">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stories of immigration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEt-yv-6qK">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="283" id="38L-Nv-uAT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -46,12 +49,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.53725490200000003" green="0.58823529409999997" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="NfM-vh-E1H" firstAttribute="centerX" secondItem="OEt-yv-6qK" secondAttribute="centerX" type="default" id="9qI-7F-4DP"/>
-                            <constraint firstItem="ndL-O3-uer" firstAttribute="centerX" secondItem="OEt-yv-6qK" secondAttribute="centerX" type="default" id="BDm-yQ-jtN"/>
                             <constraint firstItem="ndL-O3-uer" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Cv5-6s-wFu"/>
+                            <constraint firstItem="ndL-O3-uer" firstAttribute="centerX" secondItem="5" secondAttribute="centerX" type="default" id="GCQ-qb-6GI"/>
+                            <constraint firstItem="NfM-vh-E1H" firstAttribute="centerX" secondItem="ndL-O3-uer" secondAttribute="centerX" type="default" id="Z72-fx-cnD"/>
                             <constraint firstItem="NfM-vh-E1H" firstAttribute="top" secondItem="5" secondAttribute="top" constant="343" id="dpt-Ne-DVz"/>
-                            <constraint firstItem="OEt-yv-6qK" firstAttribute="top" secondItem="5" secondAttribute="top" constant="199" id="fKw-ub-Cv9"/>
-                            <constraint firstItem="OEt-yv-6qK" firstAttribute="centerX" secondItem="5" secondAttribute="centerX" type="default" id="w23-Sq-Ehm"/>
+                            <constraint firstItem="OEt-yv-6qK" firstAttribute="top" secondItem="5" secondAttribute="top" constant="202" id="kcQ-vO-gsF"/>
+                            <constraint firstItem="OEt-yv-6qK" firstAttribute="trailing" secondItem="ndL-O3-uer" secondAttribute="trailing" type="default" id="sdW-bj-MAw"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -124,11 +127,9 @@
                                     <constraint firstAttribute="width" constant="150" id="WqI-7C-MIU"/>
                                     <constraint firstAttribute="height" constant="150" id="yYa-oO-tXt"/>
                                 </constraints>
-
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="Youssef" backgroundImage="blank_portrait.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -178,27 +179,46 @@
                                     <action selector="confirmIconTouched:" destination="k4D-bS-zJI" eventType="touchUpInside" id="gRn-NK-cxc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dt7-eb-A7c">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="AUX-kM-ckk"/>
+                                    <constraint firstAttribute="height" constant="39" id="zod-op-OAl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmIconTouched:" destination="k4D-bS-zJI" eventType="touchUpInside" id="VUP-qN-TsQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.53725490200000003" green="0.58823529409999997" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-
                             <constraint firstItem="Xcs-4H-hR4" firstAttribute="leading" secondItem="2Fj-dr-jQE" secondAttribute="leading" constant="250" id="60D-5x-bZ7"/>
                             <constraint firstItem="mSh-h3-LBc" firstAttribute="baseline" secondItem="T20-5N-9tO" secondAttribute="baseline" type="default" id="BmX-iT-DT2"/>
                             <constraint firstItem="mSh-h3-LBc" firstAttribute="top" secondItem="2Fj-dr-jQE" secondAttribute="top" constant="241" id="Bn6-uB-iyL"/>
                             <constraint firstItem="Xcs-4H-hR4" firstAttribute="top" secondItem="2Fj-dr-jQE" secondAttribute="top" constant="346" id="E7V-2F-mIn"/>
                             <constraint firstItem="T20-5N-9tO" firstAttribute="top" secondItem="mSh-h3-LBc" secondAttribute="top" type="default" id="JJ9-yS-hpg"/>
+                            <constraint firstAttribute="bottom" secondItem="Dt7-eb-A7c" secondAttribute="bottom" constant="15" id="L8V-Bc-MO6"/>
                             <constraint firstAttribute="trailing" secondItem="T20-5N-9tO" secondAttribute="trailing" constant="83" id="NzW-sU-ga4"/>
                             <constraint firstItem="QVW-Zy-Ejg" firstAttribute="top" secondItem="Xcs-4H-hR4" secondAttribute="top" type="default" id="SIa-98-t6p"/>
                             <constraint firstAttribute="trailing" secondItem="QVW-Zy-Ejg" secondAttribute="trailing" constant="250" id="YuA-dT-Vy1"/>
                             <constraint firstItem="mSh-h3-LBc" firstAttribute="leading" secondItem="2Fj-dr-jQE" secondAttribute="leading" constant="84" id="bab-y2-b25"/>
+                            <constraint firstItem="rIa-dA-4YI" firstAttribute="top" secondItem="2Fj-dr-jQE" secondAttribute="top" constant="-22" id="cO9-nm-gke"/>
                             <constraint firstItem="QVW-Zy-Ejg" firstAttribute="baseline" secondItem="Xcs-4H-hR4" secondAttribute="baseline" type="default" id="fsj-Bg-nbR"/>
                             <constraint firstItem="73d-L1-gfU" firstAttribute="centerX" secondItem="0du-nj-4ah" secondAttribute="centerX" type="default" id="mBK-TZ-A5Y"/>
-                            <constraint firstItem="0du-nj-4ah" firstAttribute="centerX" secondItem="2Fj-dr-jQE" secondAttribute="centerX" type="default" id="n92-Hp-XfX"/>
                             <constraint firstAttribute="bottom" secondItem="73d-L1-gfU" secondAttribute="bottom" constant="195" id="ocd-LM-8WP"/>
-
+                            <constraint firstItem="rIa-dA-4YI" firstAttribute="leading" secondItem="2Fj-dr-jQE" secondAttribute="leading" constant="-42" id="t9D-q5-k45"/>
                             <constraint firstAttribute="bottom" secondItem="Qfo-qr-eiO" secondAttribute="bottom" constant="103" id="wHl-NX-Ymz"/>
                             <constraint firstItem="Qfo-qr-eiO" firstAttribute="top" secondItem="0du-nj-4ah" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wpY-zI-n5H"/>
+                            <constraint firstAttribute="trailing" secondItem="Dt7-eb-A7c" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="x7H-eo-rH0"/>
                             <constraint firstItem="Qfo-qr-eiO" firstAttribute="centerX" secondItem="0du-nj-4ah" secondAttribute="centerX" type="default" id="xCX-VZ-hUC"/>
+                            <constraint firstItem="Qfo-qr-eiO" firstAttribute="centerX" secondItem="2Fj-dr-jQE" secondAttribute="centerX" type="default" id="zcM-Mu-eOa"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -759,6 +779,70 @@
         <image name="lebanon.png" width="1152" height="864"/>
         <image name="nc.png" width="1152" height="864"/>
     </resources>
+    <classes>
+        <class className="CharacterDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CharacterDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="fullBodyImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lblAge" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblDoB" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblEcon" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblEducation" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblGender" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblOcc" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="portraitImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="tvFamily" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="CharacterSelectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CharacterSelectionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="characterIconTouched:"/>
+                <relationship kind="action" name="confirmIconTouched:"/>
+                <relationship kind="outlet" name="btnCharA" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnCharB" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnCharC" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnCharD" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="btnCharE" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="lblAge" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblName" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ChoiceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChoiceViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="leaveButtonTouched:"/>
+                <relationship kind="action" name="stayButtonTouched:"/>
+            </relationships>
+        </class>
+        <class className="ConclusionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ConclusionViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="illustrationImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="yearLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GameOverViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameOverViewController.h"/>
+        </class>
+        <class className="HistoricalViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HistoricalViewController.h"/>
+        </class>
+        <class className="MainMenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainMenuViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="StoryPointViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StoryPointViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="illustrationImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="yearLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -766,6 +850,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="9as-tf-7WY"/>
-        <segue reference="s50-7g-2LW"/>
+        <segue reference="epN-uE-aNZ"/>
     </inferredMetricsTieBreakers>
 </document>
