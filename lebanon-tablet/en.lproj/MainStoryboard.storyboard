@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -78,8 +78,8 @@
                                     <constraint firstAttribute="width" constant="150" id="KEE-7N-pNL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="Zahiyee" backgroundImage="blank_portrait.png">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Zahiyee" backgroundImage="zahiyee_portrait.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -95,7 +95,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="Character E" backgroundImage="blank_portrait.png">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -111,9 +111,8 @@
                                     <constraint firstAttribute="width" constant="150" id="JJI-UM-za0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="Hind" backgroundImage="blank_portrait.png">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Hind" backgroundImage="hind_portrait.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -128,8 +127,8 @@
                                     <constraint firstAttribute="height" constant="150" id="yYa-oO-tXt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="Youssef" backgroundImage="blank_portrait.png">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Youssef" backgroundImage="youssef_portrait.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -139,11 +138,11 @@
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSh-h3-LBc">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="FNY-VT-Rvd"/>
-                                    <constraint firstAttribute="width" constant="119" id="phA-oF-yp2"/>
+                                    <constraint firstAttribute="width" constant="150" id="oRs-mi-94B"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="As'ad" backgroundImage="As'ad.png">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="As'ad" backgroundImage="asad_portrait.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -163,22 +162,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIa-dA-4YI">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="HJ4-EQ-cu7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Confirm">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="confirmIconTouched:" destination="k4D-bS-zJI" eventType="touchUpInside" id="gRn-NK-cxc"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dt7-eb-A7c">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="86" id="AUX-kM-ckk"/>
@@ -209,11 +192,9 @@
                             <constraint firstItem="QVW-Zy-Ejg" firstAttribute="top" secondItem="Xcs-4H-hR4" secondAttribute="top" type="default" id="SIa-98-t6p"/>
                             <constraint firstAttribute="trailing" secondItem="QVW-Zy-Ejg" secondAttribute="trailing" constant="250" id="YuA-dT-Vy1"/>
                             <constraint firstItem="mSh-h3-LBc" firstAttribute="leading" secondItem="2Fj-dr-jQE" secondAttribute="leading" constant="84" id="bab-y2-b25"/>
-                            <constraint firstItem="rIa-dA-4YI" firstAttribute="top" secondItem="2Fj-dr-jQE" secondAttribute="top" constant="-22" id="cO9-nm-gke"/>
                             <constraint firstItem="QVW-Zy-Ejg" firstAttribute="baseline" secondItem="Xcs-4H-hR4" secondAttribute="baseline" type="default" id="fsj-Bg-nbR"/>
                             <constraint firstItem="73d-L1-gfU" firstAttribute="centerX" secondItem="0du-nj-4ah" secondAttribute="centerX" type="default" id="mBK-TZ-A5Y"/>
                             <constraint firstAttribute="bottom" secondItem="73d-L1-gfU" secondAttribute="bottom" constant="195" id="ocd-LM-8WP"/>
-                            <constraint firstItem="rIa-dA-4YI" firstAttribute="leading" secondItem="2Fj-dr-jQE" secondAttribute="leading" constant="-42" id="t9D-q5-k45"/>
                             <constraint firstAttribute="bottom" secondItem="Qfo-qr-eiO" secondAttribute="bottom" constant="103" id="wHl-NX-Ymz"/>
                             <constraint firstItem="Qfo-qr-eiO" firstAttribute="top" secondItem="0du-nj-4ah" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wpY-zI-n5H"/>
                             <constraint firstAttribute="trailing" secondItem="Dt7-eb-A7c" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="x7H-eo-rH0"/>
@@ -522,10 +503,8 @@
                             <constraint firstItem="FnJ-1j-KZ1" firstAttribute="top" secondItem="mOV-ZF-my0" secondAttribute="top" type="default" id="MLV-oj-cBP"/>
                             <constraint firstItem="2wO-bV-4mT" firstAttribute="top" secondItem="mOV-ZF-my0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Tuy-cI-Z3Y"/>
                             <constraint firstItem="FnJ-1j-KZ1" firstAttribute="leading" secondItem="mOV-ZF-my0" secondAttribute="leading" type="default" id="WHs-5u-caX"/>
-                            <constraint firstItem="FnJ-1j-KZ1" firstAttribute="trailing" secondItem="mOV-ZF-my0" secondAttribute="trailing" type="default" id="YcQ-oL-dce"/>
                             <constraint firstItem="IOh-e3-QpH" firstAttribute="top" secondItem="mOV-ZF-my0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ZBM-Vg-La2"/>
                             <constraint firstItem="2wO-bV-4mT" firstAttribute="leading" secondItem="mOV-ZF-my0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fJG-eW-KpA"/>
-                            <constraint firstItem="FnJ-1j-KZ1" firstAttribute="bottom" secondItem="mOV-ZF-my0" secondAttribute="bottom" type="default" id="hTW-Br-tOY"/>
                             <constraint firstItem="gOM-7e-k3G" firstAttribute="bottom" secondItem="2wO-bV-4mT" secondAttribute="bottom" type="default" id="m36-3C-b1s"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -673,11 +652,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="asad_e_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="HSe-Lq-al8">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="768" id="6SM-ga-Tqr"/>
-                                </constraints>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="asad_e_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="HSe-Lq-al8"/>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWE-8P-1Xs">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Historical">
@@ -704,7 +679,6 @@
                         <constraints>
                             <constraint firstItem="HSe-Lq-al8" firstAttribute="bottom" secondItem="Atk-3m-Jlu" secondAttribute="bottom" type="default" id="4Q8-ao-F3T"/>
                             <constraint firstItem="o8H-Sa-RV5" firstAttribute="top" secondItem="Atk-3m-Jlu" secondAttribute="top" constant="20" symbolic="YES" type="default" id="5Uz-6o-IIf"/>
-                            <constraint firstItem="HSe-Lq-al8" firstAttribute="trailing" secondItem="Atk-3m-Jlu" secondAttribute="trailing" type="default" id="EaQ-Av-l2M"/>
                             <constraint firstItem="HSe-Lq-al8" firstAttribute="leading" secondItem="Atk-3m-Jlu" secondAttribute="leading" type="default" id="TYx-oO-X7A"/>
                             <constraint firstAttribute="bottom" secondItem="AWE-8P-1Xs" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="aMA-4t-gnt"/>
                             <constraint firstAttribute="trailing" secondItem="AWE-8P-1Xs" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="mSL-Wx-oLO"/>
@@ -770,14 +744,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="As'ad.png" width="400" height="500"/>
-        <image name="asad_e_1.png" width="2048" height="1536"/>
+        <image name="asad_e_1.png" width="1024" height="768"/>
         <image name="asad_full.png" width="1298" height="3364"/>
-        <image name="asad_portrait.png" width="1000" height="1000"/>
-        <image name="asad_s_1.png" width="2048" height="1536"/>
+        <image name="asad_portrait.png" width="500" height="500"/>
+        <image name="asad_s_1.png" width="1024" height="768"/>
         <image name="blank_portrait.png" width="1000" height="1000"/>
+        <image name="hind_portrait.png" width="500" height="500"/>
         <image name="lebanon.png" width="1152" height="864"/>
         <image name="nc.png" width="1152" height="864"/>
+        <image name="youssef_portrait.png" width="500" height="500"/>
+        <image name="zahiyee_portrait.png" width="500" height="500"/>
     </resources>
     <classes>
         <class className="CharacterDetailViewController" superclassName="UIViewController">
