@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -435,7 +435,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="fullBodyImage" destination="RsY-ZH-rdo" id="5DG-D2-WMM"/>
+                        <outlet property="fullBodyImage" destination="RsY-ZH-rdo" id="nCE-pP-CbL"/>
                         <outlet property="lblAge" destination="ZCF-Sr-CgP" id="UjS-Nv-THI"/>
                         <outlet property="lblDoB" destination="KUd-eq-0Er" id="j6I-lv-mhi"/>
                         <outlet property="lblEcon" destination="KcR-K2-q9P" id="AAc-hR-sXY"/>
@@ -443,7 +443,7 @@
                         <outlet property="lblGender" destination="abe-33-zCc" id="ah1-GC-JNt"/>
                         <outlet property="lblName" destination="lim-9N-i0N" id="8z1-0d-oGH"/>
                         <outlet property="lblOcc" destination="BEL-ew-JRD" id="e9s-YI-NtG"/>
-                        <outlet property="portraitImage" destination="t6w-IF-nJo" id="jzl-sW-DTW"/>
+                        <outlet property="portraitImage" destination="t6w-IF-nJo" id="Pla-Gx-c2F"/>
                         <outlet property="tvFamily" destination="Pe1-OL-Rfu" id="6pq-lS-C15"/>
                     </connections>
                 </viewController>
@@ -755,77 +755,13 @@
         <image name="youssef_portrait.png" width="500" height="500"/>
         <image name="zahiyee_portrait.png" width="500" height="500"/>
     </resources>
-    <classes>
-        <class className="CharacterDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CharacterDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="fullBodyImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="lblAge" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblDoB" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblEcon" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblEducation" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblGender" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblOcc" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="portraitImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="tvFamily" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="CharacterSelectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CharacterSelectionViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="characterIconTouched:"/>
-                <relationship kind="action" name="confirmIconTouched:"/>
-                <relationship kind="outlet" name="btnCharA" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnCharB" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnCharC" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnCharD" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnCharE" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="lblAge" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblName" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ChoiceViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChoiceViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="leaveButtonTouched:"/>
-                <relationship kind="action" name="stayButtonTouched:"/>
-            </relationships>
-        </class>
-        <class className="ConclusionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ConclusionViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="illustrationImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="yearLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="GameOverViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameOverViewController.h"/>
-        </class>
-        <class className="HistoricalViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HistoricalViewController.h"/>
-        </class>
-        <class className="MainMenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainMenuViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="StoryPointViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StoryPointViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="illustrationImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="yearLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="9as-tf-7WY"/>
-        <segue reference="epN-uE-aNZ"/>
+        <segue reference="dOA-7r-Dke"/>
+        <segue reference="s50-7g-2LW"/>
     </inferredMetricsTieBreakers>
 </document>

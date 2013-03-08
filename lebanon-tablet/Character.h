@@ -21,4 +21,14 @@
 @property (nonatomic, retain) NSString	*economicStatus;
 @property (nonatomic, retain) UIImage	*portrait;
 @property (nonatomic, retain) UIImage	*fullBodyImage;
+@property (nonatomic, retain) UIImage   *story1;
+@property (nonatomic, retain) UIImage   *emigration1;
+@property (nonatomic, retain) UIImage   *story2;
+@property (nonatomic, retain) UIImage   *emigration2;
+@property (nonatomic, retain) UIImage   *story3;
+@property (nonatomic, retain) UIImage   *emigration3;
+@property (nonatomic, retain) UIImage   *story4;
+@property (nonatomic, retain) UIImage   *emigration4;
+@property (nonatomic, retain) UIImage   *story5;
+@property (nonatomic, retain) UIImage   *emigration5;
 @end
