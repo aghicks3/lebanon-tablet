@@ -66,6 +66,8 @@
 		B448448C16EB9C3A0064C9EB /* hind_s_5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B448447816EB9C3A0064C9EB /* hind_s_5@2x.png */; };
 		B448448F16EB9D380064C9EB /* hind_full.png in Resources */ = {isa = PBXBuildFile; fileRef = B448448D16EB9D380064C9EB /* hind_full.png */; };
 		B448449016EB9D380064C9EB /* hind_full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B448448E16EB9D380064C9EB /* hind_full@2x.png */; };
+		B448449516EBA2D30064C9EB /* banner-top.png in Resources */ = {isa = PBXBuildFile; fileRef = B448449316EBA2D30064C9EB /* banner-top.png */; };
+		B448449616EBA2D30064C9EB /* banner-top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B448449416EBA2D30064C9EB /* banner-top@2x.png */; };
 		B482F18516C554C700A42760 /* asad_full.png in Resources */ = {isa = PBXBuildFile; fileRef = B482F18016C554C700A42760 /* asad_full.png */; };
 		B4F9441B16B0A1F90092EFFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F9441A16B0A1F90092EFFF /* UIKit.framework */; };
 		B4F9441D16B0A1F90092EFFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F9441C16B0A1F90092EFFF /* Foundation.framework */; };
@@ -158,6 +160,9 @@
 		B448447816EB9C3A0064C9EB /* hind_s_5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hind_s_5@2x.png"; sourceTree = "<group>"; };
 		B448448D16EB9D380064C9EB /* hind_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hind_full.png; sourceTree = "<group>"; };
 		B448448E16EB9D380064C9EB /* hind_full@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hind_full@2x.png"; sourceTree = "<group>"; };
+		B448449316EBA2D30064C9EB /* banner-top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner-top.png"; sourceTree = "<group>"; };
+		B448449416EBA2D30064C9EB /* banner-top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner-top@2x.png"; sourceTree = "<group>"; };
+		B448449716EBA66A0064C9EB /* lebanon-tablet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "lebanon-tablet.entitlements"; sourceTree = "<group>"; };
 		B482F18016C554C700A42760 /* asad_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asad_full.png; sourceTree = "<group>"; };
 		B4F9441616B0A1F90092EFFF /* lebanon-tablet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lebanon-tablet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F9441A16B0A1F90092EFFF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -220,6 +225,7 @@
 		B448446316EB9C110064C9EB /* As'ad */ = {
 			isa = PBXGroup;
 			children = (
+				B482F18016C554C700A42760 /* asad_full.png */,
 				DC80597A16CC7B7F00174441 /* As'ad.png */,
 				6B217CAF16DD3AA9005FBEA6 /* asad_s_1.png */,
 				6B217CB016DD3AA9005FBEA6 /* asad_s_1@2x.png */,
@@ -278,6 +284,24 @@
 			name = Hind;
 			sourceTree = "<group>";
 		};
+		B448449116EBA2650064C9EB /* Zahiyee */ = {
+			isa = PBXGroup;
+			children = (
+				6B217CA216DD3783005FBEA6 /* zahiyee_portrait.png */,
+				6B217CA316DD3783005FBEA6 /* zahiyee_portrait@2x.png */,
+			);
+			name = Zahiyee;
+			sourceTree = "<group>";
+		};
+		B448449216EBA26B0064C9EB /* Youssef */ = {
+			isa = PBXGroup;
+			children = (
+				6B217CA416DD3783005FBEA6 /* youssef_portrait.png */,
+				6B217CA516DD3783005FBEA6 /* youssef_portrait@2x.png */,
+			);
+			name = Youssef;
+			sourceTree = "<group>";
+		};
 		B4F9440B16B0A1F90092EFFF = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +335,7 @@
 		B4F9442016B0A1F90092EFFF /* lebanon-tablet */ = {
 			isa = PBXGroup;
 			children = (
+				B448449716EBA66A0064C9EB /* lebanon-tablet.entitlements */,
 				B4F9446D16B0C6E70092EFFF /* images */,
 				B4F9443216B0A1F90092EFFF /* MainStoryboard.storyboard */,
 				B4F9442916B0A1F90092EFFF /* AppDelegate.h */,
@@ -378,17 +403,16 @@
 		B4F9446D16B0C6E70092EFFF /* images */ = {
 			isa = PBXGroup;
 			children = (
+				B448449316EBA2D30064C9EB /* banner-top.png */,
+				B448449416EBA2D30064C9EB /* banner-top@2x.png */,
 				DC836C3116E917BF00E07FB5 /* blank_full.png */,
 				DC836C2D16E90DDB00E07FB5 /* blank.png */,
 				DC836C2E16E90DDB00E07FB5 /* blank@2x.png */,
 				B448446316EB9C110064C9EB /* As'ad */,
 				B448446416EB9C280064C9EB /* Hind */,
-				6B217CA216DD3783005FBEA6 /* zahiyee_portrait.png */,
-				6B217CA316DD3783005FBEA6 /* zahiyee_portrait@2x.png */,
-				6B217CA416DD3783005FBEA6 /* youssef_portrait.png */,
-				6B217CA516DD3783005FBEA6 /* youssef_portrait@2x.png */,
+				B448449116EBA2650064C9EB /* Zahiyee */,
+				B448449216EBA26B0064C9EB /* Youssef */,
 				B444836016C9BB3F00495A08 /* blank_portrait.png */,
-				B482F18016C554C700A42760 /* asad_full.png */,
 				6B29B84516B1A28400EFC77D /* storypanels.png */,
 				6B29B84116B1A10700EFC77D /* lebanon.png */,
 				6B29B84216B1A10700EFC77D /* nc.png */,
@@ -518,6 +542,8 @@
 				B448448C16EB9C3A0064C9EB /* hind_s_5@2x.png in Resources */,
 				B448448F16EB9D380064C9EB /* hind_full.png in Resources */,
 				B448449016EB9D380064C9EB /* hind_full@2x.png in Resources */,
+				B448449516EBA2D30064C9EB /* banner-top.png in Resources */,
+				B448449616EBA2D30064C9EB /* banner-top@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

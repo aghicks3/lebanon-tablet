@@ -448,7 +448,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLt-P7-UG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-225" y="-1721"/>
+            <point key="canvasLocation" x="-237" y="-1761"/>
         </scene>
         <!--Story Point View Controller-->
         <scene sceneID="9vd-f0-jJZ">
@@ -459,12 +459,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="asad_s_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="FnJ-1j-KZ1"/>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1890" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOh-e3-QpH">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1890" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOh-e3-QpH">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="101" id="C1R-CW-0d0"/>
+                                    <constraint firstAttribute="height" constant="75" id="ghe-eY-VW2"/>
+                                    <constraint firstAttribute="width" constant="100" id="qr4-ho-eS5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="73"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="45"/>
+                                <color key="textColor" red="0.45098039215686275" green="0.11372549019607843" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fC4-ex-A79">
@@ -480,31 +481,18 @@
                                     <segue destination="M30-uQ-0cx" kind="modal" identifier="ChoiceSegue" modalTransitionStyle="crossDissolve" id="C1x-Up-ngh"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="nc.png" translatesAutoresizingMaskIntoConstraints="NO" id="2wO-bV-4mT">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="89" id="Z3L-bP-nta"/>
-                                    <constraint firstAttribute="width" constant="167" id="zKp-ob-4Nw"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="lebanon.png" translatesAutoresizingMaskIntoConstraints="NO" id="gOM-7e-k3G">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="167" id="x9Z-fy-1UN"/>
-                                </constraints>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="banner-top.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hzy-kJ-dEY"/>
                         </subviews>
                         <color key="backgroundColor" red="0.53725490200000003" green="0.58823529409999997" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="fC4-ex-A79" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0jD-cF-QXK"/>
-                            <constraint firstItem="gOM-7e-k3G" firstAttribute="top" secondItem="mOV-ZF-my0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="1Sq-FN-vSo"/>
                             <constraint firstAttribute="bottom" secondItem="fC4-ex-A79" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="7CC-ki-pZz"/>
-                            <constraint firstItem="IOh-e3-QpH" firstAttribute="centerX" secondItem="FnJ-1j-KZ1" secondAttribute="centerX" type="default" id="BMU-G1-6fh"/>
-                            <constraint firstAttribute="trailing" secondItem="gOM-7e-k3G" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Eg7-Rn-Q8T"/>
                             <constraint firstItem="FnJ-1j-KZ1" firstAttribute="top" secondItem="mOV-ZF-my0" secondAttribute="top" type="default" id="MLV-oj-cBP"/>
-                            <constraint firstItem="2wO-bV-4mT" firstAttribute="top" secondItem="mOV-ZF-my0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Tuy-cI-Z3Y"/>
+                            <constraint firstItem="IOh-e3-QpH" firstAttribute="top" secondItem="mOV-ZF-my0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Vqx-Mc-3Mj"/>
                             <constraint firstItem="FnJ-1j-KZ1" firstAttribute="leading" secondItem="mOV-ZF-my0" secondAttribute="leading" type="default" id="WHs-5u-caX"/>
-                            <constraint firstItem="IOh-e3-QpH" firstAttribute="top" secondItem="mOV-ZF-my0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ZBM-Vg-La2"/>
-                            <constraint firstItem="2wO-bV-4mT" firstAttribute="leading" secondItem="mOV-ZF-my0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fJG-eW-KpA"/>
-                            <constraint firstItem="gOM-7e-k3G" firstAttribute="bottom" secondItem="2wO-bV-4mT" secondAttribute="bottom" type="default" id="m36-3C-b1s"/>
+                            <constraint firstItem="Hzy-kJ-dEY" firstAttribute="top" secondItem="mOV-ZF-my0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="XB5-D8-dmA"/>
+                            <constraint firstItem="Hzy-kJ-dEY" firstAttribute="leading" secondItem="mOV-ZF-my0" secondAttribute="leading" type="default" id="ZT1-vK-GUu"/>
+                            <constraint firstItem="IOh-e3-QpH" firstAttribute="centerX" secondItem="Hzy-kJ-dEY" secondAttribute="centerX" type="default" id="kRx-CI-Ky1"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -652,6 +640,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="asad_e_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="HSe-Lq-al8"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="banner-top.png" translatesAutoresizingMaskIntoConstraints="NO" id="bVj-3d-CDR"/>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWE-8P-1Xs">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Historical">
@@ -665,12 +654,13 @@
                                     <segue destination="Fvy-aq-fdk" kind="modal" modalTransitionStyle="crossDissolve" id="rFy-8K-gq3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1890" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8H-Sa-RV5">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1890" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8H-Sa-RV5">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="101" id="ptI-RN-ZOz"/>
+                                    <constraint firstAttribute="width" constant="100" id="R6R-H1-cgQ"/>
+                                    <constraint firstAttribute="height" constant="75" id="Tp6-Ep-mee"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="73"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="45"/>
+                                <color key="textColor" red="0.45098039220000002" green="0.1137254902" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -678,10 +668,12 @@
                         <constraints>
                             <constraint firstItem="HSe-Lq-al8" firstAttribute="bottom" secondItem="Atk-3m-Jlu" secondAttribute="bottom" type="default" id="4Q8-ao-F3T"/>
                             <constraint firstItem="o8H-Sa-RV5" firstAttribute="top" secondItem="Atk-3m-Jlu" secondAttribute="top" constant="20" symbolic="YES" type="default" id="5Uz-6o-IIf"/>
+                            <constraint firstItem="bVj-3d-CDR" firstAttribute="top" secondItem="Atk-3m-Jlu" secondAttribute="top" constant="20" symbolic="YES" type="default" id="J7e-uf-NJd"/>
+                            <constraint firstItem="bVj-3d-CDR" firstAttribute="leading" secondItem="Atk-3m-Jlu" secondAttribute="leading" type="default" id="Ohq-7I-bOl"/>
                             <constraint firstItem="HSe-Lq-al8" firstAttribute="leading" secondItem="Atk-3m-Jlu" secondAttribute="leading" type="default" id="TYx-oO-X7A"/>
                             <constraint firstAttribute="bottom" secondItem="AWE-8P-1Xs" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="aMA-4t-gnt"/>
+                            <constraint firstItem="o8H-Sa-RV5" firstAttribute="centerX" secondItem="bVj-3d-CDR" secondAttribute="centerX" type="default" id="edW-We-KC9"/>
                             <constraint firstAttribute="trailing" secondItem="AWE-8P-1Xs" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="mSL-Wx-oLO"/>
-                            <constraint firstItem="HSe-Lq-al8" firstAttribute="centerX" secondItem="o8H-Sa-RV5" secondAttribute="centerX" type="default" id="vPr-HN-481"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -747,10 +739,9 @@
         <image name="asad_full.png" width="1298" height="3364"/>
         <image name="asad_portrait.png" width="500" height="500"/>
         <image name="asad_s_1.png" width="1024" height="768"/>
+        <image name="banner-top.png" width="1024" height="75"/>
         <image name="blank_portrait.png" width="1000" height="1000"/>
         <image name="hind_portrait.png" width="500" height="500"/>
-        <image name="lebanon.png" width="1152" height="864"/>
-        <image name="nc.png" width="1152" height="864"/>
         <image name="youssef_portrait.png" width="500" height="500"/>
         <image name="zahiyee_portrait.png" width="500" height="500"/>
     </resources>
