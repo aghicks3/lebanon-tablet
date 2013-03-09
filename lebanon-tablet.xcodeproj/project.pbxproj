@@ -41,6 +41,7 @@
 		6B29B84416B1A10700EFC77D /* nc.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B29B84216B1A10700EFC77D /* nc.png */; };
 		6B29B84616B1A28400EFC77D /* storypanels.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B29B84516B1A28400EFC77D /* storypanels.png */; };
 		6BC012F816D3E51800149DD9 /* Journey.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6BC012F716D3E51800149DD9 /* Journey.sqlite */; };
+		B40F282B16EBB462007649E9 /* Garamond.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40F282A16EBB462007649E9 /* Garamond.ttf */; };
 		B43B7FD916BA00EE00311DC3 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B7FD816BA00EE00311DC3 /* Character.m */; };
 		B43B7FDC16BA026A00311DC3 /* GameStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B7FDB16BA026A00311DC3 /* GameStateManager.m */; };
 		B444836116C9BB3F00495A08 /* blank_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = B444836016C9BB3F00495A08 /* blank_portrait.png */; };
@@ -133,6 +134,7 @@
 		6B29B84216B1A10700EFC77D /* nc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nc.png; sourceTree = "<group>"; };
 		6B29B84516B1A28400EFC77D /* storypanels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = storypanels.png; sourceTree = "<group>"; };
 		6BC012F716D3E51800149DD9 /* Journey.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Journey.sqlite; sourceTree = "<group>"; };
+		B40F282A16EBB462007649E9 /* Garamond.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Garamond.ttf; sourceTree = "<group>"; };
 		B43B7FD716BA00EE00311DC3 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
 		B43B7FD816BA00EE00311DC3 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 		B43B7FDA16BA026A00311DC3 /* GameStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStateManager.h; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 		B4F9442116B0A1F90092EFFF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B40F282A16EBB462007649E9 /* Garamond.ttf */,
 				6BC012F716D3E51800149DD9 /* Journey.sqlite */,
 				B4F9442216B0A1F90092EFFF /* lebanon-tablet-Info.plist */,
 				B4F9442316B0A1F90092EFFF /* InfoPlist.strings */,
@@ -542,6 +545,7 @@
 				B448449016EB9D380064C9EB /* hind_full@2x.png in Resources */,
 				B448449516EBA2D30064C9EB /* banner-top.png in Resources */,
 				B448449616EBA2D30064C9EB /* banner-top@2x.png in Resources */,
+				B40F282B16EBB462007649E9 /* Garamond.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

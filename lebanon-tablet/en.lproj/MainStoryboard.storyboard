@@ -459,15 +459,6 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="asad_s_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="FnJ-1j-KZ1"/>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1890" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOh-e3-QpH">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="ghe-eY-VW2"/>
-                                    <constraint firstAttribute="width" constant="100" id="qr4-ho-eS5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="45"/>
-                                <color key="textColor" red="0.45098039215686275" green="0.11372549019607843" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fC4-ex-A79">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Next">
@@ -482,6 +473,15 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="banner-top.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hzy-kJ-dEY"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1890" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOh-e3-QpH">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="ghe-eY-VW2"/>
+                                    <constraint firstAttribute="width" constant="100" id="qr4-ho-eS5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <color key="textColor" red="0.45098039215686275" green="0.11372549019607843" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.53725490200000003" green="0.58823529409999997" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -659,7 +659,7 @@
                                     <constraint firstAttribute="width" constant="100" id="R6R-H1-cgQ"/>
                                     <constraint firstAttribute="height" constant="75" id="Tp6-Ep-mee"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                 <color key="textColor" red="0.45098039220000002" green="0.1137254902" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -816,6 +816,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="dOA-7r-Dke"/>
-        <segue reference="s50-7g-2LW"/>
+        <segue reference="epN-uE-aNZ"/>
     </inferredMetricsTieBreakers>
 </document>
