@@ -41,9 +41,6 @@
     self.lblEcon.text = selectedCharacter.economicStatus;
     self.lblOcc.text = selectedCharacter.occupation;
     self.tvFamily.text = selectedCharacter.family;
-    
-    self.tvFamily.opaque = NO;
-    self.tvFamily.backgroundColor = [UIColor clearColor];
 	
     self.portraitImage.image = selectedCharacter.portrait;
     self.fullBodyImage.image = selectedCharacter.fullBodyImage;

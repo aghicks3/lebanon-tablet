@@ -25,8 +25,6 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    
-    
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -48,10 +46,9 @@
     
     NSString *txtPath = [documentsDirectory stringByAppendingPathComponent:@"Journey"];
     
-    if ([fileManager fileExistsAtPath:txtPath] == YES) {
+    if ([fileManager fileExistsAtPath:txtPath]) {
         [fileManager removeItemAtPath:txtPath error:&resourceError];
-    }
-    if ([fileManager fileExistsAtPath:txtPath] == NO) {
+    } else {
         NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
         [fileManager copyItemAtPath:resourcePath toPath:txtPath error:&resourceError];
     }
@@ -61,8 +58,7 @@
         const char *dbPath = [dbPathString UTF8String];
         
         //create db here
-        if(sqlite3_open(dbPath, &characterDB)== SQLITE_OK)
-        {
+        if(sqlite3_open(dbPath, &characterDB)== SQLITE_OK) {
             const char *sql_stmt = "CREATE TABLE IF NOT EXISTS CHARACTER (id INTEGER PRIMARY KEY, name TEXT, dateOfBirth TEXT, gender TEXT, age NUMERIC, family TEXT, education TEXT, economicStatus TEXT, occupation TEXT, portrait TEXT, fullbody TEXT, story1 TEXT, emigrate1 TEXT, story2 TEXT, emigrate2 TEXT, story3 TEXT, emigrate3 TEXT, story4 TEXT, emigrate4 TEXT, story5 TEXT, emigrate5 TEXT";
             sqlite3_exec(characterDB, sql_stmt, NULL, NULL, &error);
             sqlite3_close(characterDB);
@@ -72,7 +68,8 @@
 
 
 //handles the user touching a character selection button
--(IBAction)characterIconTouched:(id)sender {
+-(IBAction)characterIconTouched:(id)sender
+{
 	UIButton *sendingButton = (UIButton *)sender;
 	NSLog(@"%@", [sendingButton titleForState:UIControlStateNormal]);
 
@@ -81,11 +78,9 @@
 	NSString *characterName = [sendingButton titleForState:UIControlStateNormal];
     
     Character *current = [[Character alloc]init];
-    for(int i = 0; i < characters.count; i++)
-    {
+    for(int i = 0; i < characters.count; i++) {
         current = [characters objectAtIndex:i];
-        if([current.name isEqualToString:characterName])
-        {
+        if([current.name isEqualToString:characterName]) {
             character = [characters objectAtIndex:i];
             [lblAge setText:[NSString stringWithFormat:@"%d",current.age ]];
             [lblName setText:current.name];
@@ -94,24 +89,18 @@
         
     }
 	// TODO: get full character info from a plist or SQLite
-    if(character.name == 0x00000000)
-    {
-	character.name = characterName;
+    if(!character.name) {
+		character.name = characterName;
     }
     
 	
-	[GameStateManager instance].currentCharacter = character;
-	
-	
+	[GameStateManager instance].currentCharacter = character;	
 }
 
-- (IBAction)confirmIconTouched:(id)sender {
-    if([GameStateManager instance].currentCharacter != 0x00000000)
-    {
-          
-        
-        [self performSegueWithIdentifier:@"SelectCharacterSegue" sender:sender];
-        
+- (IBAction)confirmIconTouched:(id)sender
+{
+    if([GameStateManager instance].currentCharacter) {
+		[self performSegueWithIdentifier:@"SelectCharacterSegue" sender:sender];
     }
 }
 
@@ -177,11 +166,11 @@
                 [character setStory5:[UIImage imageNamed:story5]];
                 [character setEmigration5:[UIImage imageNamed:emigrate5]];
                 
-                
                 [characters addObject:character];
             }
         }
     }
+	
     if(characters.count == 5)
     {
         [btnCharA setTitle:[[characters objectAtIndex:0] name] forState:UIControlStateNormal];
@@ -203,9 +192,6 @@
         [btnCharE setTitle:[[characters objectAtIndex:4] name] forState:UIControlStateNormal];
         [btnCharE setTitle:[[characters objectAtIndex:4] name] forState:UIControlStateSelected];
         [btnCharE setTitle:[[characters objectAtIndex:4] name] forState:UIControlStateHighlighted];
-        
-
-
     }
 }
 

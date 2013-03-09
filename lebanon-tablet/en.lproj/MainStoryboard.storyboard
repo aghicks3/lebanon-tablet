@@ -8,7 +8,7 @@
         <scene sceneID="4">
             <objects>
                 <viewController id="2" customClass="MainMenuViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5" customClass="Mainmenuview">
+                    <view key="view" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -736,7 +736,7 @@
     </scenes>
     <resources>
         <image name="asad_e_1.png" width="1024" height="768"/>
-        <image name="asad_full.png" width="1298" height="3364"/>
+        <image name="asad_full.png" width="215" height="557"/>
         <image name="asad_portrait.png" width="500" height="500"/>
         <image name="asad_s_1.png" width="1024" height="768"/>
         <image name="banner-top.png" width="1024" height="75"/>
@@ -816,6 +816,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="dOA-7r-Dke"/>
-        <segue reference="epN-uE-aNZ"/>
+        <segue reference="s50-7g-2LW"/>
     </inferredMetricsTieBreakers>
 </document>

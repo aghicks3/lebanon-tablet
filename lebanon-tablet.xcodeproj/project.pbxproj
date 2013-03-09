@@ -42,6 +42,7 @@
 		6B29B84616B1A28400EFC77D /* storypanels.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B29B84516B1A28400EFC77D /* storypanels.png */; };
 		6BC012F816D3E51800149DD9 /* Journey.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6BC012F716D3E51800149DD9 /* Journey.sqlite */; };
 		B40F282B16EBB462007649E9 /* Garamond.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40F282A16EBB462007649E9 /* Garamond.ttf */; };
+		B40F282D16EBBBC5007649E9 /* asad_full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F282C16EBBBC5007649E9 /* asad_full@2x.png */; };
 		B43B7FD916BA00EE00311DC3 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B7FD816BA00EE00311DC3 /* Character.m */; };
 		B43B7FDC16BA026A00311DC3 /* GameStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B7FDB16BA026A00311DC3 /* GameStateManager.m */; };
 		B444836116C9BB3F00495A08 /* blank_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = B444836016C9BB3F00495A08 /* blank_portrait.png */; };
@@ -135,6 +136,7 @@
 		6B29B84516B1A28400EFC77D /* storypanels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = storypanels.png; sourceTree = "<group>"; };
 		6BC012F716D3E51800149DD9 /* Journey.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Journey.sqlite; sourceTree = "<group>"; };
 		B40F282A16EBB462007649E9 /* Garamond.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Garamond.ttf; sourceTree = "<group>"; };
+		B40F282C16EBBBC5007649E9 /* asad_full@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "asad_full@2x.png"; sourceTree = "<group>"; };
 		B43B7FD716BA00EE00311DC3 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
 		B43B7FD816BA00EE00311DC3 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 		B43B7FDA16BA026A00311DC3 /* GameStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStateManager.h; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 		B448446316EB9C110064C9EB /* As'ad */ = {
 			isa = PBXGroup;
 			children = (
+				B40F282C16EBBBC5007649E9 /* asad_full@2x.png */,
 				B482F18016C554C700A42760 /* asad_full.png */,
 				DC80597A16CC7B7F00174441 /* As'ad.png */,
 				6B217CAF16DD3AA9005FBEA6 /* asad_s_1.png */,
@@ -546,6 +549,7 @@
 				B448449516EBA2D30064C9EB /* banner-top.png in Resources */,
 				B448449616EBA2D30064C9EB /* banner-top@2x.png in Resources */,
 				B40F282B16EBB462007649E9 /* Garamond.ttf in Resources */,
+				B40F282D16EBBBC5007649E9 /* asad_full@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
