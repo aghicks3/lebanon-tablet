@@ -162,7 +162,6 @@
 		B448448E16EB9D380064C9EB /* hind_full@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hind_full@2x.png"; sourceTree = "<group>"; };
 		B448449316EBA2D30064C9EB /* banner-top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner-top.png"; sourceTree = "<group>"; };
 		B448449416EBA2D30064C9EB /* banner-top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner-top@2x.png"; sourceTree = "<group>"; };
-		B448449716EBA66A0064C9EB /* lebanon-tablet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "lebanon-tablet.entitlements"; sourceTree = "<group>"; };
 		B482F18016C554C700A42760 /* asad_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asad_full.png; sourceTree = "<group>"; };
 		B4F9441616B0A1F90092EFFF /* lebanon-tablet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lebanon-tablet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F9441A16B0A1F90092EFFF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -335,7 +334,6 @@
 		B4F9442016B0A1F90092EFFF /* lebanon-tablet */ = {
 			isa = PBXGroup;
 			children = (
-				B448449716EBA66A0064C9EB /* lebanon-tablet.entitlements */,
 				B4F9446D16B0C6E70092EFFF /* images */,
 				B4F9443216B0A1F90092EFFF /* MainStoryboard.storyboard */,
 				B4F9442916B0A1F90092EFFF /* AppDelegate.h */,
