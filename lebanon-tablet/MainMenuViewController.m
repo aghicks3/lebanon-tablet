@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+	_titleLabel.font = [UIFont fontWithName:@"Garamond" size:100.0f];
+	_subtitleLabel.font = [UIFont fontWithName:@"Garamond" size:30.0f];
 }
 
 - (void)didReceiveMemoryWarning

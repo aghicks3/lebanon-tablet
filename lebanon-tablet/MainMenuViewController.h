@@ -10,4 +10,8 @@
 
 @interface MainMenuViewController : UIViewController
 
+
+@property (nonatomic, retain) IBOutlet UILabel *titleLabel;
+@property (nonatomic, retain) IBOutlet UILabel *subtitleLabel;
+
 @end

@@ -38,6 +38,8 @@
 	//populate the interface elements with the current story point's info
 	self.yearLabel.text = [NSString stringWithFormat:@"%i", currentStoryPoint.year];
 	self.yearLabel.font = [UIFont fontWithName:@"Garamond" size:50.0f];
+	self.ncPopulationLabel.font = [UIFont fontWithName:@"Garamond" size:22.0f];
+	self.lebanonPopulationLabel.font = [UIFont fontWithName:@"Garamond" size:22.0f];
 	self.illustrationImageView.image = currentStoryPoint.illustration;
 }
 

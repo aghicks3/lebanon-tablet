@@ -11,6 +11,8 @@
 @interface StoryPointViewController : UIViewController
 
 @property (nonatomic, retain) IBOutlet UILabel *yearLabel;
+@property (nonatomic, retain) IBOutlet UILabel *ncPopulationLabel;
+@property (nonatomic, retain) IBOutlet UILabel *lebanonPopulationLabel;
 @property (nonatomic, retain) IBOutlet UIImageView *illustrationImageView;
 
 @end
