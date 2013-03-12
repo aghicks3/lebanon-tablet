@@ -193,9 +193,9 @@
                             <constraint firstItem="73d-L1-gfU" firstAttribute="leading" secondItem="2Fj-dr-jQE" secondAttribute="leading" constant="438" id="96a-Kf-6Js"/>
                             <constraint firstItem="mSh-h3-LBc" firstAttribute="baseline" secondItem="T20-5N-9tO" secondAttribute="baseline" type="default" id="BmX-iT-DT2"/>
                             <constraint firstItem="T20-5N-9tO" firstAttribute="top" secondItem="mSh-h3-LBc" secondAttribute="top" type="default" id="JJ9-yS-hpg"/>
-                            <constraint firstAttribute="bottom" secondItem="Dt7-eb-A7c" secondAttribute="bottom" constant="15" id="L8V-Bc-MO6"/>
                             <constraint firstAttribute="trailing" secondItem="T20-5N-9tO" secondAttribute="trailing" constant="83" id="NzW-sU-ga4"/>
                             <constraint firstItem="QVW-Zy-Ejg" firstAttribute="top" secondItem="Xcs-4H-hR4" secondAttribute="top" type="default" id="SIa-98-t6p"/>
+                            <constraint firstAttribute="bottom" secondItem="Dt7-eb-A7c" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="TtA-me-Ore"/>
                             <constraint firstAttribute="trailing" secondItem="QVW-Zy-Ejg" secondAttribute="trailing" constant="250" id="YuA-dT-Vy1"/>
                             <constraint firstItem="mSh-h3-LBc" firstAttribute="leading" secondItem="2Fj-dr-jQE" secondAttribute="leading" constant="84" id="bab-y2-b25"/>
                             <constraint firstItem="QVW-Zy-Ejg" firstAttribute="baseline" secondItem="Xcs-4H-hR4" secondAttribute="baseline" type="default" id="fsj-Bg-nbR"/>
@@ -819,7 +819,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="9as-tf-7WY"/>
-        <segue reference="epN-uE-aNZ"/>
+        <segue reference="s50-7g-2LW"/>
+        <segue reference="dOA-7r-Dke"/>
     </inferredMetricsTieBreakers>
 </document>
