@@ -16,7 +16,6 @@
 @end
 
 @implementation CharacterDetailViewController
-@synthesize lblAge, lblDoB, lblGender, lblEducation, lblEcon, lblOcc, tvFamily;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

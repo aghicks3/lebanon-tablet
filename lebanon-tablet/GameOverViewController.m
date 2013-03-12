@@ -27,6 +27,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+	_endLabel.font = [UIFont fontWithName:@"Garamond" size:120.0f];
+	_playAgainLabel.font = [UIFont fontWithName:@"Garamond" size:50.0f];
+	
+	[self performSelector:@selector(restart:) withObject:nil afterDelay:3.0];
+}
+
+-(void)restart:(id)sender {
+	[self performSegueWithIdentifier:@"RestartSegue" sender:self];
 }
 
 - (void)didReceiveMemoryWarning

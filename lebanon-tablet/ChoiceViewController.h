@@ -10,7 +10,6 @@
 
 @interface ChoiceViewController : UIViewController
 
-
 -(IBAction)stayButtonTouched:(id)sender;
 -(IBAction)leaveButtonTouched:(id)sender;
 

@@ -10,4 +10,7 @@
 
 @interface GameOverViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *endLabel;
+@property (strong, nonatomic) IBOutlet UILabel *playAgainLabel;
+
 @end

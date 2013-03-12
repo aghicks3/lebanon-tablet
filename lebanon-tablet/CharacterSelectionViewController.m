@@ -20,8 +20,6 @@
 @end
 
 @implementation CharacterSelectionViewController
-@synthesize btnCharA,btnCharB,btnCharC,btnCharD,btnCharE;
-@synthesize lblName, lblAge;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -82,8 +80,8 @@
         current = [characters objectAtIndex:i];
         if([current.name isEqualToString:characterName]) {
             character = [characters objectAtIndex:i];
-            [lblAge setText:[NSString stringWithFormat:@"%d",current.age ]];
-            [lblName setText:current.name];
+            [_lblAge setText:[NSString stringWithFormat:@"%d",current.age ]];
+            [_lblName setText:current.name];
             break;
         }
         
@@ -109,7 +107,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    
+    _lblAge.font = [UIFont fontWithName:@"Garamond" size:30.0f];
+	_lblName.font = [UIFont fontWithName:@"Garamond" size:30.0f];
     characters = [[NSMutableArray alloc]init];
     [self createOrOpenDB];
     
@@ -173,25 +172,25 @@
 	
     if(characters.count == 5)
     {
-        [btnCharA setTitle:[[characters objectAtIndex:0] name] forState:UIControlStateNormal];
-        [btnCharA setTitle:[[characters objectAtIndex:0] name] forState:UIControlStateSelected];
-        [btnCharA setTitle:[[characters objectAtIndex:0] name] forState:UIControlStateHighlighted];
+        [_btnCharA setTitle:[[characters objectAtIndex:0] name] forState:UIControlStateNormal];
+        [_btnCharA setTitle:[[characters objectAtIndex:0] name] forState:UIControlStateSelected];
+        [_btnCharA setTitle:[[characters objectAtIndex:0] name] forState:UIControlStateHighlighted];
         
-        [btnCharB setTitle:[[characters objectAtIndex:1] name] forState:UIControlStateNormal];
-        [btnCharB setTitle:[[characters objectAtIndex:1] name] forState:UIControlStateSelected];
-        [btnCharB setTitle:[[characters objectAtIndex:1] name] forState:UIControlStateHighlighted];
+        [_btnCharB setTitle:[[characters objectAtIndex:1] name] forState:UIControlStateNormal];
+        [_btnCharB setTitle:[[characters objectAtIndex:1] name] forState:UIControlStateSelected];
+        [_btnCharB setTitle:[[characters objectAtIndex:1] name] forState:UIControlStateHighlighted];
         
-        [btnCharC setTitle:[[characters objectAtIndex:2] name] forState:UIControlStateNormal];
-        [btnCharC setTitle:[[characters objectAtIndex:2] name] forState:UIControlStateSelected];
-        [btnCharC setTitle:[[characters objectAtIndex:2] name] forState:UIControlStateHighlighted];
+        [_btnCharC setTitle:[[characters objectAtIndex:2] name] forState:UIControlStateNormal];
+        [_btnCharC setTitle:[[characters objectAtIndex:2] name] forState:UIControlStateSelected];
+        [_btnCharC setTitle:[[characters objectAtIndex:2] name] forState:UIControlStateHighlighted];
         
-        [btnCharD setTitle:[[characters objectAtIndex:3] name] forState:UIControlStateNormal];
-        [btnCharD setTitle:[[characters objectAtIndex:3] name] forState:UIControlStateSelected];
-        [btnCharD setTitle:[[characters objectAtIndex:3] name] forState:UIControlStateHighlighted];
+        [_btnCharD setTitle:[[characters objectAtIndex:3] name] forState:UIControlStateNormal];
+        [_btnCharD setTitle:[[characters objectAtIndex:3] name] forState:UIControlStateSelected];
+        [_btnCharD setTitle:[[characters objectAtIndex:3] name] forState:UIControlStateHighlighted];
         
-        [btnCharE setTitle:[[characters objectAtIndex:4] name] forState:UIControlStateNormal];
-        [btnCharE setTitle:[[characters objectAtIndex:4] name] forState:UIControlStateSelected];
-        [btnCharE setTitle:[[characters objectAtIndex:4] name] forState:UIControlStateHighlighted];
+        [_btnCharE setTitle:[[characters objectAtIndex:4] name] forState:UIControlStateNormal];
+        [_btnCharE setTitle:[[characters objectAtIndex:4] name] forState:UIControlStateSelected];
+        [_btnCharE setTitle:[[characters objectAtIndex:4] name] forState:UIControlStateHighlighted];
     }
 }
 

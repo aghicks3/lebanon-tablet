@@ -19,8 +19,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblOcc;
 @property (strong, nonatomic) IBOutlet UITextView *tvFamily;
 
-
-
 @property (nonatomic, retain) IBOutlet UIImageView *portraitImage;
 @property (nonatomic, retain) IBOutlet UIImageView *fullBodyImage;
 
