@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface HistoricalViewController : UIViewController
 
+@property (strong, nonatomic) MPMoviePlayerController *moviePlayer;
 @end

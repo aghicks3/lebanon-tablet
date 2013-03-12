@@ -70,6 +70,8 @@
 		B448449016EB9D380064C9EB /* hind_full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B448448E16EB9D380064C9EB /* hind_full@2x.png */; };
 		B448449516EBA2D30064C9EB /* banner-top.png in Resources */ = {isa = PBXBuildFile; fileRef = B448449316EBA2D30064C9EB /* banner-top.png */; };
 		B448449616EBA2D30064C9EB /* banner-top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B448449416EBA2D30064C9EB /* banner-top@2x.png */; };
+		B473891D16EEA51D0081B69C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B473891C16EEA51D0081B69C /* MediaPlayer.framework */; };
+		B473892116EEA6C80081B69C /* Movie.mov in Resources */ = {isa = PBXBuildFile; fileRef = B473892016EEA6C80081B69C /* Movie.mov */; };
 		B482F18516C554C700A42760 /* asad_full.png in Resources */ = {isa = PBXBuildFile; fileRef = B482F18016C554C700A42760 /* asad_full.png */; };
 		B4F9441B16B0A1F90092EFFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F9441A16B0A1F90092EFFF /* UIKit.framework */; };
 		B4F9441D16B0A1F90092EFFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F9441C16B0A1F90092EFFF /* Foundation.framework */; };
@@ -166,6 +168,9 @@
 		B448448E16EB9D380064C9EB /* hind_full@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hind_full@2x.png"; sourceTree = "<group>"; };
 		B448449316EBA2D30064C9EB /* banner-top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner-top.png"; sourceTree = "<group>"; };
 		B448449416EBA2D30064C9EB /* banner-top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner-top@2x.png"; sourceTree = "<group>"; };
+		B473891C16EEA51D0081B69C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		B473891E16EEA5410081B69C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B473892016EEA6C80081B69C /* Movie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Movie.mov; sourceTree = "<group>"; };
 		B482F18016C554C700A42760 /* asad_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asad_full.png; sourceTree = "<group>"; };
 		B4F9441616B0A1F90092EFFF /* lebanon-tablet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lebanon-tablet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F9441A16B0A1F90092EFFF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -215,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B473891D16EEA51D0081B69C /* MediaPlayer.framework in Frameworks */,
 				DC90E47E16C83F990054B704 /* libsqlite3.0.dylib in Frameworks */,
 				B4F9441B16B0A1F90092EFFF /* UIKit.framework in Frameworks */,
 				B4F9441D16B0A1F90092EFFF /* Foundation.framework in Frameworks */,
@@ -328,6 +334,8 @@
 		B4F9441916B0A1F90092EFFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B473891E16EEA5410081B69C /* AVFoundation.framework */,
+				B473891C16EEA51D0081B69C /* MediaPlayer.framework */,
 				DC90E47D16C83F990054B704 /* libsqlite3.0.dylib */,
 				B4F9441A16B0A1F90092EFFF /* UIKit.framework */,
 				B4F9441C16B0A1F90092EFFF /* Foundation.framework */,
@@ -353,6 +361,7 @@
 		B4F9442116B0A1F90092EFFF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B473892016EEA6C80081B69C /* Movie.mov */,
 				B40F282A16EBB462007649E9 /* Garamond.ttf */,
 				6BC012F716D3E51800149DD9 /* Journey.sqlite */,
 				B4F9442216B0A1F90092EFFF /* lebanon-tablet-Info.plist */,
@@ -550,6 +559,7 @@
 				B448449616EBA2D30064C9EB /* banner-top@2x.png in Resources */,
 				B40F282B16EBB462007649E9 /* Garamond.ttf in Resources */,
 				B40F282D16EBBBC5007649E9 /* asad_full@2x.png in Resources */,
+				B473892116EEA6C80081B69C /* Movie.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
