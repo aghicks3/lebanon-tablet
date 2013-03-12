@@ -41,6 +41,9 @@
 		6B29B84416B1A10700EFC77D /* nc.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B29B84216B1A10700EFC77D /* nc.png */; };
 		6B29B84616B1A28400EFC77D /* storypanels.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B29B84516B1A28400EFC77D /* storypanels.png */; };
 		6B71308316EF8A37004801E7 /* grandfather.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6B71308216EF8A37004801E7 /* grandfather.mp4 */; };
+		6B71309B16EF9DDC004801E7 /* laytana.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 6B71309916EF9DDC004801E7 /* laytana.m4a */; };
+		6B71309C16EF9DDC004801E7 /* masar.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 6B71309A16EF9DDC004801E7 /* masar.m4a */; };
+		6B71309D16EFA0CA004801E7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B473891E16EEA5410081B69C /* AVFoundation.framework */; };
 		6BC012F816D3E51800149DD9 /* Journey.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6BC012F716D3E51800149DD9 /* Journey.sqlite */; };
 		B40F282B16EBB462007649E9 /* Garamond.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40F282A16EBB462007649E9 /* Garamond.ttf */; };
 		B40F282D16EBBBC5007649E9 /* asad_full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F282C16EBBBC5007649E9 /* asad_full@2x.png */; };
@@ -138,6 +141,8 @@
 		6B29B84216B1A10700EFC77D /* nc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nc.png; sourceTree = "<group>"; };
 		6B29B84516B1A28400EFC77D /* storypanels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = storypanels.png; sourceTree = "<group>"; };
 		6B71308216EF8A37004801E7 /* grandfather.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = grandfather.mp4; sourceTree = "<group>"; };
+		6B71309916EF9DDC004801E7 /* laytana.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = laytana.m4a; sourceTree = "<group>"; };
+		6B71309A16EF9DDC004801E7 /* masar.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = masar.m4a; sourceTree = "<group>"; };
 		6BC012F716D3E51800149DD9 /* Journey.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Journey.sqlite; sourceTree = "<group>"; };
 		B40F282A16EBB462007649E9 /* Garamond.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Garamond.ttf; sourceTree = "<group>"; };
 		B40F282C16EBBBC5007649E9 /* asad_full@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "asad_full@2x.png"; sourceTree = "<group>"; };
@@ -222,6 +227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B71309D16EFA0CA004801E7 /* AVFoundation.framework in Frameworks */,
 				B473891D16EEA51D0081B69C /* MediaPlayer.framework in Frameworks */,
 				DC90E47E16C83F990054B704 /* libsqlite3.0.dylib in Frameworks */,
 				B4F9441B16B0A1F90092EFFF /* UIKit.framework in Frameworks */,
@@ -363,6 +369,8 @@
 		B4F9442116B0A1F90092EFFF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6B71309916EF9DDC004801E7 /* laytana.m4a */,
+				6B71309A16EF9DDC004801E7 /* masar.m4a */,
 				6B71308216EF8A37004801E7 /* grandfather.mp4 */,
 				B473892016EEA6C80081B69C /* Movie.mov */,
 				B40F282A16EBB462007649E9 /* Garamond.ttf */,
@@ -564,6 +572,8 @@
 				B40F282D16EBBBC5007649E9 /* asad_full@2x.png in Resources */,
 				B473892116EEA6C80081B69C /* Movie.mov in Resources */,
 				6B71308316EF8A37004801E7 /* grandfather.mp4 in Resources */,
+				6B71309B16EF9DDC004801E7 /* laytana.m4a in Resources */,
+				6B71309C16EF9DDC004801E7 /* masar.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

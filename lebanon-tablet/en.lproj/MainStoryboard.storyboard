@@ -94,22 +94,6 @@
                                     <action selector="characterIconTouched:" destination="k4D-bS-zJI" eventType="touchUpInside" id="Eew-Or-0U6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T20-5N-9tO">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="bdr-cF-DRU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="Character E" backgroundImage="blank_portrait.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="characterIconTouched:" destination="k4D-bS-zJI" eventType="touchUpInside" id="YTm-7U-ypS"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xcs-4H-hR4">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="7CX-FF-syg"/>
@@ -129,7 +113,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73d-L1-gfU">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="WqI-7C-MIU"/>
-                                    <constraint firstAttribute="height" constant="150" id="yYa-oO-tXt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="Youssef" backgroundImage="youssef_portrait.png">
@@ -187,24 +170,22 @@
                         </subviews>
                         <color key="backgroundColor" red="0.53725490200000003" green="0.58823529409999997" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Xcs-4H-hR4" firstAttribute="top" secondItem="2Fj-dr-jQE" secondAttribute="top" constant="344" id="0Q0-wk-jKQ"/>
                             <constraint firstItem="0du-nj-4ah" firstAttribute="centerX" secondItem="2Fj-dr-jQE" secondAttribute="centerX" type="default" id="1CC-o4-Lxi"/>
-                            <constraint firstItem="Xcs-4H-hR4" firstAttribute="leading" secondItem="2Fj-dr-jQE" secondAttribute="leading" constant="250" id="60D-5x-bZ7"/>
-                            <constraint firstItem="73d-L1-gfU" firstAttribute="leading" secondItem="2Fj-dr-jQE" secondAttribute="leading" constant="438" id="96a-Kf-6Js"/>
-                            <constraint firstItem="mSh-h3-LBc" firstAttribute="baseline" secondItem="T20-5N-9tO" secondAttribute="baseline" type="default" id="BmX-iT-DT2"/>
-                            <constraint firstItem="T20-5N-9tO" firstAttribute="top" secondItem="mSh-h3-LBc" secondAttribute="top" type="default" id="JJ9-yS-hpg"/>
-                            <constraint firstAttribute="trailing" secondItem="T20-5N-9tO" secondAttribute="trailing" constant="83" id="NzW-sU-ga4"/>
-                            <constraint firstItem="QVW-Zy-Ejg" firstAttribute="top" secondItem="Xcs-4H-hR4" secondAttribute="top" type="default" id="SIa-98-t6p"/>
+                            <constraint firstItem="Xcs-4H-hR4" firstAttribute="leading" secondItem="2Fj-dr-jQE" secondAttribute="leading" constant="278" id="8NS-zz-8pB"/>
+                            <constraint firstAttribute="bottom" secondItem="Xcs-4H-hR4" secondAttribute="bottom" constant="219" id="BlC-Ap-Lbn"/>
+                            <constraint firstItem="73d-L1-gfU" firstAttribute="top" secondItem="Xcs-4H-hR4" secondAttribute="top" type="default" id="EcS-Ch-DBF"/>
+                            <constraint firstItem="QVW-Zy-Ejg" firstAttribute="baseline" secondItem="mSh-h3-LBc" secondAttribute="baseline" type="default" id="HBf-9J-CnN"/>
                             <constraint firstAttribute="bottom" secondItem="Dt7-eb-A7c" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="TtA-me-Ore"/>
-                            <constraint firstAttribute="trailing" secondItem="QVW-Zy-Ejg" secondAttribute="trailing" constant="250" id="YuA-dT-Vy1"/>
+                            <constraint firstItem="73d-L1-gfU" firstAttribute="baseline" secondItem="Xcs-4H-hR4" secondAttribute="baseline" type="default" id="XxF-51-t8X"/>
+                            <constraint firstItem="QVW-Zy-Ejg" firstAttribute="top" secondItem="mSh-h3-LBc" secondAttribute="top" type="default" id="Ztd-q6-IsD"/>
                             <constraint firstItem="mSh-h3-LBc" firstAttribute="leading" secondItem="2Fj-dr-jQE" secondAttribute="leading" constant="84" id="bab-y2-b25"/>
-                            <constraint firstItem="QVW-Zy-Ejg" firstAttribute="baseline" secondItem="Xcs-4H-hR4" secondAttribute="baseline" type="default" id="fsj-Bg-nbR"/>
+                            <constraint firstAttribute="trailing" secondItem="73d-L1-gfU" secondAttribute="trailing" constant="278" id="c1g-o8-tUq"/>
+                            <constraint firstAttribute="trailing" secondItem="QVW-Zy-Ejg" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gad-a2-flX"/>
                             <constraint firstItem="mSh-h3-LBc" firstAttribute="top" secondItem="2Fj-dr-jQE" secondAttribute="top" constant="240" id="pqp-Qi-pi4"/>
                             <constraint firstAttribute="bottom" secondItem="Qfo-qr-eiO" secondAttribute="bottom" constant="103" id="wHl-NX-Ymz"/>
                             <constraint firstItem="Qfo-qr-eiO" firstAttribute="top" secondItem="0du-nj-4ah" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wpY-zI-n5H"/>
                             <constraint firstAttribute="trailing" secondItem="Dt7-eb-A7c" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="x7H-eo-rH0"/>
                             <constraint firstItem="Qfo-qr-eiO" firstAttribute="centerX" secondItem="0du-nj-4ah" secondAttribute="centerX" type="default" id="xCX-VZ-hUC"/>
-                            <constraint firstAttribute="bottom" secondItem="73d-L1-gfU" secondAttribute="bottom" constant="196" id="ycD-Vd-XU0"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -216,7 +197,6 @@
                         <outlet property="btnCharB" destination="Xcs-4H-hR4" id="pPa-ar-tVl"/>
                         <outlet property="btnCharC" destination="73d-L1-gfU" id="un4-I4-96R"/>
                         <outlet property="btnCharD" destination="QVW-Zy-Ejg" id="gM0-OY-atY"/>
-                        <outlet property="btnCharE" destination="T20-5N-9tO" id="ID8-dF-riq"/>
                         <outlet property="lblAge" destination="Qfo-qr-eiO" id="lh8-HH-ORN"/>
                         <outlet property="lblName" destination="0du-nj-4ah" id="82E-Td-jfY"/>
                         <segue destination="uw1-e1-T6z" kind="modal" identifier="SelectCharacterSegue" modalTransitionStyle="crossDissolve" id="r01-29-S49"/>
@@ -734,7 +714,6 @@
         <image name="asad_portrait.png" width="500" height="500"/>
         <image name="asad_s_1.png" width="1024" height="768"/>
         <image name="banner-top.png" width="1024" height="75"/>
-        <image name="blank_portrait.png" width="1000" height="1000"/>
         <image name="hind_portrait.png" width="500" height="500"/>
         <image name="youssef_portrait.png" width="500" height="500"/>
         <image name="zahiyee_portrait.png" width="500" height="500"/>

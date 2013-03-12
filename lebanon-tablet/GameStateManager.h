@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <AVFoundation/AVAudioPlayer.h>
 @class StoryPoint, Character;
 
 @interface GameStateManager : NSObject
 
 +(GameStateManager *)instance;
 
+@property (nonatomic, retain) AVAudioPlayer *audioPlayer;
 @property (nonatomic, retain) StoryPoint *currentStoryPoint;
 @property (nonatomic, retain) Character *currentCharacter;
 

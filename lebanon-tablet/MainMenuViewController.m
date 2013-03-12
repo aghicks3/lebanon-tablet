@@ -7,6 +7,7 @@
 //
 
 #import "MainMenuViewController.h"
+#import "GameStateManager.h"
 
 @interface MainMenuViewController ()
 
@@ -29,6 +30,15 @@
 	// Do any additional setup after loading the view.
 	_titleLabel.font = [UIFont fontWithName:@"Garamond" size:100.0f];
 	_subtitleLabel.font = [UIFont fontWithName:@"Garamond" size:30.0f];
+	
+	GameStateManager *gsm = [GameStateManager instance];
+	
+	NSURL *songURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"laytana" ofType:@"m4a"]];
+	
+	NSError *error;
+	
+	gsm.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:songURL error:&error];
+	[gsm.audioPlayer play];
 }
 
 - (void)didReceiveMemoryWarning
