@@ -48,7 +48,7 @@
 }
 
 -(void)initializeVideoPlayer {
-	NSURL *movieURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Movie" ofType:@"mov"]];
+	NSURL *movieURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"grandfather" ofType:@"mp4"]];
 	
 	_moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
 	[[NSNotificationCenter defaultCenter] addObserver:self
@@ -58,8 +58,9 @@
 	_moviePlayer.controlStyle = MPMovieControlStyleNone;
 	_moviePlayer.shouldAutoplay = YES;
 	_moviePlayer.view.bounds = self.view.bounds;
+	_moviePlayer.scalingMode = MPMovieScalingModeAspectFill;
 	_moviePlayer.backgroundView.backgroundColor = [UIColor clearColor];
-	CGRect viewInsetRect = CGRectMake(HORIZONTAL_INSET, VERTICAL_INSET, 1024-2*HORIZONTAL_INSET, 768-(VERTICAL_INSET*2+20));
+	CGRect viewInsetRect = CGRectMake(HORIZONTAL_INSET, VERTICAL_INSET, 1024-2*HORIZONTAL_INSET, 768-VERTICAL_INSET*2);
 	[[_moviePlayer view] setFrame:viewInsetRect];
 	[self.view addSubview:_moviePlayer.view];
 	[_moviePlayer setFullscreen:NO animated:NO];
