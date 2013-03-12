@@ -41,15 +41,13 @@
 	[self performSegueWithIdentifier:@"GameOverSegue" sender:self];
 }
 
--(void)movieScalingModeDidChange:(id)sender {
-	NSLog(@"scaling");
-
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+	[self initializeVideoPlayer];
+}
+
+-(void)initializeVideoPlayer {
 	NSURL *movieURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Movie" ofType:@"mov"]];
 	
 	_moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
@@ -65,7 +63,6 @@
 	[[_moviePlayer view] setFrame:viewInsetRect];
 	[self.view addSubview:_moviePlayer.view];
 	[_moviePlayer setFullscreen:NO animated:NO];
-
 }
 
 - (void)didReceiveMemoryWarning
