@@ -77,6 +77,10 @@
 		B473891D16EEA51D0081B69C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B473891C16EEA51D0081B69C /* MediaPlayer.framework */; };
 		B473892116EEA6C80081B69C /* Movie.mov in Resources */ = {isa = PBXBuildFile; fileRef = B473892016EEA6C80081B69C /* Movie.mov */; };
 		B482F18516C554C700A42760 /* asad_full.png in Resources */ = {isa = PBXBuildFile; fileRef = B482F18016C554C700A42760 /* asad_full.png */; };
+		B4F90B0516F8A88E0011AFCA /* zahiyee_full.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F90B0116F8A88E0011AFCA /* zahiyee_full.png */; };
+		B4F90B0616F8A88E0011AFCA /* zahiyee_full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F90B0216F8A88E0011AFCA /* zahiyee_full@2x.png */; };
+		B4F90B0716F8A88E0011AFCA /* youssef_full.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F90B0316F8A88E0011AFCA /* youssef_full.png */; };
+		B4F90B0816F8A88E0011AFCA /* youssef_full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F90B0416F8A88E0011AFCA /* youssef_full@2x.png */; };
 		B4F9441B16B0A1F90092EFFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F9441A16B0A1F90092EFFF /* UIKit.framework */; };
 		B4F9441D16B0A1F90092EFFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F9441C16B0A1F90092EFFF /* Foundation.framework */; };
 		B4F9441F16B0A1F90092EFFF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F9441E16B0A1F90092EFFF /* CoreGraphics.framework */; };
@@ -179,6 +183,10 @@
 		B473891E16EEA5410081B69C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B473892016EEA6C80081B69C /* Movie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Movie.mov; sourceTree = "<group>"; };
 		B482F18016C554C700A42760 /* asad_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asad_full.png; sourceTree = "<group>"; };
+		B4F90B0116F8A88E0011AFCA /* zahiyee_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zahiyee_full.png; sourceTree = "<group>"; };
+		B4F90B0216F8A88E0011AFCA /* zahiyee_full@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zahiyee_full@2x.png"; sourceTree = "<group>"; };
+		B4F90B0316F8A88E0011AFCA /* youssef_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youssef_full.png; sourceTree = "<group>"; };
+		B4F90B0416F8A88E0011AFCA /* youssef_full@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "youssef_full@2x.png"; sourceTree = "<group>"; };
 		B4F9441616B0A1F90092EFFF /* lebanon-tablet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lebanon-tablet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4F9441A16B0A1F90092EFFF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B4F9441C16B0A1F90092EFFF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -305,6 +313,8 @@
 		B448449116EBA2650064C9EB /* Zahiyee */ = {
 			isa = PBXGroup;
 			children = (
+				B4F90B0116F8A88E0011AFCA /* zahiyee_full.png */,
+				B4F90B0216F8A88E0011AFCA /* zahiyee_full@2x.png */,
 				6B217CA216DD3783005FBEA6 /* zahiyee_portrait.png */,
 				6B217CA316DD3783005FBEA6 /* zahiyee_portrait@2x.png */,
 			);
@@ -314,6 +324,8 @@
 		B448449216EBA26B0064C9EB /* Youssef */ = {
 			isa = PBXGroup;
 			children = (
+				B4F90B0316F8A88E0011AFCA /* youssef_full.png */,
+				B4F90B0416F8A88E0011AFCA /* youssef_full@2x.png */,
 				6B217CA416DD3783005FBEA6 /* youssef_portrait.png */,
 				6B217CA516DD3783005FBEA6 /* youssef_portrait@2x.png */,
 			);
@@ -574,6 +586,10 @@
 				6B71308316EF8A37004801E7 /* grandfather.mp4 in Resources */,
 				6B71309B16EF9DDC004801E7 /* laytana.m4a in Resources */,
 				6B71309C16EF9DDC004801E7 /* masar.m4a in Resources */,
+				B4F90B0516F8A88E0011AFCA /* zahiyee_full.png in Resources */,
+				B4F90B0616F8A88E0011AFCA /* zahiyee_full@2x.png in Resources */,
+				B4F90B0716F8A88E0011AFCA /* youssef_full.png in Resources */,
+				B4F90B0816F8A88E0011AFCA /* youssef_full@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
