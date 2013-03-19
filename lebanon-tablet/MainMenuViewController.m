@@ -38,6 +38,7 @@
 	NSError *error;
 	
 	gsm.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:songURL error:&error];
+	gsm.audioPlayer.volume = 0.5;
 	[gsm.audioPlayer play];
 }
 

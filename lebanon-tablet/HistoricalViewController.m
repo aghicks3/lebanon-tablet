@@ -7,6 +7,7 @@
 //
 
 #import "HistoricalViewController.h"
+#import "GameStateManager.h"
 
 #define HORIZONTAL_INSET 20
 #define VERTICAL_INSET 80
@@ -44,6 +45,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	[[GameStateManager instance] audioPlayer].volume = 0.1;
 	[self initializeVideoPlayer];
 }
 

@@ -75,13 +75,10 @@
 	Character *character = [[Character alloc] init];
 	NSString *characterName = [sendingButton titleForState:UIControlStateNormal];
     
-    Character *current = [[Character alloc]init];
     for(int i = 0; i < characters.count; i++) {
-        current = [characters objectAtIndex:i];
+        Character *current = [characters objectAtIndex:i];
         if([current.name isEqualToString:characterName]) {
             character = [characters objectAtIndex:i];
-            [_lblAge setText:[NSString stringWithFormat:@"%d",current.age ]];
-            [_lblName setText:current.name];
             break;
         }
         
@@ -93,13 +90,7 @@
     
 	
 	[GameStateManager instance].currentCharacter = character;	
-}
-
-- (IBAction)confirmIconTouched:(id)sender
-{
-    if([GameStateManager instance].currentCharacter) {
-		[self performSegueWithIdentifier:@"SelectCharacterSegue" sender:sender];
-    }
+	[self performSegueWithIdentifier:@"SelectCharacterSegue" sender:sender];
 }
 
 - (void)viewDidLoad
@@ -107,8 +98,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    _lblAge.font = [UIFont fontWithName:@"Garamond" size:30.0f];
-	_lblName.font = [UIFont fontWithName:@"Garamond" size:30.0f];
     characters = [[NSMutableArray alloc]init];
     [self createOrOpenDB];
     
@@ -187,10 +176,6 @@
         [_btnCharD setTitle:[[characters objectAtIndex:3] name] forState:UIControlStateNormal];
         [_btnCharD setTitle:[[characters objectAtIndex:3] name] forState:UIControlStateSelected];
         [_btnCharD setTitle:[[characters objectAtIndex:3] name] forState:UIControlStateHighlighted];
-        
-        [_btnCharE setTitle:[[characters objectAtIndex:4] name] forState:UIControlStateNormal];
-        [_btnCharE setTitle:[[characters objectAtIndex:4] name] forState:UIControlStateSelected];
-        [_btnCharE setTitle:[[characters objectAtIndex:4] name] forState:UIControlStateHighlighted];
     }
 }
 
