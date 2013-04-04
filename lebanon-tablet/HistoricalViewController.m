@@ -69,6 +69,10 @@
 	[_moviePlayer setFullscreen:NO animated:NO];
 }
 
+-(IBAction)skipButtonPressed:(id)sender {
+	[self performSegueWithIdentifier:@"GameOverSegue" sender:self];	
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

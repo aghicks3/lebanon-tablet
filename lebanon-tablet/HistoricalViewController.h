@@ -12,4 +12,7 @@
 @interface HistoricalViewController : UIViewController
 
 @property (strong, nonatomic) MPMoviePlayerController *moviePlayer;
+@property (nonatomic, strong) IBOutlet UIButton *skipVideoButton;
+
+-(IBAction)skipButtonPressed:(id)sender;
 @end
