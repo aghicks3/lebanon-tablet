@@ -14,5 +14,6 @@
 @property (nonatomic, retain) IBOutlet UILabel *ncPopulationLabel;
 @property (nonatomic, retain) IBOutlet UILabel *lebanonPopulationLabel;
 @property (nonatomic, retain) IBOutlet UIImageView *illustrationImageView;
+@property (nonatomic, retain) IBOutlet UIButton *nextButton;
 
 @end

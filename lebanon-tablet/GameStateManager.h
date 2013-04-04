@@ -17,5 +17,6 @@
 @property (nonatomic, retain) AVAudioPlayer *audioPlayer;
 @property (nonatomic, retain) StoryPoint *currentStoryPoint;
 @property (nonatomic, retain) Character *currentCharacter;
+@property (nonatomic, retain) UIFont *buttonFont;
 
 @end

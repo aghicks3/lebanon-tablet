@@ -176,6 +176,11 @@
         [_btnCharD setTitle:[[characters objectAtIndex:3] name] forState:UIControlStateNormal];
         [_btnCharD setTitle:[[characters objectAtIndex:3] name] forState:UIControlStateSelected];
         [_btnCharD setTitle:[[characters objectAtIndex:3] name] forState:UIControlStateHighlighted];
+		
+		_btnCharA.font = [GameStateManager instance].buttonFont;
+		_btnCharB.font = [GameStateManager instance].buttonFont;
+		_btnCharC.font = [GameStateManager instance].buttonFont;
+		_btnCharD.font = [GameStateManager instance].buttonFont;
     }
 }
 

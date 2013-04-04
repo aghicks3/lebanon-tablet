@@ -242,6 +242,7 @@
 		B43B7FD816BA00EE00311DC3 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 		B43B7FDA16BA026A00311DC3 /* GameStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStateManager.h; sourceTree = "<group>"; };
 		B43B7FDB16BA026A00311DC3 /* GameStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStateManager.m; sourceTree = "<group>"; };
+		B4442D8A170DBEC400D32AF4 /* GaramondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GaramondBold.ttf; sourceTree = "<group>"; };
 		B444836016C9BB3F00495A08 /* blank_portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank_portrait.png; sourceTree = "<group>"; };
 		B448446516EB9C3A0064C9EB /* hind_e_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hind_e_1.png; sourceTree = "<group>"; };
 		B448446616EB9C3A0064C9EB /* hind_e_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hind_e_1@2x.png"; sourceTree = "<group>"; };
@@ -510,6 +511,7 @@
 		B4F9442116B0A1F90092EFFF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B4442D8A170DBEC400D32AF4 /* GaramondBold.ttf */,
 				6B71309916EF9DDC004801E7 /* laytana.m4a */,
 				6B71309A16EF9DDC004801E7 /* masar.m4a */,
 				6B71308216EF8A37004801E7 /* grandfather.mp4 */,

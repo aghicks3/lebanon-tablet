@@ -30,9 +30,9 @@
 	// Do any additional setup after loading the view.
 	_titleLabel.font = [UIFont fontWithName:@"Garamond" size:100.0f];
 	_subtitleLabel.font = [UIFont fontWithName:@"Garamond" size:30.0f];
-	
 	GameStateManager *gsm = [GameStateManager instance];
 	
+	_playButton.font = gsm.buttonFont;
 	NSURL *songURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"laytana" ofType:@"m4a"]];
 	
 	NSError *error;

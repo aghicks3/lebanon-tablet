@@ -10,6 +10,9 @@
 
 @interface ChoiceViewController : UIViewController
 
+@property (nonatomic, retain) IBOutlet UIButton *stayButton;
+@property (nonatomic, retain) IBOutlet UIButton *emigrateButton;
+
 -(IBAction)stayButtonTouched:(id)sender;
 -(IBAction)leaveButtonTouched:(id)sender;
 

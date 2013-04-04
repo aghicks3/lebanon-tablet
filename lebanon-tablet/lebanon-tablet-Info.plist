@@ -37,6 +37,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>GaramondBold.ttf</string>
 		<string>Garamond.ttf</string>
 	</array>
 	<key>UIMainStoryboardFile</key>

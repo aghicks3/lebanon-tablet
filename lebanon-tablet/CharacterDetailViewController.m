@@ -40,6 +40,31 @@
     self.lblEcon.text = selectedCharacter.economicStatus;
     self.lblOcc.text = selectedCharacter.occupation;
     self.tvFamily.text = selectedCharacter.family;
+
+	UIFont *labelFont = [UIFont fontWithName:@"Garamond" size:20.0f];
+//	UIFont *buttonFont = [UIFont fontWithName:@"Garamond Bold" size:20.0f];
+	
+	self.lblName.font = labelFont;
+    self.lblAge.font = labelFont;
+    self.lblDoB.font = labelFont;
+    self.lblGender.font = labelFont;
+    self.lblEducation.font = labelFont;
+    self.lblEcon.font = labelFont;
+    self.lblOcc.font = labelFont;
+    self.tvFamily.font = labelFont;
+	
+	self.profileTitle.font = [UIFont fontWithName:@"Garamond" size:34.0f];
+    self.nameTitle.font = labelFont;
+    self.ageTitle.font = labelFont;
+    self.dobTitle.font = labelFont;
+    self.genderTitle.font = labelFont;
+    self.educationTitle.font = labelFont;
+    self.econTitle.font = labelFont;
+    self.occTitle.font = labelFont;
+    self.familyTitle.font = labelFont;
+	
+	self.prevButton.font = [GameStateManager instance].buttonFont;
+	self.nextButton.font = [GameStateManager instance].buttonFont;
 	
     self.portraitImage.image = selectedCharacter.portrait;
     self.fullBodyImage.image = selectedCharacter.fullBodyImage;

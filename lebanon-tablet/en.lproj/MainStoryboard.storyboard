@@ -62,6 +62,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="playButton" destination="NfM-vh-E1H" id="Rx3-bn-4EA"/>
                         <outlet property="subtitleLabel" destination="OEt-yv-6qK" id="KiI-Ba-epv"/>
                         <outlet property="titleLabel" destination="ndL-O3-uer" id="AdT-3X-TVY"/>
                     </connections>
@@ -384,7 +385,13 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="ageTitle" destination="I7x-xi-5lu" id="107-Kr-DFT"/>
+                        <outlet property="dobTitle" destination="mju-YD-GO4" id="Oxc-hz-AtP"/>
+                        <outlet property="econTitle" destination="F1M-kZ-VkG" id="Jmy-7y-ghM"/>
+                        <outlet property="educationTitle" destination="cr0-Ti-UFc" id="q4u-YQ-cPR"/>
+                        <outlet property="familyTitle" destination="kwY-bP-esv" id="Fdg-Bt-mCy"/>
                         <outlet property="fullBodyImage" destination="RsY-ZH-rdo" id="nCE-pP-CbL"/>
+                        <outlet property="genderTitle" destination="QWa-OS-uaI" id="kxw-xp-5ty"/>
                         <outlet property="lblAge" destination="ZCF-Sr-CgP" id="UjS-Nv-THI"/>
                         <outlet property="lblDoB" destination="KUd-eq-0Er" id="j6I-lv-mhi"/>
                         <outlet property="lblEcon" destination="KcR-K2-q9P" id="AAc-hR-sXY"/>
@@ -392,7 +399,12 @@
                         <outlet property="lblGender" destination="abe-33-zCc" id="ah1-GC-JNt"/>
                         <outlet property="lblName" destination="lim-9N-i0N" id="8z1-0d-oGH"/>
                         <outlet property="lblOcc" destination="BEL-ew-JRD" id="e9s-YI-NtG"/>
+                        <outlet property="nameTitle" destination="2Tc-ah-Ilx" id="aZc-Z4-iPV"/>
+                        <outlet property="nextButton" destination="SIX-zD-BRJ" id="qUC-vP-vlo"/>
+                        <outlet property="occTitle" destination="b4w-dT-rJc" id="mDX-Sv-nj9"/>
                         <outlet property="portraitImage" destination="t6w-IF-nJo" id="Pla-Gx-c2F"/>
+                        <outlet property="prevButton" destination="PP0-eO-oAl" id="fc9-eg-0Dc"/>
+                        <outlet property="profileTitle" destination="DVm-V3-ol4" id="meU-Er-36O"/>
                         <outlet property="tvFamily" destination="Pe1-OL-Rfu" id="6pq-lS-C15"/>
                     </connections>
                 </viewController>
@@ -473,6 +485,7 @@
                         <outlet property="illustrationImageView" destination="FnJ-1j-KZ1" id="z31-8u-DH1"/>
                         <outlet property="lebanonPopulationLabel" destination="PV5-3w-QLD" id="bcC-sG-RNx"/>
                         <outlet property="ncPopulationLabel" destination="qfY-kf-pQr" id="Afy-qy-s5d"/>
+                        <outlet property="nextButton" destination="fC4-ex-A79" id="vwF-lh-ha4"/>
                         <outlet property="yearLabel" destination="IOh-e3-QpH" id="KNx-Sd-lT9"/>
                     </connections>
                 </viewController>
@@ -536,6 +549,8 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="emigrateButton" destination="7HP-VS-Oal" id="pg2-76-HYp"/>
+                        <outlet property="stayButton" destination="Oa4-P9-RNN" id="hTt-iU-KjI"/>
                         <segue destination="Uj1-Qo-1oP" kind="modal" identifier="NextStoryPointSegue" id="9as-tf-7WY"/>
                         <segue destination="eLb-jF-rM0" kind="modal" identifier="ConclusionSeque" modalTransitionStyle="crossDissolve" id="JvQ-yh-LSP"/>
                     </connections>
@@ -644,6 +659,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="illustrationImageView" destination="HSe-Lq-al8" id="J4k-FO-yox"/>
+                        <outlet property="nextButton" destination="AWE-8P-1Xs" id="aGm-SG-QdD"/>
                         <outlet property="yearLabel" destination="o8H-Sa-RV5" id="gVK-53-w6N"/>
                     </connections>
                 </viewController>
@@ -707,7 +723,13 @@
         <class className="CharacterDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CharacterDetailViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="ageTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dobTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="econTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="educationTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="familyTitle" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="fullBodyImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="genderTitle" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="lblAge" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="lblDoB" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="lblEcon" candidateClass="UILabel"/>
@@ -715,7 +737,12 @@
                 <relationship kind="outlet" name="lblGender" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="lblName" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="lblOcc" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nextButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="occTitle" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="portraitImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="prevButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="profileTitle" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="tvFamily" candidateClass="UITextView"/>
             </relationships>
         </class>
@@ -734,12 +761,17 @@
             <relationships>
                 <relationship kind="action" name="leaveButtonTouched:"/>
                 <relationship kind="action" name="stayButtonTouched:"/>
+                <relationship kind="outlet" name="emigrateButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="playButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="stayButton" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="ConclusionViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ConclusionViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="illustrationImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="nex" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="nextButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="yearLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
@@ -760,6 +792,7 @@
         <class className="MainMenuViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainMenuViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="playButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="subtitleLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
             </relationships>
@@ -773,6 +806,7 @@
                 <relationship kind="outlet" name="illustrationImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="lebanonPopulationLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="ncPopulationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nextButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="yearLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
