@@ -306,8 +306,8 @@
 		B4F9445516B0A3DD0092EFFF /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
 		B4F9445716B0B0D20092EFFF /* ChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceViewController.h; sourceTree = "<group>"; };
 		B4F9445816B0B0D20092EFFF /* ChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceViewController.m; sourceTree = "<group>"; };
-		B4F9446716B0C0740092EFFF /* cedaricon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cedaricon72.png; sourceTree = "<group>"; };
-		B4F9446916B0C07F0092EFFF /* cedaricon144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cedaricon144.png; sourceTree = "<group>"; };
+		B4F9446716B0C0740092EFFF /* cedaricon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cedaricon72.png; path = ../cedaricon72.png; sourceTree = "<group>"; };
+		B4F9446916B0C07F0092EFFF /* cedaricon144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cedaricon144.png; path = ../cedaricon144.png; sourceTree = "<group>"; };
 		B4FD9D3F170DAEFB0050EC15 /* stay_in_lebanon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stay_in_lebanon.png; sourceTree = "<group>"; };
 		B4FD9D40170DAEFB0050EC15 /* stay_in_lebanon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stay_in_lebanon@2x.png"; sourceTree = "<group>"; };
 		DC80597A16CC7B7F00174441 /* As'ad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "As'ad.png"; sourceTree = "<group>"; };
@@ -466,8 +466,6 @@
 		B4F9440B16B0A1F90092EFFF = {
 			isa = PBXGroup;
 			children = (
-				B4F9446916B0C07F0092EFFF /* cedaricon144.png */,
-				B4F9446716B0C0740092EFFF /* cedaricon72.png */,
 				B4F9442016B0A1F90092EFFF /* lebanon-tablet */,
 				B4F9441916B0A1F90092EFFF /* Frameworks */,
 				B4F9441716B0A1F90092EFFF /* Products */,
@@ -579,6 +577,8 @@
 		B4FD9D43170DAF6B0050EC15 /* Miscellaneous */ = {
 			isa = PBXGroup;
 			children = (
+				B4F9446916B0C07F0092EFFF /* cedaricon144.png */,
+				B4F9446716B0C0740092EFFF /* cedaricon72.png */,
 				B448449316EBA2D30064C9EB /* banner-top.png */,
 				B448449416EBA2D30064C9EB /* banner-top@2x.png */,
 				DC836C2D16E90DDB00E07FB5 /* blank.png */,
