@@ -134,7 +134,6 @@
 		B4F9442F16B0A1F90092EFFF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F9442E16B0A1F90092EFFF /* Default@2x.png */; };
 		B4F9443116B0A1F90092EFFF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F9443016B0A1F90092EFFF /* Default-568h@2x.png */; };
 		B4F9443416B0A1F90092EFFF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4F9443216B0A1F90092EFFF /* MainStoryboard.storyboard */; };
-		B4F9443716B0A1F90092EFFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9443616B0A1F90092EFFF /* ViewController.m */; };
 		B4F9443F16B0A2250092EFFF /* StoryPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9443E16B0A2250092EFFF /* StoryPoint.m */; };
 		B4F9444416B0A2900092EFFF /* StoryPointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9444316B0A2900092EFFF /* StoryPointViewController.m */; };
 		B4F9444716B0A2E70092EFFF /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9444616B0A2E70092EFFF /* MainMenuViewController.m */; };
@@ -289,8 +288,6 @@
 		B4F9442E16B0A1F90092EFFF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B4F9443016B0A1F90092EFFF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B4F9443316B0A1F90092EFFF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		B4F9443516B0A1F90092EFFF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B4F9443616B0A1F90092EFFF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B4F9443D16B0A2250092EFFF /* StoryPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryPoint.h; sourceTree = "<group>"; };
 		B4F9443E16B0A2250092EFFF /* StoryPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryPoint.m; sourceTree = "<group>"; };
 		B4F9444216B0A2900092EFFF /* StoryPointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryPointViewController.h; sourceTree = "<group>"; };
@@ -563,8 +560,6 @@
 				B4F9444616B0A2E70092EFFF /* MainMenuViewController.m */,
 				B4F9444216B0A2900092EFFF /* StoryPointViewController.h */,
 				B4F9444316B0A2900092EFFF /* StoryPointViewController.m */,
-				B4F9443516B0A1F90092EFFF /* ViewController.h */,
-				B4F9443616B0A1F90092EFFF /* ViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -790,7 +785,6 @@
 			files = (
 				B4F9442716B0A1F90092EFFF /* main.m in Sources */,
 				B4F9442B16B0A1F90092EFFF /* AppDelegate.m in Sources */,
-				B4F9443716B0A1F90092EFFF /* ViewController.m in Sources */,
 				B4F9443F16B0A2250092EFFF /* StoryPoint.m in Sources */,
 				B4F9444416B0A2900092EFFF /* StoryPointViewController.m in Sources */,
 				B4F9444716B0A2E70092EFFF /* MainMenuViewController.m in Sources */,
