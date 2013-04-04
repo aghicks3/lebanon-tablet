@@ -63,8 +63,8 @@
     self.occTitle.font = labelFont;
     self.familyTitle.font = labelFont;
 	
-	self.prevButton.font = [GameStateManager instance].buttonFont;
-	self.nextButton.font = [GameStateManager instance].buttonFont;
+	self.prevButton.titleLabel.font = [GameStateManager instance].buttonFont;
+	self.nextButton.titleLabel.font = [GameStateManager instance].buttonFont;
 	
     self.portraitImage.image = selectedCharacter.portrait;
     self.fullBodyImage.image = selectedCharacter.fullBodyImage;

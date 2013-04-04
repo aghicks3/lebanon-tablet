@@ -16,7 +16,7 @@ static GameStateManager *_gameStateManager = nil;
 +(GameStateManager *)instance {
 	if(!_gameStateManager) {
 		_gameStateManager = [[self alloc] init];
-		_gameStateManager.buttonFont = [UIFont fontWithName:@"Garamond" size:20.0f];
+		_gameStateManager.buttonFont = [UIFont fontWithName:@"Garamond-Bold" size:20.0f];
 	}
 	
 	return _gameStateManager;

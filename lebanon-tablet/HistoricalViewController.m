@@ -46,7 +46,7 @@
 {
     [super viewDidLoad];
 	
-	_skipVideoButton.font = [GameStateManager instance].buttonFont;
+	_skipVideoButton.titleLabel.font = [GameStateManager instance].buttonFont;
 
 	[[GameStateManager instance] audioPlayer].volume = 0.1;
 	[self initializeVideoPlayer];

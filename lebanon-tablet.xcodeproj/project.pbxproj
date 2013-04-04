@@ -93,6 +93,7 @@
 		B40F282D16EBBBC5007649E9 /* asad_full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F282C16EBBBC5007649E9 /* asad_full@2x.png */; };
 		B43B7FD916BA00EE00311DC3 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B7FD816BA00EE00311DC3 /* Character.m */; };
 		B43B7FDC16BA026A00311DC3 /* GameStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B7FDB16BA026A00311DC3 /* GameStateManager.m */; };
+		B4442D8B170DC1EF00D32AF4 /* GaramondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4442D8A170DBEC400D32AF4 /* GaramondBold.ttf */; };
 		B444836116C9BB3F00495A08 /* blank_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = B444836016C9BB3F00495A08 /* blank_portrait.png */; };
 		B448447916EB9C3A0064C9EB /* hind_e_1.png in Resources */ = {isa = PBXBuildFile; fileRef = B448446516EB9C3A0064C9EB /* hind_e_1.png */; };
 		B448447A16EB9C3A0064C9EB /* hind_e_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B448446616EB9C3A0064C9EB /* hind_e_1@2x.png */; };
@@ -511,19 +512,19 @@
 		B4F9442116B0A1F90092EFFF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B4442D8A170DBEC400D32AF4 /* GaramondBold.ttf */,
-				6B71309916EF9DDC004801E7 /* laytana.m4a */,
-				6B71309A16EF9DDC004801E7 /* masar.m4a */,
-				6B71308216EF8A37004801E7 /* grandfather.mp4 */,
-				B40F282A16EBB462007649E9 /* Garamond.ttf */,
-				6BC012F716D3E51800149DD9 /* Journey.sqlite */,
-				B4F9442216B0A1F90092EFFF /* lebanon-tablet-Info.plist */,
-				B4F9442316B0A1F90092EFFF /* InfoPlist.strings */,
-				B4F9442616B0A1F90092EFFF /* main.m */,
-				B4F9442816B0A1F90092EFFF /* lebanon-tablet-Prefix.pch */,
+				B4F9443016B0A1F90092EFFF /* Default-568h@2x.png */,
 				B4F9442C16B0A1F90092EFFF /* Default.png */,
 				B4F9442E16B0A1F90092EFFF /* Default@2x.png */,
-				B4F9443016B0A1F90092EFFF /* Default-568h@2x.png */,
+				B40F282A16EBB462007649E9 /* Garamond.ttf */,
+				B4442D8A170DBEC400D32AF4 /* GaramondBold.ttf */,
+				6B71308216EF8A37004801E7 /* grandfather.mp4 */,
+				B4F9442316B0A1F90092EFFF /* InfoPlist.strings */,
+				6BC012F716D3E51800149DD9 /* Journey.sqlite */,
+				6B71309916EF9DDC004801E7 /* laytana.m4a */,
+				B4F9442216B0A1F90092EFFF /* lebanon-tablet-Info.plist */,
+				B4F9442816B0A1F90092EFFF /* lebanon-tablet-Prefix.pch */,
+				B4F9442616B0A1F90092EFFF /* main.m */,
+				6B71309A16EF9DDC004801E7 /* masar.m4a */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -649,6 +650,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4442D8B170DC1EF00D32AF4 /* GaramondBold.ttf in Resources */,
 				B4F9442516B0A1F90092EFFF /* InfoPlist.strings in Resources */,
 				B4F9442D16B0A1F90092EFFF /* Default.png in Resources */,
 				B4F9442F16B0A1F90092EFFF /* Default@2x.png in Resources */,

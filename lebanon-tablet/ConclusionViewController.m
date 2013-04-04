@@ -38,7 +38,7 @@
 	self.yearLabel.font = [UIFont fontWithName:@"Garamond" size:50.0f];
 	self.illustrationImageView.image = currentStoryPoint.illustration;
 	
-	_nextButton.font = [GameStateManager instance].buttonFont;
+	_nextButton.titleLabel.font = [GameStateManager instance].buttonFont;
 }
 
 - (void)didReceiveMemoryWarning
