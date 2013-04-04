@@ -547,24 +547,24 @@
 		B4F9444116B0A2350092EFFF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B4F9443516B0A1F90092EFFF /* ViewController.h */,
-				B4F9443616B0A1F90092EFFF /* ViewController.m */,
-				B4F9444216B0A2900092EFFF /* StoryPointViewController.h */,
-				B4F9444316B0A2900092EFFF /* StoryPointViewController.m */,
-				B4F9444516B0A2E70092EFFF /* MainMenuViewController.h */,
-				B4F9444616B0A2E70092EFFF /* MainMenuViewController.m */,
-				B4F9444816B0A2F80092EFFF /* CharacterSelectionViewController.h */,
-				B4F9444916B0A2F80092EFFF /* CharacterSelectionViewController.m */,
 				B4F9444B16B0A3080092EFFF /* CharacterDetailViewController.h */,
 				B4F9444C16B0A3080092EFFF /* CharacterDetailViewController.m */,
-				B4F9444E16B0A3C60092EFFF /* ConclusionViewController.h */,
-				B4F9444F16B0A3C60092EFFF /* ConclusionViewController.m */,
-				B4F9445116B0A3D40092EFFF /* HistoricalViewController.h */,
-				B4F9445216B0A3D40092EFFF /* HistoricalViewController.m */,
-				B4F9445416B0A3DD0092EFFF /* GameOverViewController.h */,
-				B4F9445516B0A3DD0092EFFF /* GameOverViewController.m */,
+				B4F9444816B0A2F80092EFFF /* CharacterSelectionViewController.h */,
+				B4F9444916B0A2F80092EFFF /* CharacterSelectionViewController.m */,
 				B4F9445716B0B0D20092EFFF /* ChoiceViewController.h */,
 				B4F9445816B0B0D20092EFFF /* ChoiceViewController.m */,
+				B4F9444E16B0A3C60092EFFF /* ConclusionViewController.h */,
+				B4F9444F16B0A3C60092EFFF /* ConclusionViewController.m */,
+				B4F9445416B0A3DD0092EFFF /* GameOverViewController.h */,
+				B4F9445516B0A3DD0092EFFF /* GameOverViewController.m */,
+				B4F9445116B0A3D40092EFFF /* HistoricalViewController.h */,
+				B4F9445216B0A3D40092EFFF /* HistoricalViewController.m */,
+				B4F9444516B0A2E70092EFFF /* MainMenuViewController.h */,
+				B4F9444616B0A2E70092EFFF /* MainMenuViewController.m */,
+				B4F9444216B0A2900092EFFF /* StoryPointViewController.h */,
+				B4F9444316B0A2900092EFFF /* StoryPointViewController.m */,
+				B4F9443516B0A1F90092EFFF /* ViewController.h */,
+				B4F9443616B0A1F90092EFFF /* ViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";

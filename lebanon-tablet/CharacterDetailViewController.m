@@ -66,6 +66,10 @@
 	storyPoint5.year = 1905;
 	storyPoint5.illustration = selectedCharacter.story5;
     
+	StoryPoint *finalStoryPoint = [[StoryPoint alloc] init];
+	finalStoryPoint.year = 1905;
+	finalStoryPoint.illustration = [UIImage imageNamed:@"stay_in_lebanon.png"];
+	
 	StoryPoint *emigration1 = [[StoryPoint alloc] init];
 	emigration1.year = 1890;
 	emigration1.illustration = selectedCharacter.emigration1;
@@ -90,7 +94,7 @@
 	storyPoint2.nextStoryPoint = storyPoint3;
 	storyPoint3.nextStoryPoint = storyPoint4;
 	storyPoint4.nextStoryPoint = storyPoint5;
-	storyPoint5.nextStoryPoint = storyPoint5;
+	storyPoint5.nextStoryPoint = finalStoryPoint;
 	
 	storyPoint1.emigrationStoryPoint = emigration1;
 	storyPoint2.emigrationStoryPoint = emigration2;

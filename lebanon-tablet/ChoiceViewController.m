@@ -9,6 +9,7 @@
 #import "ChoiceViewController.h"
 #import "GameStateManager.h"
 #import "StoryPoint.h"
+#import "Character.h"
 
 @interface ChoiceViewController ()
 
@@ -31,11 +32,17 @@
 	NSLog(@"%@", [sendingButton titleForState:UIControlStateNormal]);
 	
 	//update the game state
-	[GameStateManager instance].currentStoryPoint = [GameStateManager instance].currentStoryPoint.nextStoryPoint;
+	Character *character = [GameStateManager instance].currentCharacter;
+	StoryPoint *storyPoint = [GameStateManager instance].currentStoryPoint;
+	
+	[GameStateManager instance].currentStoryPoint = storyPoint.nextStoryPoint;
 	
 	//perform the appropriate segue based on the game state
-	// TODO: this should not neccessarily perform this segue
-	[self performSegueWithIdentifier:@"NextStoryPointSegue" sender:sender];
+	if( character.story5 == storyPoint.illustration ) {
+		[self performSegueWithIdentifier:@"ConclusionSeque" sender:sender];
+	} else {
+		[self performSegueWithIdentifier:@"NextStoryPointSegue" sender:sender];
+	}
 }
 
 //called when the user presses the "emigrate" button
