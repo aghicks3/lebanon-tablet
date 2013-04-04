@@ -575,25 +575,33 @@
 		B4F9446D16B0C6E70092EFFF /* images */ = {
 			isa = PBXGroup;
 			children = (
-				B4FD9D3F170DAEFB0050EC15 /* stay_in_lebanon.png */,
-				B4FD9D40170DAEFB0050EC15 /* stay_in_lebanon@2x.png */,
-				B448449316EBA2D30064C9EB /* banner-top.png */,
-				B448449416EBA2D30064C9EB /* banner-top@2x.png */,
-				DC836C3116E917BF00E07FB5 /* blank_full.png */,
-				DC836C2D16E90DDB00E07FB5 /* blank.png */,
-				DC836C2E16E90DDB00E07FB5 /* blank@2x.png */,
+				B4FD9D43170DAF6B0050EC15 /* Miscellaneous */,
 				B448446316EB9C110064C9EB /* As'ad */,
 				B448446416EB9C280064C9EB /* Hind */,
-				B448449116EBA2650064C9EB /* Zahiyee */,
 				B448449216EBA26B0064C9EB /* Youssef */,
-				B444836016C9BB3F00495A08 /* blank_portrait.png */,
-				6B29B84516B1A28400EFC77D /* storypanels.png */,
-				6B29B84116B1A10700EFC77D /* lebanon.png */,
-				6B29B84216B1A10700EFC77D /* nc.png */,
-				6B29B83C16B19F9400EFC77D /* bodymockup.png */,
-				6B29B83D16B19F9400EFC77D /* portraitmockup.png */,
+				B448449116EBA2650064C9EB /* Zahiyee */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		B4FD9D43170DAF6B0050EC15 /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				B448449316EBA2D30064C9EB /* banner-top.png */,
+				B448449416EBA2D30064C9EB /* banner-top@2x.png */,
+				DC836C2D16E90DDB00E07FB5 /* blank.png */,
+				DC836C2E16E90DDB00E07FB5 /* blank@2x.png */,
+				DC836C3116E917BF00E07FB5 /* blank_full.png */,
+				B444836016C9BB3F00495A08 /* blank_portrait.png */,
+				6B29B83C16B19F9400EFC77D /* bodymockup.png */,
+				6B29B84116B1A10700EFC77D /* lebanon.png */,
+				6B29B84216B1A10700EFC77D /* nc.png */,
+				6B29B83D16B19F9400EFC77D /* portraitmockup.png */,
+				B4FD9D3F170DAEFB0050EC15 /* stay_in_lebanon.png */,
+				B4FD9D40170DAEFB0050EC15 /* stay_in_lebanon@2x.png */,
+				6B29B84516B1A28400EFC77D /* storypanels.png */,
+			);
+			name = Miscellaneous;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
