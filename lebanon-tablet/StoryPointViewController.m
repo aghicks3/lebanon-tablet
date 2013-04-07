@@ -42,6 +42,9 @@
 	self.lebanonPopulationLabel.font = [UIFont fontWithName:@"Garamond" size:22.0f];
 	self.illustrationImageView.image = currentStoryPoint.illustration;
 	_nextButton.titleLabel.font = [GameStateManager instance].buttonFont;
+    self.LeaveButton.alpha = 0.0;
+    self.StayButton.alpha = 0.0;
+    self.illustrationMask.alpha=0.0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,4 +53,45 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)StayButtonAction:(id)sender {
+    self.LeaveButton.alpha = 0.0;
+    self.StayButton.alpha = 0.0;
+    self.ContinueButton.alpha = 1.0;
+    
+    Character *character = [GameStateManager instance].currentCharacter;
+	StoryPoint *storyPoint = [GameStateManager instance].currentStoryPoint;
+	
+	[GameStateManager instance].currentStoryPoint = storyPoint.nextStoryPoint;
+    
+	self.illustrationImageView.image = [GameStateManager instance].currentStoryPoint.illustration;
+    self.illustrationMask.alpha=0.0;
+    
+    //perform the appropriate segue based on the game state
+	/*if( character.story5 == storyPoint.illustration ) {
+		[self performSegueWithIdentifier:@"ConclusionSeque" sender:sender];
+	} else {
+		[self performSegueWithIdentifier:@"NextStoryPointSegue" sender:sender];
+	}*/
+    
+    
+}
+- (IBAction)ContinueButtonAction:(id)sender {
+    self.LeaveButton.alpha = 1.0;
+    self.StayButton.alpha = 1.0;
+    self.ContinueButton.alpha = 0.0;
+    self.illustrationMask.alpha=0.4;
+    
+    
+    
+}
+- (IBAction)LeaveButtonAction:(id)sender {
+    if(self.LeaveButton.alpha == 1.0)
+    {
+        [GameStateManager instance].currentStoryPoint = [GameStateManager instance].currentStoryPoint.emigrationStoryPoint;
+        
+        [self performSegueWithIdentifier:@"ConclusionSegue" sender:sender];
+    }
+    
+}
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -421,19 +421,6 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="asad_s_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="FnJ-1j-KZ1"/>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fC4-ex-A79">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Continue">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="M30-uQ-0cx" kind="modal" identifier="ChoiceSegue" modalTransitionStyle="crossDissolve" id="C1x-Up-ngh"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="banner-top.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hzy-kJ-dEY"/>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1890" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOh-e3-QpH">
                                 <constraints>
@@ -459,22 +446,82 @@
                                 <color key="textColor" red="0.45098039220000002" green="0.1137254902" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKQ-UD-WuR">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1004" id="D8H-aw-I79"/>
+                                    <constraint firstAttribute="height" constant="603" id="t2o-3i-Lr4"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24o-LA-CK2">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="tCT-d3-fgl"/>
+                                    <constraint firstAttribute="height" constant="219" id="uPv-Wu-Scq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Stay in Lebanon">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="StayButtonAction:" destination="Uj1-Qo-1oP" eventType="touchUpInside" id="s0F-cK-KGb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bo3-bG-SyV">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="282" id="DCa-cI-mew"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Emigrate to America">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="LeaveButtonAction:" destination="Uj1-Qo-1oP" eventType="touchUpInside" id="ZzN-jU-oZf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fC4-ex-A79">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ContinueButtonAction:" destination="Uj1-Qo-1oP" eventType="touchUpInside" id="c8t-Yb-2CY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.53725490200000003" green="0.58823529409999997" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="fC4-ex-A79" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0jD-cF-QXK"/>
+                            <constraint firstItem="24o-LA-CK2" firstAttribute="bottom" secondItem="bo3-bG-SyV" secondAttribute="bottom" type="default" id="10q-23-lNv"/>
                             <constraint firstAttribute="bottom" secondItem="fC4-ex-A79" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="7CC-ki-pZz"/>
+                            <constraint firstItem="24o-LA-CK2" firstAttribute="leading" secondItem="mOV-ZF-my0" secondAttribute="leading" constant="135" id="BvK-E0-aho"/>
+                            <constraint firstItem="24o-LA-CK2" firstAttribute="top" secondItem="bo3-bG-SyV" secondAttribute="top" type="default" id="DeJ-Oa-QPq"/>
                             <constraint firstItem="PV5-3w-QLD" firstAttribute="leading" secondItem="mOV-ZF-my0" secondAttribute="leading" constant="942" id="Fcu-t8-Pmw"/>
                             <constraint firstItem="FnJ-1j-KZ1" firstAttribute="top" secondItem="mOV-ZF-my0" secondAttribute="top" type="default" id="MLV-oj-cBP"/>
                             <constraint firstItem="PV5-3w-QLD" firstAttribute="baseline" secondItem="qfY-kf-pQr" secondAttribute="baseline" type="default" id="Uad-CK-eeu"/>
                             <constraint firstItem="IOh-e3-QpH" firstAttribute="top" secondItem="mOV-ZF-my0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Vqx-Mc-3Mj"/>
                             <constraint firstItem="FnJ-1j-KZ1" firstAttribute="leading" secondItem="mOV-ZF-my0" secondAttribute="leading" type="default" id="WHs-5u-caX"/>
                             <constraint firstItem="IOh-e3-QpH" firstAttribute="bottom" secondItem="qfY-kf-pQr" secondAttribute="bottom" type="default" id="WgU-eZ-mP8"/>
+                            <constraint firstItem="EKQ-UD-WuR" firstAttribute="top" secondItem="mOV-ZF-my0" secondAttribute="top" constant="118" id="WxM-vd-dfD"/>
                             <constraint firstItem="Hzy-kJ-dEY" firstAttribute="top" secondItem="mOV-ZF-my0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="XB5-D8-dmA"/>
                             <constraint firstItem="Hzy-kJ-dEY" firstAttribute="leading" secondItem="mOV-ZF-my0" secondAttribute="leading" type="default" id="ZT1-vK-GUu"/>
+                            <constraint firstItem="Hzy-kJ-dEY" firstAttribute="bottom" secondItem="IOh-e3-QpH" secondAttribute="bottom" type="default" id="Zf7-ec-d3G"/>
+                            <constraint firstItem="EKQ-UD-WuR" firstAttribute="leading" secondItem="mOV-ZF-my0" secondAttribute="leading" constant="11" id="c8M-Af-LSC"/>
                             <constraint firstItem="qfY-kf-pQr" firstAttribute="leading" secondItem="mOV-ZF-my0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dEk-Ji-CHj"/>
-                            <constraint firstItem="qfY-kf-pQr" firstAttribute="bottom" secondItem="Hzy-kJ-dEY" secondAttribute="bottom" type="default" id="hML-5e-tal"/>
+                            <constraint firstAttribute="trailing" secondItem="bo3-bG-SyV" secondAttribute="trailing" constant="140" id="jHc-cp-Peb"/>
                             <constraint firstItem="IOh-e3-QpH" firstAttribute="centerX" secondItem="Hzy-kJ-dEY" secondAttribute="centerX" type="default" id="kRx-CI-Ky1"/>
+                            <constraint firstItem="24o-LA-CK2" firstAttribute="top" secondItem="mOV-ZF-my0" secondAttribute="top" constant="261" id="nac-lG-eBt"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -482,16 +529,21 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="ContinueButton" destination="fC4-ex-A79" id="5Ll-tP-GAv"/>
+                        <outlet property="LeaveButton" destination="bo3-bG-SyV" id="rcS-1J-4HU"/>
+                        <outlet property="StayButton" destination="24o-LA-CK2" id="Agy-Gg-Zy5"/>
                         <outlet property="illustrationImageView" destination="FnJ-1j-KZ1" id="z31-8u-DH1"/>
+                        <outlet property="illustrationMask" destination="EKQ-UD-WuR" id="DoI-rk-viE"/>
                         <outlet property="lebanonPopulationLabel" destination="PV5-3w-QLD" id="bcC-sG-RNx"/>
                         <outlet property="ncPopulationLabel" destination="qfY-kf-pQr" id="Afy-qy-s5d"/>
                         <outlet property="nextButton" destination="fC4-ex-A79" id="vwF-lh-ha4"/>
                         <outlet property="yearLabel" destination="IOh-e3-QpH" id="KNx-Sd-lT9"/>
+                        <segue destination="eLb-jF-rM0" kind="modal" identifier="ConclusionSegue" id="pdb-uI-9ld"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQr-AZ-aTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2072" y="-537"/>
+            <point key="canvasLocation" x="-2066" y="-537"/>
         </scene>
         <!--Choice View Controller-->
         <scene sceneID="Cvv-ym-DOm">
@@ -762,7 +814,6 @@
                 <relationship kind="action" name="leaveButtonTouched:"/>
                 <relationship kind="action" name="stayButtonTouched:"/>
                 <relationship kind="outlet" name="emigrateButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="playButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="stayButton" candidateClass="UIButton"/>
             </relationships>
         </class>
@@ -770,7 +821,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ConclusionViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="illustrationImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="nex" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="nextButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="yearLabel" candidateClass="UILabel"/>
             </relationships>
@@ -803,7 +853,14 @@
         <class className="StoryPointViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/StoryPointViewController.h"/>
             <relationships>
+                <relationship kind="action" name="ContinueButtonAction:"/>
+                <relationship kind="action" name="LeaveButtonAction:"/>
+                <relationship kind="action" name="StayButtonAction:"/>
+                <relationship kind="outlet" name="ContinueButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="LeaveButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="StayButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="illustrationImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="illustrationMask" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="lebanonPopulationLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="ncPopulationLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nextButton" candidateClass="UIButton"/>
@@ -817,7 +874,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="pdb-uI-9ld"/>
+        <segue reference="9as-tf-7WY"/>
         <segue reference="s50-7g-2LW"/>
-        <segue reference="dOA-7r-Dke"/>
     </inferredMetricsTieBreakers>
 </document>
