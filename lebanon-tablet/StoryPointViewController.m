@@ -39,7 +39,9 @@
 	self.yearLabel.text = [NSString stringWithFormat:@"%i", currentStoryPoint.year];
 	self.yearLabel.font = [UIFont fontWithName:@"Garamond" size:50.0f];
 	self.ncPopulationLabel.font = [UIFont fontWithName:@"Garamond" size:22.0f];
+    self.ncPopulationLabel.text =[NSString stringWithFormat:@"%i", currentStoryPoint.nCPop];
 	self.lebanonPopulationLabel.font = [UIFont fontWithName:@"Garamond" size:22.0f];
+    self.lebanonPopulationLabel.text = [NSString stringWithFormat:@"%i", currentStoryPoint.hammanaPop];
 	self.illustrationImageView.image = currentStoryPoint.illustration;
 	_nextButton.titleLabel.font = [GameStateManager instance].buttonFont;
     self.LeaveButton.alpha = 0.0;
@@ -63,6 +65,10 @@
 	StoryPoint *storyPoint = [GameStateManager instance].currentStoryPoint;
 	
 	[GameStateManager instance].currentStoryPoint = storyPoint.nextStoryPoint;
+    if([GameStateManager instance].currentStoryPoint.nextStoryPoint == NULL)
+    {
+        [self performSegueWithIdentifier:@"ConclusionSegue" sender:sender];
+    }
     
 	self.illustrationImageView.image = [GameStateManager instance].currentStoryPoint.illustration;
     self.illustrationMask.alpha=0.0;
@@ -76,13 +82,36 @@
     
     
 }
+- (void) transition
+{
+    self.LeaveButton.alpha += 0.2;
+    self.StayButton.alpha += 0.2;
+    self.ContinueButton.alpha -= 0.2;
+    self.illustrationMask.alpha += 0.1;
+    [_LeaveButton setNeedsDisplay];
+    [_StayButton setNeedsDisplay];
+    [_ContinueButton setNeedsDisplay];
+    [_illustrationMask setNeedsDisplay];
+    //[NSThread sleepForTimeInterval:0.2];
+    
+}
+
 - (IBAction)ContinueButtonAction:(id)sender {
-    self.LeaveButton.alpha = 1.0;
+    /*self.LeaveButton.alpha = 1.0;
     self.StayButton.alpha = 1.0;
     self.ContinueButton.alpha = 0.0;
-    self.illustrationMask.alpha=0.4;
+    self.illustrationMask.alpha=0.4;*/
     
-    
+    int frames = 5;
+    for(int i=0; i < frames; i++)
+    {
+        //[self performSelector:@selector(transition) withObject:(NULL) afterDelay:(0.5)];
+        [self performSelectorOnMainThread:@selector(transition) withObject:(NULL) waitUntilDone:(NO)];
+        /*self.LeaveButton.alpha += 0.2;
+        self.StayButton.alpha += 0.2;
+        self.ContinueButton.alpha -= 0.2;
+        self.illustrationMask.alpha += 0.1;*/
+    }
     
 }
 - (IBAction)LeaveButtonAction:(id)sender {
