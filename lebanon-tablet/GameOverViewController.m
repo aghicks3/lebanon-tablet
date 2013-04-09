@@ -44,4 +44,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)PlayAgainButton:(id)sender {
+	[self performSegueWithIdentifier:@"RestartSegue" sender:self];
+}
 @end
