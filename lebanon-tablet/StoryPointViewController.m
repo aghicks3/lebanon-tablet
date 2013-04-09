@@ -61,7 +61,6 @@
     self.StayButton.alpha = 0.0;
     self.ContinueButton.alpha = 1.0;
     
-    Character *character = [GameStateManager instance].currentCharacter;
 	StoryPoint *storyPoint = [GameStateManager instance].currentStoryPoint;
 	
 	[GameStateManager instance].currentStoryPoint = storyPoint.nextStoryPoint;
@@ -72,6 +71,9 @@
     
 	self.illustrationImageView.image = [GameStateManager instance].currentStoryPoint.illustration;
     self.illustrationMask.alpha=0.0;
+	self.yearLabel.text = [NSString stringWithFormat:@"%i", [GameStateManager instance].currentStoryPoint.year];
+    self.ncPopulationLabel.text =[NSString stringWithFormat:@"%i", [GameStateManager instance].currentStoryPoint.nCPop];
+    self.lebanonPopulationLabel.text = [NSString stringWithFormat:@"%i", [GameStateManager instance].currentStoryPoint.hammanaPop];
     
     //perform the appropriate segue based on the game state
 	/*if( character.story5 == storyPoint.illustration ) {

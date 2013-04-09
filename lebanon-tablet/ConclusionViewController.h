@@ -13,5 +13,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *yearLabel;
 @property (nonatomic, retain) IBOutlet UIImageView *illustrationImageView;
 @property (nonatomic, retain) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet UILabel *ncPopulationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lebanonPopulationLabel;
 
 @end
