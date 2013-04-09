@@ -143,7 +143,6 @@
 		B4F9445016B0A3C60092EFFF /* ConclusionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9444F16B0A3C60092EFFF /* ConclusionViewController.m */; };
 		B4F9445316B0A3D40092EFFF /* HistoricalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9445216B0A3D40092EFFF /* HistoricalViewController.m */; };
 		B4F9445616B0A3DD0092EFFF /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9445516B0A3DD0092EFFF /* GameOverViewController.m */; };
-		B4F9445916B0B0D20092EFFF /* ChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9445816B0B0D20092EFFF /* ChoiceViewController.m */; };
 		B4F9446816B0C0740092EFFF /* cedaricon72.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F9446716B0C0740092EFFF /* cedaricon72.png */; };
 		B4F9446A16B0C07F0092EFFF /* cedaricon144.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F9446916B0C07F0092EFFF /* cedaricon144.png */; };
 		B4FD9D41170DAEFB0050EC15 /* stay_in_lebanon.png in Resources */ = {isa = PBXBuildFile; fileRef = B4FD9D3F170DAEFB0050EC15 /* stay_in_lebanon.png */; };
@@ -306,8 +305,6 @@
 		B4F9445216B0A3D40092EFFF /* HistoricalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoricalViewController.m; sourceTree = "<group>"; };
 		B4F9445416B0A3DD0092EFFF /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
 		B4F9445516B0A3DD0092EFFF /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
-		B4F9445716B0B0D20092EFFF /* ChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceViewController.h; sourceTree = "<group>"; };
-		B4F9445816B0B0D20092EFFF /* ChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceViewController.m; sourceTree = "<group>"; };
 		B4F9446716B0C0740092EFFF /* cedaricon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cedaricon72.png; path = ../cedaricon72.png; sourceTree = "<group>"; };
 		B4F9446916B0C07F0092EFFF /* cedaricon144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cedaricon144.png; path = ../cedaricon144.png; sourceTree = "<group>"; };
 		B4FD9D3F170DAEFB0050EC15 /* stay_in_lebanon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stay_in_lebanon.png; sourceTree = "<group>"; };
@@ -549,8 +546,6 @@
 				B4F9444C16B0A3080092EFFF /* CharacterDetailViewController.m */,
 				B4F9444816B0A2F80092EFFF /* CharacterSelectionViewController.h */,
 				B4F9444916B0A2F80092EFFF /* CharacterSelectionViewController.m */,
-				B4F9445716B0B0D20092EFFF /* ChoiceViewController.h */,
-				B4F9445816B0B0D20092EFFF /* ChoiceViewController.m */,
 				B4F9444E16B0A3C60092EFFF /* ConclusionViewController.h */,
 				B4F9444F16B0A3C60092EFFF /* ConclusionViewController.m */,
 				B4F9445416B0A3DD0092EFFF /* GameOverViewController.h */,
@@ -797,7 +792,6 @@
 				B4F9445016B0A3C60092EFFF /* ConclusionViewController.m in Sources */,
 				B4F9445316B0A3D40092EFFF /* HistoricalViewController.m in Sources */,
 				B4F9445616B0A3DD0092EFFF /* GameOverViewController.m in Sources */,
-				B4F9445916B0B0D20092EFFF /* ChoiceViewController.m in Sources */,
 				B43B7FD916BA00EE00311DC3 /* Character.m in Sources */,
 				B43B7FDC16BA026A00311DC3 /* GameStateManager.m in Sources */,
 			);

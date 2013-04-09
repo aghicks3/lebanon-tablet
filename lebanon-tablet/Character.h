@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "StoryPoint.h"
 
 
 @interface Character : NSObject
 
+@property (readwrite) int idNum;
 @property (nonatomic, retain) NSString	*name;
 @property (readwrite) int age;
 @property (nonatomic, retain) NSString	*gender;
@@ -21,7 +23,8 @@
 @property (nonatomic, retain) NSString	*economicStatus;
 @property (nonatomic, retain) UIImage	*portrait;
 @property (nonatomic, retain) UIImage	*fullBodyImage;
-@property (nonatomic, retain) UIImage   *story1;
+@property (nonatomic, retain) StoryPoint *story;
+/*@property (nonatomic, retain) UIImage   *story1;
 @property (nonatomic, retain) UIImage   *emigration1;
 @property (nonatomic, retain) UIImage   *story2;
 @property (nonatomic, retain) UIImage   *emigration2;
@@ -30,5 +33,5 @@
 @property (nonatomic, retain) UIImage   *story4;
 @property (nonatomic, retain) UIImage   *emigration4;
 @property (nonatomic, retain) UIImage   *story5;
-@property (nonatomic, retain) UIImage   *emigration5;
+@property (nonatomic, retain) UIImage   *emigration5;*/
 @end

@@ -12,6 +12,11 @@
 #import "StoryPoint.h"
 
 @interface CharacterDetailViewController ()
+{
+    NSMutableArray *stories;
+    sqlite3 *storyDB;
+    NSString *dbPathString;
+}
 
 @end
 
@@ -26,12 +31,96 @@
     return self;
 }
 
+
+- (void)createOrOpenDB
+{
+    //dbPathString = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Journey"];
+    dbPathString = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
+    
+    char *error;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSError *resourceError;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    NSString *txtPath = [documentsDirectory stringByAppendingPathComponent:@"Journey"];
+    
+    if ([fileManager fileExistsAtPath:txtPath]) {
+        [fileManager removeItemAtPath:txtPath error:&resourceError];
+    } else {
+        NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
+        [fileManager copyItemAtPath:resourcePath toPath:txtPath error:&resourceError];
+    }
+    
+    if(![fileManager fileExistsAtPath:dbPathString])
+    {
+        const char *dbPath = [dbPathString UTF8String];
+        
+        //create db here
+        if(sqlite3_open(dbPath, &storyDB)== SQLITE_OK) {
+            const char *sql_stmt = "CREATE TABLE IF NOT EXISTS CHARACTER (nCPop NUMERIC, hammanaPop NUMERIC, year NUMERIC, id INTEGER PRIMARY KEY, owner NUMERIC, image TEXT, type TEXT, parent NUMERIC";
+            sqlite3_exec(storyDB, sql_stmt, NULL, NULL, &error);
+            sqlite3_close(storyDB);
+        }
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	
-	//get the selected character from the GameStateManager
+    //get the selected character from the GameStateManager
 	Character *selectedCharacter = [[GameStateManager instance] currentCharacter];
+    
+    stories = [[NSMutableArray alloc]init];
+    [self createOrOpenDB];
+    
+    sqlite3_stmt *statement;
+    if(sqlite3_open([dbPathString UTF8String], &(storyDB))==SQLITE_OK)
+    {
+        [stories removeAllObjects];
+        /*const char *query_sql = [NSString  stringwithFormat:@"select * from story where owner = %i", selectedCharacter.idNum];*/
+        int idnum = selectedCharacter.idNum;
+        char *query = malloc(35 * sizeof(char));
+        strcpy(query, "select * from story where owner = ");
+        NSString* numString = [NSString stringWithFormat:@"%i", idnum];
+        const char *num = [numString UTF8String];
+        const char *query_sql = strcat(query, num);
+        
+        if(sqlite3_prepare_v2(storyDB, query_sql, -1, &statement, NULL) == SQLITE_OK)
+        {
+            while(sqlite3_step(statement) == SQLITE_ROW)
+            {
+                NSString *nCPop = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 0)];
+                NSString *hammanaPop = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 1)];
+                NSString *year = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 2)];
+                NSString *idNum = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 3)];
+                NSString *owner = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 4)];
+                NSString *image = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 5)];
+                NSString *type = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 6)];
+                NSString *parent = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 7)];
+                
+                
+                
+                StoryPoint *story = [[StoryPoint alloc]init];
+                [story setNCPop:[nCPop intValue]];
+                [story setHammanaPop:[hammanaPop intValue]];
+                [story setYear:[year intValue]];
+                [story setIdNum:[idNum intValue]];
+                [story setOwner:[owner intValue]];
+                [story setIllustration:[UIImage imageNamed:image]];
+                [story setStoryType:type];
+                [story setParent:[parent intValue]];
+                
+                
+                [stories addObject:story];
+            }
+        }
+        
+    }
+    
+	
 	self.lblName.text = selectedCharacter.name;
     self.lblAge.text = [NSString stringWithFormat:@"%d",selectedCharacter.age];
     self.lblDoB.text = selectedCharacter.dateOfBirth;
@@ -69,65 +158,43 @@
     self.portraitImage.image = selectedCharacter.portrait;
     self.fullBodyImage.image = selectedCharacter.fullBodyImage;
     
-	//get the initial story point
-	//this is hardcoded now until we have the data loading
-	StoryPoint *storyPoint1 = [[StoryPoint alloc] init];
-	storyPoint1.year = 1890;
-	storyPoint1.illustration = selectedCharacter.story1;
-	
-	StoryPoint *storyPoint2 = [[StoryPoint alloc] init];
-	storyPoint2.year = 1894;
-	storyPoint2.illustration = selectedCharacter.story2;
-	
-	StoryPoint *storyPoint3 = [[StoryPoint alloc] init];
-	storyPoint3.year = 1897;
-	storyPoint3.illustration = selectedCharacter.story3;
-	
-	StoryPoint *storyPoint4 = [[StoryPoint alloc] init];
-	storyPoint4.year = 1901;
-	storyPoint4.illustration = selectedCharacter.story4;
-	
-	StoryPoint *storyPoint5 = [[StoryPoint alloc] init];
-	storyPoint5.year = 1905;
-	storyPoint5.illustration = selectedCharacter.story5;
-    
-	StoryPoint *finalStoryPoint = [[StoryPoint alloc] init];
-	finalStoryPoint.year = 1905;
-	finalStoryPoint.illustration = [UIImage imageNamed:@"stay_in_lebanon.png"];
-	
-	StoryPoint *emigration1 = [[StoryPoint alloc] init];
-	emigration1.year = 1890;
-	emigration1.illustration = selectedCharacter.emigration1;
-	
-	StoryPoint *emigration2 = [[StoryPoint alloc] init];
-	emigration2.year = 1894;
-	emigration2.illustration = selectedCharacter.emigration2;
-	
-	StoryPoint *emigration3 = [[StoryPoint alloc] init];
-	emigration3.year = 1897;
-	emigration3.illustration = selectedCharacter.emigration3;
-
-	StoryPoint *emigration4 = [[StoryPoint alloc] init];
-	emigration4.year = 1901;
-	emigration4.illustration = selectedCharacter.emigration4;
-	
-	StoryPoint *emigration5 = [[StoryPoint alloc] init];
-	emigration5.year = 1905;
-	emigration5.illustration = selectedCharacter.emigration5;
-	
-	storyPoint1.nextStoryPoint = storyPoint2;
-	storyPoint2.nextStoryPoint = storyPoint3;
-	storyPoint3.nextStoryPoint = storyPoint4;
-	storyPoint4.nextStoryPoint = storyPoint5;
-	storyPoint5.nextStoryPoint = finalStoryPoint;
-	
-	storyPoint1.emigrationStoryPoint = emigration1;
-	storyPoint2.emigrationStoryPoint = emigration2;
-	storyPoint3.emigrationStoryPoint = emigration3;
-	storyPoint4.emigrationStoryPoint = emigration4;
-	storyPoint5.emigrationStoryPoint = emigration5;
-	
-	[GameStateManager instance].currentStoryPoint = storyPoint1;
+    //Loop through the story points and construct the correct chain
+    StoryPoint *storyPointStay = [[StoryPoint alloc] init];
+    StoryPoint *nextStoryPoint = [[StoryPoint alloc] init];
+    int storiesSize = [stories count];/*/(sizeof stories[0])*/;
+    for(int i = 0; i < storiesSize; i++)
+    {
+        if([[stories objectAtIndex:i ]parent] == 0)
+        {
+            storyPointStay = stories[i];
+            break;
+        }
+    }
+    [GameStateManager instance].currentStoryPoint = storyPointStay;
+    while(storyPointStay !=NULL)
+    {
+        //set the child stories
+        nextStoryPoint = NULL;
+        for(int i = 0; i < storiesSize; i++)
+        {
+            if([[stories objectAtIndex:i ]parent] == storyPointStay.idNum && [[[stories objectAtIndex:i ]storyType] isEqualToString:@"emigrate"])
+            {
+                storyPointStay.emigrationStoryPoint = [stories objectAtIndex:i ];
+                
+            }
+            if([[stories objectAtIndex:i ]parent] == storyPointStay.idNum && [[[stories objectAtIndex:i ]storyType] isEqualToString:@"stay"])
+            {
+                if(nextStoryPoint == NULL)
+                {
+                    nextStoryPoint = [stories objectAtIndex:i ];
+                }
+                
+            }
+        }
+        storyPointStay.nextStoryPoint = nextStoryPoint;
+        storyPointStay = nextStoryPoint;
+    }
+    storyPointStay = [GameStateManager instance].currentStoryPoint;
 }
 
 - (void)didReceiveMemoryWarning

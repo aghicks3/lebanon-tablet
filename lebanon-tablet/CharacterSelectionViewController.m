@@ -57,7 +57,7 @@
         
         //create db here
         if(sqlite3_open(dbPath, &characterDB)== SQLITE_OK) {
-            const char *sql_stmt = "CREATE TABLE IF NOT EXISTS CHARACTER (id INTEGER PRIMARY KEY, name TEXT, dateOfBirth TEXT, gender TEXT, age NUMERIC, family TEXT, education TEXT, economicStatus TEXT, occupation TEXT, portrait TEXT, fullbody TEXT, story1 TEXT, emigrate1 TEXT, story2 TEXT, emigrate2 TEXT, story3 TEXT, emigrate3 TEXT, story4 TEXT, emigrate4 TEXT, story5 TEXT, emigrate5 TEXT";
+            const char *sql_stmt = "CREATE TABLE IF NOT EXISTS CHARACTER (id INTEGER PRIMARY KEY, name TEXT, dateOfBirth TEXT, gender TEXT, age NUMERIC, family TEXT, education TEXT, economicStatus TEXT, occupation TEXT, portrait TEXT, fullbody TEXT";
             sqlite3_exec(characterDB, sql_stmt, NULL, NULL, &error);
             sqlite3_close(characterDB);
         }
@@ -111,6 +111,7 @@
         {
             while(sqlite3_step(statement) == SQLITE_ROW)
             {
+                NSString *idNum = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 0)];
                 NSString *name = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 1)];
                 NSString *dateOfBirth = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 2)];
                 NSString *gender = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 3)];
@@ -121,7 +122,7 @@
                 NSString *occupation = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 8)];
                 NSString *portrait = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 9)];
                 NSString *fullbody = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 10)];
-                NSString *story1 = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 11)];
+                /*NSString *story1 = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 11)];
                 NSString *emigrate1 = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 12)];
                 NSString *story2 = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 13)];
                 NSString *emigrate2 = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 14)];
@@ -130,9 +131,12 @@
                 NSString *story4 = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 17)];
                 NSString *emigrate4 = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 18)];
                 NSString *story5 = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 19)];
-                NSString *emigrate5 = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 20)];
+                NSString *emigrate5 = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 20)];*/
+                
+                
                 
                 Character *character = [[Character alloc]init];
+                [character setIdNum:[idNum intValue]];
                 [character setName:name];
                 [character setDateOfBirth:dateOfBirth];
                 [character setGender:gender];
@@ -143,7 +147,7 @@
                 [character setOccupation:occupation];
                 [character setPortrait:[UIImage imageNamed:portrait]];
                 [character setFullBodyImage:[UIImage imageNamed:fullbody]];
-                [character setStory1:[UIImage imageNamed:story1]];
+                /*[character setStory1:[UIImage imageNamed:story1]];
                 [character setEmigration1:[UIImage imageNamed:emigrate1]];
                 [character setStory2:[UIImage imageNamed:story2]];
                 [character setEmigration2:[UIImage imageNamed:emigrate2]];
@@ -152,14 +156,15 @@
                 [character setStory4:[UIImage imageNamed:story4]];
                 [character setEmigration4:[UIImage imageNamed:emigrate4]];
                 [character setStory5:[UIImage imageNamed:story5]];
-                [character setEmigration5:[UIImage imageNamed:emigrate5]];
+                [character setEmigration5:[UIImage imageNamed:emigrate5]];*/
                 
                 [characters addObject:character];
             }
         }
+        
     }
 	
-    if(characters.count == 5)
+    if(characters.count == 4)
     {
         [_btnCharA setTitle:[[characters objectAtIndex:0] name] forState:UIControlStateNormal];
         [_btnCharA setTitle:[[characters objectAtIndex:0] name] forState:UIControlStateSelected];

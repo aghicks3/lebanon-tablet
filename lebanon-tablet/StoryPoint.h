@@ -10,9 +10,13 @@
 
 @interface StoryPoint : NSObject
 
-@property (nonatomic, retain) NSString		*title;
+@property (readwrite)		  int			idNum;
 @property (readwrite)		  int			year;
-@property (nonatomic, retain) NSString		*description;
+@property (readwrite)		  int			nCPop;
+@property (readwrite)		  int			hammanaPop;
+@property (readwrite)		  int			owner;
+@property (nonatomic, retain) NSString		*storyType;
+@property (readwrite)		  int			parent;
 @property (nonatomic, retain) UIImage		*illustration;
 @property (nonatomic, retain) StoryPoint	*nextStoryPoint;
 @property (nonatomic, retain) StoryPoint	*emigrationStoryPoint;
