@@ -47,6 +47,18 @@
     self.LeaveButton.alpha = 0.0;
     self.StayButton.alpha = 0.0;
     self.illustrationMask.alpha=0.0;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(lastStoryPoint)];
+    self.illustrationImageView.userInteractionEnabled = YES;
+    [self.illustrationImageView addGestureRecognizer:tap];
+}
+
+- (void)lastStoryPoint
+{
+    self.LeaveButton.alpha = 0.0;
+    self.StayButton.alpha = 0.0;
+    self.illustrationMask.alpha=0.0;
+    self.ContinueButton.alpha = 1.0;
 }
 
 - (void)didReceiveMemoryWarning
