@@ -98,15 +98,19 @@
 }
 - (void) transition
 {
-    self.LeaveButton.alpha += 0.2;
-    self.StayButton.alpha += 0.2;
-    self.ContinueButton.alpha -= 0.2;
-    self.illustrationMask.alpha += 0.1;
+    self.LeaveButton.alpha += 0.1;
+    self.StayButton.alpha += 0.1;
+    self.ContinueButton.alpha -= 0.1;
+    self.illustrationMask.alpha += 0.05;
     [_LeaveButton setNeedsDisplay];
     [_StayButton setNeedsDisplay];
     [_ContinueButton setNeedsDisplay];
     [_illustrationMask setNeedsDisplay];
     //[NSThread sleepForTimeInterval:0.2];
+	
+	if(self.LeaveButton.alpha < 1.0) {
+		[self performSelector:@selector(transition) withObject:nil afterDelay:0.02];
+	}
     
 }
 
@@ -116,20 +120,21 @@
     self.ContinueButton.alpha = 0.0;
     self.illustrationMask.alpha=0.4;*/
     
-    int frames = 5;
-    for(int i=0; i < frames; i++)
-    {
-        //[self performSelector:@selector(transition) withObject:(NULL) afterDelay:(0.5)];
-        [self performSelectorOnMainThread:@selector(transition) withObject:(NULL) waitUntilDone:(NO)];
+//    int frames = 5;
+//    for(int i=0; i < frames; i++)
+//    {
+		[self transition];
+//        [self performSelector:@selector(transition) withObject:(NULL) afterDelay:(0.5)];
+        //[self performSelectorOnMainThread:@selector(transition) withObject:(NULL) waitUntilDone:(NO)];
         /*self.LeaveButton.alpha += 0.2;
         self.StayButton.alpha += 0.2;
         self.ContinueButton.alpha -= 0.2;
         self.illustrationMask.alpha += 0.1;*/
-    }
+//    }
     
 }
 - (IBAction)LeaveButtonAction:(id)sender {
-    if(self.LeaveButton.alpha == 1.0)
+    if(self.LeaveButton.alpha >= 1.0)
     {
         [GameStateManager instance].currentStoryPoint = [GameStateManager instance].currentStoryPoint.emigrationStoryPoint;
         

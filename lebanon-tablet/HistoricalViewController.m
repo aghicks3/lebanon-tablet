@@ -72,6 +72,7 @@
 }
 
 -(IBAction)skipButtonPressed:(id)sender {
+	[_moviePlayer stop];
 	[self performSegueWithIdentifier:@"GameOverSegue" sender:self];	
 }
 
