@@ -9,6 +9,8 @@
 #import "MainMenuViewController.h"
 #import "GameStateManager.h"
 
+#define LOOP_FOREVER -1
+
 @interface MainMenuViewController ()
 
 @end
@@ -39,6 +41,7 @@
 	
 	gsm.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:songURL error:&error];
 	gsm.audioPlayer.volume = 0.5;
+	gsm.audioPlayer.numberOfLoops = LOOP_FOREVER;
 	[gsm.audioPlayer play];
 }
 
