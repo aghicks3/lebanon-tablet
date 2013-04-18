@@ -30,11 +30,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-	_titleLabel.font = [UIFont fontWithName:@"Garamond" size:100.0f];
-	_subtitleLabel.font = [UIFont fontWithName:@"Garamond" size:30.0f];
 	GameStateManager *gsm = [GameStateManager instance];
+
+	howToDisplayed = NO;
 	
-	_playButton.titleLabel.font = gsm.buttonFont;
 	NSURL *songURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"laytana" ofType:@"m4a"]];
 	
 	NSError *error;
@@ -43,6 +42,17 @@
 	gsm.audioPlayer.volume = 0.5;
 	gsm.audioPlayer.numberOfLoops = LOOP_FOREVER;
 	[gsm.audioPlayer play];
+}
+
+- (void)handleTap:(UITapGestureRecognizer *)sender {
+	if (sender.state == UIGestureRecognizerStateEnded)     {
+		if(howToDisplayed) {
+			[self performSegueWithIdentifier:@"characterSelectionSegue" sender:sender];
+		} else {
+			_imageView.image = [UIImage imageNamed:@"howTo.png"];
+			howToDisplayed = YES;
+		}
+	}
 }
 
 - (void)didReceiveMemoryWarning

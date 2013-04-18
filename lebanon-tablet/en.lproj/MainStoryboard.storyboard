@@ -12,62 +12,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfM-vh-E1H">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="79" id="PoU-uO-lq6"/>
-                                    <constraint firstAttribute="height" constant="61" id="kjp-jL-qi0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Play">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <imageView contentMode="scaleToFill" image="titleScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="bd9-6M-rQI">
+                                <gestureRecognizers/>
                                 <connections>
-                                    <segue destination="k4D-bS-zJI" kind="modal" modalTransitionStyle="crossDissolve" id="epN-uE-aNZ"/>
+                                    <outletCollection property="gestureRecognizers" destination="OYg-Jn-MGk" appends="YES" id="8KC-At-Bxv"/>
                                 </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Journey to America" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndL-O3-uer">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="143" id="s1m-be-jEm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stories of immigration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEt-yv-6qK">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="MFl-I3-p7x"/>
-                                    <constraint firstAttribute="width" constant="478" id="gCk-BM-URJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.53725490200000003" green="0.58823529409999997" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="OEt-yv-6qK" firstAttribute="centerX" secondItem="ndL-O3-uer" secondAttribute="centerX" type="default" id="8Cx-Zw-uSR"/>
-                            <constraint firstItem="OEt-yv-6qK" firstAttribute="top" secondItem="5" secondAttribute="top" constant="143" id="8fR-vo-Zlc"/>
-                            <constraint firstItem="ndL-O3-uer" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Cv5-6s-wFu"/>
-                            <constraint firstItem="ndL-O3-uer" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="L9J-RO-f8t"/>
-                            <constraint firstItem="OEt-yv-6qK" firstAttribute="centerX" secondItem="NfM-vh-E1H" secondAttribute="centerX" type="default" id="aXF-HO-XoK"/>
-                            <constraint firstAttribute="trailing" secondItem="ndL-O3-uer" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="abS-2R-2aI"/>
-                            <constraint firstItem="NfM-vh-E1H" firstAttribute="top" secondItem="5" secondAttribute="top" constant="343" id="dpt-Ne-DVz"/>
+                            <constraint firstItem="bd9-6M-rQI" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="Bd1-tv-HZw"/>
+                            <constraint firstItem="bd9-6M-rQI" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="aXH-sM-w13"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="playButton" destination="NfM-vh-E1H" id="Rx3-bn-4EA"/>
-                        <outlet property="subtitleLabel" destination="OEt-yv-6qK" id="KiI-Ba-epv"/>
-                        <outlet property="titleLabel" destination="ndL-O3-uer" id="AdT-3X-TVY"/>
+                        <outlet property="imageView" destination="bd9-6M-rQI" id="uop-am-EFE"/>
+                        <outlet property="tapRecognizer" destination="OYg-Jn-MGk" id="9pb-yX-7dH"/>
+                        <segue destination="k4D-bS-zJI" kind="modal" identifier="characterSelectionSegue" modalTransitionStyle="crossDissolve" id="wMK-Vf-ijL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="OYg-Jn-MGk">
+                    <connections>
+                        <action selector="handleTap:" destination="2" id="j5v-kK-TVF"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-2570" y="-1767"/>
         </scene>
@@ -755,6 +727,7 @@
         <image name="asad_s_1.png" width="1024" height="768"/>
         <image name="banner-top.png" width="1024" height="75"/>
         <image name="hind_portrait.png" width="500" height="500"/>
+        <image name="titleScreen.png" width="1024" height="768"/>
         <image name="youssef_portrait.png" width="500" height="500"/>
         <image name="zahiyee_portrait.png" width="500" height="500"/>
     </resources>
@@ -764,6 +737,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="s50-7g-2LW"/>
+        <segue reference="wMK-Vf-ijL"/>
     </inferredMetricsTieBreakers>
 </document>

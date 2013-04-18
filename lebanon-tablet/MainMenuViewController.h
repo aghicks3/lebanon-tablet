@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainMenuViewController : UIViewController
+@interface MainMenuViewController : UIViewController {
+	BOOL howToDisplayed;
+}
 
-@property (nonatomic, retain) IBOutlet UILabel *titleLabel;
-@property (nonatomic, retain) IBOutlet UILabel *subtitleLabel;
-@property (nonatomic, retain) IBOutlet UIButton *playButton;
+@property (nonatomic, retain) IBOutlet UIImageView *imageView;
+@property (nonatomic, retain) IBOutlet UITapGestureRecognizer *tapRecognizer;
 
+-(IBAction)handleTap:(id)sender;
 @end
