@@ -98,6 +98,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+	_chooseLabel.font = [UIFont fontWithName:@"Garamond" size:60.0f];
+	
     characters = [[NSMutableArray alloc]init];
     [self createOrOpenDB];
     

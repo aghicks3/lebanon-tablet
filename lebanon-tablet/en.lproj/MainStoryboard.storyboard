@@ -141,10 +141,21 @@
                                     <action selector="characterIconTouched:" destination="k4D-bS-zJI" eventType="touchUpInside" id="4bi-Uu-r5f"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Choose a Character" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezx-ad-dmG">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="USl-8i-ZRe"/>
+                                    <constraint firstAttribute="width" constant="662" id="ZMA-4G-OKs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.53725490200000003" green="0.58823529409999997" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Ezx-ad-dmG" firstAttribute="top" secondItem="2Fj-dr-jQE" secondAttribute="top" constant="70" id="2KJ-jH-qo5"/>
                             <constraint firstItem="Xcs-4H-hR4" firstAttribute="leading" secondItem="2Fj-dr-jQE" secondAttribute="leading" constant="278" id="8NS-zz-8pB"/>
+                            <constraint firstItem="Ezx-ad-dmG" firstAttribute="centerX" secondItem="2Fj-dr-jQE" secondAttribute="centerX" type="default" id="9H5-NV-AMD"/>
                             <constraint firstAttribute="bottom" secondItem="Xcs-4H-hR4" secondAttribute="bottom" constant="219" id="BlC-Ap-Lbn"/>
                             <constraint firstItem="73d-L1-gfU" firstAttribute="top" secondItem="Xcs-4H-hR4" secondAttribute="top" type="default" id="EcS-Ch-DBF"/>
                             <constraint firstItem="QVW-Zy-Ejg" firstAttribute="baseline" secondItem="mSh-h3-LBc" secondAttribute="baseline" type="default" id="HBf-9J-CnN"/>
@@ -165,6 +176,7 @@
                         <outlet property="btnCharB" destination="Xcs-4H-hR4" id="pPa-ar-tVl"/>
                         <outlet property="btnCharC" destination="73d-L1-gfU" id="un4-I4-96R"/>
                         <outlet property="btnCharD" destination="QVW-Zy-Ejg" id="gM0-OY-atY"/>
+                        <outlet property="chooseLabel" destination="Ezx-ad-dmG" id="Rc9-gc-as9"/>
                         <segue destination="uw1-e1-T6z" kind="modal" identifier="SelectCharacterSegue" modalTransitionStyle="crossDissolve" id="r01-29-S49"/>
                     </connections>
                 </viewController>
@@ -746,97 +758,6 @@
         <image name="youssef_portrait.png" width="500" height="500"/>
         <image name="zahiyee_portrait.png" width="500" height="500"/>
     </resources>
-    <classes>
-        <class className="CharacterDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CharacterDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="ageTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dobTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="econTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="educationTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="familyTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="fullBodyImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="genderTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblAge" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblDoB" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblEcon" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblEducation" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblGender" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblOcc" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nextButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="occTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="portraitImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="prevButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="profileTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tvFamily" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="CharacterSelectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CharacterSelectionViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="characterIconTouched:"/>
-                <relationship kind="outlet" name="btnCharA" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnCharB" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnCharC" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnCharD" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="ConclusionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ConclusionViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="illustrationImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="lebanonPopulationLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="ncPopulationLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nextButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="yearLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="GameOverViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameOverViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="PlayAgainButton:"/>
-                <relationship kind="outlet" name="endLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="playAgainLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="HistoricalViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HistoricalViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="skipButtonPressed:"/>
-                <relationship kind="outlet" name="skipVideoButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="MainMenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainMenuViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="playButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="subtitleLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="StoryPointViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StoryPointViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="ContinueButtonAction:"/>
-                <relationship kind="action" name="LeaveButtonAction:"/>
-                <relationship kind="action" name="StayButtonAction:"/>
-                <relationship kind="outlet" name="ContinueButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="LeaveButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="StayButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="illustrationImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="illustrationMask" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="lebanonPopulationLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="ncPopulationLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nextButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="yearLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

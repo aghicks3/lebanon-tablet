@@ -20,5 +20,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnCharB;
 @property (strong, nonatomic) IBOutlet UIButton *btnCharC;
 @property (strong, nonatomic) IBOutlet UIButton *btnCharD;
+@property (strong, nonatomic) IBOutlet UILabel	*chooseLabel;
 
 @end
