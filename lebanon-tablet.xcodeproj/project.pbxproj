@@ -44,6 +44,7 @@
 		6B6A102F17204ED400C40424 /* titleScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6A102B17204ED400C40424 /* titleScreen@2x.png */; };
 		6B6A103017204ED400C40424 /* howTo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6A102C17204ED400C40424 /* howTo.png */; };
 		6B6A103117204ED400C40424 /* howTo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6A102D17204ED400C40424 /* howTo@2x.png */; };
+		6B6A10331720536500C40424 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6A10321720536500C40424 /* QuartzCore.framework */; };
 		6B71308316EF8A37004801E7 /* grandfather.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6B71308216EF8A37004801E7 /* grandfather.mp4 */; };
 		6B71309B16EF9DDC004801E7 /* laytana.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 6B71309916EF9DDC004801E7 /* laytana.m4a */; };
 		6B71309C16EF9DDC004801E7 /* masar.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 6B71309A16EF9DDC004801E7 /* masar.m4a */; };
@@ -196,6 +197,7 @@
 		6B6A102B17204ED400C40424 /* titleScreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "titleScreen@2x.png"; sourceTree = "<group>"; };
 		6B6A102C17204ED400C40424 /* howTo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = howTo.png; sourceTree = "<group>"; };
 		6B6A102D17204ED400C40424 /* howTo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "howTo@2x.png"; sourceTree = "<group>"; };
+		6B6A10321720536500C40424 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6B71308216EF8A37004801E7 /* grandfather.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = grandfather.mp4; sourceTree = "<group>"; };
 		6B71309916EF9DDC004801E7 /* laytana.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = laytana.m4a; sourceTree = "<group>"; };
 		6B71309A16EF9DDC004801E7 /* masar.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = masar.m4a; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B6A10331720536500C40424 /* QuartzCore.framework in Frameworks */,
 				6B71309D16EFA0CA004801E7 /* AVFoundation.framework in Frameworks */,
 				B473891D16EEA51D0081B69C /* MediaPlayer.framework in Frameworks */,
 				DC90E47E16C83F990054B704 /* libsqlite3.0.dylib in Frameworks */,
@@ -490,6 +493,7 @@
 		B4F9441916B0A1F90092EFFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B6A10321720536500C40424 /* QuartzCore.framework */,
 				B473891E16EEA5410081B69C /* AVFoundation.framework */,
 				B473891C16EEA51D0081B69C /* MediaPlayer.framework */,
 				DC90E47D16C83F990054B704 /* libsqlite3.0.dylib */,

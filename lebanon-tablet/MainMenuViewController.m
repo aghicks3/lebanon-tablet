@@ -8,6 +8,7 @@
 
 #import "MainMenuViewController.h"
 #import "GameStateManager.h"
+#import "QuartzCore/CAAnimation.h"
 
 #define LOOP_FOREVER -1
 
@@ -49,6 +50,13 @@
 		if(howToDisplayed) {
 			[self performSegueWithIdentifier:@"characterSelectionSegue" sender:sender];
 		} else {
+			UIImage *image1 = _imageView.image;
+			UIImage *image2 = [UIImage imageNamed:@"howTo.png"];
+			CABasicAnimation *crossFade = [CABasicAnimation animationWithKeyPath:@"contents"];
+			crossFade.duration = 0.5;
+			crossFade.fromValue = (__bridge id)(image1.CGImage);
+			crossFade.toValue = (__bridge id)(image2.CGImage);
+			[_imageView.layer addAnimation:crossFade forKey:@"animateContents"];
 			_imageView.image = [UIImage imageNamed:@"howTo.png"];
 			howToDisplayed = YES;
 		}
