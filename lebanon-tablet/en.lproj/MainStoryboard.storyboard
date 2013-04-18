@@ -467,7 +467,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="StayButtonAction:" destination="Uj1-Qo-1oP" eventType="touchUpInside" id="s0F-cK-KGb"/>
+                                    <action selector="stayButtonPressed:" destination="Uj1-Qo-1oP" eventType="touchUpInside" id="XvS-Vw-OWI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bo3-bG-SyV">
@@ -483,7 +483,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="LeaveButtonAction:" destination="Uj1-Qo-1oP" eventType="touchUpInside" id="ZzN-jU-oZf"/>
+                                    <action selector="leaveButtonPressed:" destination="Uj1-Qo-1oP" eventType="touchUpInside" id="MBJ-tP-Evy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fC4-ex-A79">
@@ -496,7 +496,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="ContinueButtonAction:" destination="Uj1-Qo-1oP" eventType="touchUpInside" id="c8t-Yb-2CY"/>
+                                    <action selector="continueButtonPressed:" destination="Uj1-Qo-1oP" eventType="touchUpInside" id="nig-Tv-t4H"/>
                                 </connections>
                             </button>
                         </subviews>

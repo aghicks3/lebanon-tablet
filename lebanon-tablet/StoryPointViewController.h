@@ -15,12 +15,13 @@
 @property (nonatomic, retain) IBOutlet UILabel *lebanonPopulationLabel;
 @property (nonatomic, retain) IBOutlet UIImageView *illustrationImageView;
 @property (nonatomic, retain) IBOutlet UIButton *nextButton;
-- (IBAction)StayButtonAction:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *StayButton;
-- (IBAction)ContinueButtonAction:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *ContinueButton;
-- (IBAction)LeaveButtonAction:(id)sender;
-@property (weak, nonatomic) IBOutlet UIButton *LeaveButton;
+@property (weak, nonatomic) IBOutlet UIButton *stayButton;
+@property (weak, nonatomic) IBOutlet UIButton *continueButton;
+@property (weak, nonatomic) IBOutlet UIButton *leaveButton;
 @property (weak, nonatomic) IBOutlet UIImageView *illustrationMask;
+
+- (IBAction)stayButtonPressed:(id)sender;
+- (IBAction)leaveButtonPressed:(id)sender;
+- (IBAction)continueButtonPressed:(id)sender;
 
 @end
