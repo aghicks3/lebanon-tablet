@@ -19,9 +19,13 @@
 @property (weak, nonatomic) IBOutlet UIButton *continueButton;
 @property (weak, nonatomic) IBOutlet UIButton *leaveButton;
 @property (weak, nonatomic) IBOutlet UIImageView *illustrationMask;
+@property (weak, nonatomic) IBOutlet UIButton *characterButton;
+@property (weak, nonatomic) IBOutlet UIImageView *lebanonLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *ncLabel;
 
 - (IBAction)stayButtonPressed:(id)sender;
 - (IBAction)leaveButtonPressed:(id)sender;
 - (IBAction)continueButtonPressed:(id)sender;
+- (IBAction)characterButtonPressed:(id)sender;
 
 @end
