@@ -10,6 +10,8 @@
 #import "GameStateManager.h"
 #import "Character.h"
 
+#define TIME_BEFORE_RESET 150
+
 @interface CharacterSelectionViewController ()
 {
     NSMutableArray *characters;
@@ -102,6 +104,7 @@
 	
     characters = [[NSMutableArray alloc]init];
     [self createOrOpenDB];
+    [self performSelector:@selector(restart:) withObject:nil afterDelay:TIME_BEFORE_RESET];
     
     sqlite3_stmt *statement;
     if(sqlite3_open([dbPathString UTF8String], &(characterDB))==SQLITE_OK)
@@ -189,6 +192,10 @@
 		_btnCharC.titleLabel.font = [GameStateManager instance].buttonFont;
 		_btnCharD.titleLabel.font = [GameStateManager instance].buttonFont;
     }
+}
+
+-(void)restart:(id)sender {
+	[self performSegueWithIdentifier:@"RESET" sender:self];
 }
 
 - (void)didReceiveMemoryWarning

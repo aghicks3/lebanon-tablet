@@ -12,6 +12,8 @@
 #define HORIZONTAL_INSET 20
 #define VERTICAL_INSET 80
 
+#define TIME_BEFORE_RESET 300
+
 @interface HistoricalViewController ()
 
 @end
@@ -50,6 +52,8 @@
 
 	[[GameStateManager instance] audioPlayer].volume = 0.1;
 	[self initializeVideoPlayer];
+    [self performSelector:@selector(restart:) withObject:nil afterDelay:TIME_BEFORE_RESET];
+    
 }
 
 -(void)initializeVideoPlayer {
@@ -75,6 +79,11 @@
 	[_moviePlayer stop];
 	[self performSegueWithIdentifier:@"GameOverSegue" sender:self];	
 }
+
+-(void)restart:(id)sender {
+	[self performSegueWithIdentifier:@"RESET" sender:self];
+}
+
 
 - (void)didReceiveMemoryWarning
 {

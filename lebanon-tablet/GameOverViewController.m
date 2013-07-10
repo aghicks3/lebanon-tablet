@@ -8,7 +8,7 @@
 
 #import "GameOverViewController.h"
 
-#define TIME_BEFORE_RESET 5.0
+#define TIME_BEFORE_RESET 150
 
 @interface GameOverViewController ()
 

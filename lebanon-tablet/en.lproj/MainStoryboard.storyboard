@@ -150,6 +150,7 @@
                         <outlet property="btnCharD" destination="QVW-Zy-Ejg" id="gM0-OY-atY"/>
                         <outlet property="chooseLabel" destination="Ezx-ad-dmG" id="Rc9-gc-as9"/>
                         <segue destination="uw1-e1-T6z" kind="modal" identifier="SelectCharacterSegue" modalTransitionStyle="crossDissolve" id="r01-29-S49"/>
+                        <segue destination="2" kind="modal" identifier="RESET" id="v9E-eW-ZjY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YHz-b9-wrk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -309,8 +310,8 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" text="Label" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-OL-Rfu">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="134" id="l0I-pn-X66"/>
                                     <constraint firstAttribute="width" constant="152" id="rRK-nx-cTO"/>
+                                    <constraint firstAttribute="height" constant="339" id="z3Y-g2-SJh"/>
                                 </constraints>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -390,6 +391,7 @@
                         <outlet property="prevButton" destination="PP0-eO-oAl" id="fc9-eg-0Dc"/>
                         <outlet property="profileTitle" destination="DVm-V3-ol4" id="meU-Er-36O"/>
                         <outlet property="tvFamily" destination="Pe1-OL-Rfu" id="6pq-lS-C15"/>
+                        <segue destination="2" kind="modal" identifier="RESET" id="SP9-ye-QGI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLt-P7-UG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -440,7 +442,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24o-LA-CK2">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="290" id="tCT-d3-fgl"/>
-                                    <constraint firstAttribute="height" constant="219" id="uPv-Wu-Scq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Stay in Lebanon">
@@ -457,6 +458,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bo3-bG-SyV">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="282" id="DCa-cI-mew"/>
+                                    <constraint firstAttribute="height" constant="219" id="Wnu-Bp-E9H"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Emigrate to America">
@@ -489,10 +491,10 @@
                             <constraint firstAttribute="trailing" secondItem="fC4-ex-A79" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0jD-cF-QXK"/>
                             <constraint firstItem="24o-LA-CK2" firstAttribute="bottom" secondItem="bo3-bG-SyV" secondAttribute="bottom" type="default" id="10q-23-lNv"/>
                             <constraint firstAttribute="bottom" secondItem="fC4-ex-A79" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="7CC-ki-pZz"/>
-                            <constraint firstItem="24o-LA-CK2" firstAttribute="leading" secondItem="mOV-ZF-my0" secondAttribute="leading" constant="135" id="BvK-E0-aho"/>
                             <constraint firstItem="24o-LA-CK2" firstAttribute="top" secondItem="bo3-bG-SyV" secondAttribute="top" type="default" id="DeJ-Oa-QPq"/>
                             <constraint firstItem="PV5-3w-QLD" firstAttribute="leading" secondItem="mOV-ZF-my0" secondAttribute="leading" constant="942" id="Fcu-t8-Pmw"/>
                             <constraint firstItem="FnJ-1j-KZ1" firstAttribute="top" secondItem="mOV-ZF-my0" secondAttribute="top" type="default" id="MLV-oj-cBP"/>
+                            <constraint firstItem="bo3-bG-SyV" firstAttribute="top" secondItem="mOV-ZF-my0" secondAttribute="top" constant="261" id="RZ4-Xp-Bae"/>
                             <constraint firstItem="PV5-3w-QLD" firstAttribute="baseline" secondItem="qfY-kf-pQr" secondAttribute="baseline" type="default" id="Uad-CK-eeu"/>
                             <constraint firstItem="IOh-e3-QpH" firstAttribute="top" secondItem="mOV-ZF-my0" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Vqx-Mc-3Mj"/>
                             <constraint firstItem="FnJ-1j-KZ1" firstAttribute="leading" secondItem="mOV-ZF-my0" secondAttribute="leading" type="default" id="WHs-5u-caX"/>
@@ -503,9 +505,9 @@
                             <constraint firstItem="Hzy-kJ-dEY" firstAttribute="bottom" secondItem="IOh-e3-QpH" secondAttribute="bottom" type="default" id="Zf7-ec-d3G"/>
                             <constraint firstItem="EKQ-UD-WuR" firstAttribute="leading" secondItem="mOV-ZF-my0" secondAttribute="leading" constant="11" id="c8M-Af-LSC"/>
                             <constraint firstItem="qfY-kf-pQr" firstAttribute="leading" secondItem="mOV-ZF-my0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dEk-Ji-CHj"/>
-                            <constraint firstAttribute="trailing" secondItem="bo3-bG-SyV" secondAttribute="trailing" constant="140" id="jHc-cp-Peb"/>
+                            <constraint firstAttribute="trailing" secondItem="24o-LA-CK2" secondAttribute="trailing" constant="140" id="j4y-Gd-xzB"/>
                             <constraint firstItem="IOh-e3-QpH" firstAttribute="centerX" secondItem="Hzy-kJ-dEY" secondAttribute="centerX" type="default" id="kRx-CI-Ky1"/>
-                            <constraint firstItem="24o-LA-CK2" firstAttribute="top" secondItem="mOV-ZF-my0" secondAttribute="top" constant="261" id="nac-lG-eBt"/>
+                            <constraint firstItem="bo3-bG-SyV" firstAttribute="leading" secondItem="mOV-ZF-my0" secondAttribute="leading" constant="135" id="z99-fC-Mty"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -523,6 +525,7 @@
                         <outlet property="nextButton" destination="fC4-ex-A79" id="vwF-lh-ha4"/>
                         <outlet property="yearLabel" destination="IOh-e3-QpH" id="KNx-Sd-lT9"/>
                         <segue destination="eLb-jF-rM0" kind="modal" identifier="ConclusionSegue" modalTransitionStyle="crossDissolve" id="pdb-uI-9ld"/>
+                        <segue destination="2" kind="modal" identifier="RESET" id="nwm-Jj-whe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQr-AZ-aTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -672,6 +675,7 @@
                         <outlet property="ncPopulationLabel" destination="KlR-Qe-8dX" id="U6j-bO-Kp3"/>
                         <outlet property="nextButton" destination="AWE-8P-1Xs" id="aGm-SG-QdD"/>
                         <outlet property="yearLabel" destination="o8H-Sa-RV5" id="gVK-53-w6N"/>
+                        <segue destination="2" kind="modal" identifier="RESET" id="9Qx-AL-8An"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="35b-6e-ooL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -713,6 +717,7 @@
                     <connections>
                         <outlet property="skipVideoButton" destination="gqa-0C-eNK" id="Crp-Un-Bte"/>
                         <segue destination="OyH-7m-Ppw" kind="modal" identifier="GameOverSegue" modalTransitionStyle="crossDissolve" id="YLK-Es-E6S"/>
+                        <segue destination="2" kind="modal" identifier="RESET" id="RNt-ev-8Pg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Kj-1S-Ieh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -829,6 +834,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="wMK-Vf-ijL"/>
+        <segue reference="s50-7g-2LW"/>
+        <segue reference="SP9-ye-QGI"/>
     </inferredMetricsTieBreakers>
 </document>

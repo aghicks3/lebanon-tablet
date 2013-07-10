@@ -10,6 +10,8 @@
 #import "GameStateManager.h"
 #import "StoryPoint.h"
 
+#define TIME_BEFORE_RESET 150
+
 @interface ConclusionViewController ()
 
 @end
@@ -43,7 +45,13 @@
     self.lebanonPopulationLabel.text = [NSString stringWithFormat:@"%i", currentStoryPoint.hammanaPop];
 	
 	_nextButton.titleLabel.font = [GameStateManager instance].buttonFont;
+    [self performSelector:@selector(restart:) withObject:nil afterDelay:TIME_BEFORE_RESET];
 }
+
+-(void)restart:(id)sender {
+	[self performSegueWithIdentifier:@"RESET" sender:self];
+}
+
 
 - (void)didReceiveMemoryWarning
 {

@@ -10,6 +10,8 @@
 #import "StoryPoint.h"
 #import "GameStateManager.h"
 
+#define TIME_BEFORE_RESET 150
+
 @interface StoryPointViewController ()
 
 @end
@@ -53,7 +55,13 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(lastStoryPoint)];
     self.illustrationImageView.userInteractionEnabled = YES;
     [self.illustrationImageView addGestureRecognizer:tap];
+    [self performSelector:@selector(restart:) withObject:nil afterDelay:TIME_BEFORE_RESET];
 }
+
+-(void)restart:(id)sender {
+	[self performSegueWithIdentifier:@"RESET" sender:self];
+}
+
 
 - (void)lastStoryPoint
 {

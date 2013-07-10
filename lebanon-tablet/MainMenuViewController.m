@@ -10,6 +10,7 @@
 #import "GameStateManager.h"
 #import "QuartzCore/CAAnimation.h"
 
+
 #define LOOP_FOREVER -1
 
 @interface MainMenuViewController ()
@@ -62,6 +63,7 @@
 		}
 	}
 }
+
 
 - (void)didReceiveMemoryWarning
 {
