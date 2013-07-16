@@ -9,8 +9,8 @@
 #import "StoryPointViewController.h"
 #import "StoryPoint.h"
 #import "GameStateManager.h"
-
-#define TIME_BEFORE_RESET 150
+#define TIMEOUT 120
+#define TIMER 150
 
 @interface StoryPointViewController ()
 
@@ -31,7 +31,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-	
 	//get the current StoryPoint from the GameStateManager
 	StoryPoint *currentStoryPoint = [[GameStateManager instance] currentStoryPoint];
 	
@@ -55,13 +54,13 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(lastStoryPoint)];
     self.illustrationImageView.userInteractionEnabled = YES;
     [self.illustrationImageView addGestureRecognizer:tap];
-    [self performSelector:@selector(restart:) withObject:nil afterDelay:TIME_BEFORE_RESET];
+    [self performSelector:@selector(transition) withObject:nil afterDelay: TIMEOUT];
+    [self performSelector:@selector(restart:) withObject:nil afterDelay: TIMER];
 }
 
 -(void)restart:(id)sender {
-	[self performSegueWithIdentifier:@"RESET" sender:self];
+	[self performSegueWithIdentifier:@"RESET" sender:self];    
 }
-
 
 - (void)lastStoryPoint
 {
@@ -69,6 +68,7 @@
     _stayButton.alpha = 0.0;
     _illustrationMask.alpha=0.0;
     _continueButton.alpha = 1.0;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,6 +95,7 @@
 	self.yearLabel.text = [NSString stringWithFormat:@"%i", [GameStateManager instance].currentStoryPoint.year];
     self.ncPopulationLabel.text =[NSString stringWithFormat:@"%i", [GameStateManager instance].currentStoryPoint.nCPop];
     self.lebanonPopulationLabel.text = [NSString stringWithFormat:@"%i", [GameStateManager instance].currentStoryPoint.hammanaPop];
+    
 }
 - (void) transition
 {
@@ -115,6 +116,7 @@
 
 - (IBAction)continueButtonPressed:(id)sender {
 		[self transition];
+    
 }
 
 - (IBAction)leaveButtonPressed:(id)sender {
@@ -122,5 +124,6 @@
         [GameStateManager instance].currentStoryPoint = [GameStateManager instance].currentStoryPoint.emigrationStoryPoint;
         [self performSegueWithIdentifier:@"ConclusionSegue" sender:sender];
     }
+
 }
 @end

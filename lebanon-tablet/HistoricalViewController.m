@@ -12,7 +12,7 @@
 #define HORIZONTAL_INSET 20
 #define VERTICAL_INSET 80
 
-#define TIME_BEFORE_RESET 300
+#define TIME_BEFORE_RESET 150
 
 @interface HistoricalViewController ()
 
