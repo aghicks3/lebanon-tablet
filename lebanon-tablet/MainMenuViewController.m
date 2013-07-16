@@ -10,6 +10,7 @@
 #import "GameStateManager.h"
 #import "QuartzCore/CAAnimation.h"
 
+
 #define LOOP_FOREVER -1
 
 @interface MainMenuViewController ()
@@ -40,7 +41,7 @@
 	NSError *error;
 	
 	gsm.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:songURL error:&error];
-	gsm.audioPlayer.volume = 0.5;
+	gsm.audioPlayer.volume = 1.5;
 	gsm.audioPlayer.numberOfLoops = LOOP_FOREVER;
 	[gsm.audioPlayer play];
 }
@@ -62,6 +63,7 @@
 		}
 	}
 }
+
 
 - (void)didReceiveMemoryWarning
 {

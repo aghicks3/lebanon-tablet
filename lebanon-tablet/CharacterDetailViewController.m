@@ -11,6 +11,8 @@
 #import "Character.h"
 #import "StoryPoint.h"
 
+#define TIME_BEFORE_RESET 150
+
 @interface CharacterDetailViewController ()
 {
     NSMutableArray *stories;
@@ -73,6 +75,7 @@
     //get the selected character from the GameStateManager
 	Character *selectedCharacter = [[GameStateManager instance] currentCharacter];
     
+    [self performSelector:@selector(restart:) withObject:nil afterDelay:TIME_BEFORE_RESET];
     stories = [[NSMutableArray alloc]init];
     [self createOrOpenDB];
     
@@ -196,6 +199,11 @@
     }
     storyPointStay = [GameStateManager instance].currentStoryPoint;
 }
+
+-(void)restart:(id)sender {
+	[self performSegueWithIdentifier:@"RESET" sender:self];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
