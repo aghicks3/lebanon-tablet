@@ -73,6 +73,7 @@
 	[[_moviePlayer view] setFrame:viewInsetRect];
 	[self.view addSubview:_moviePlayer.view];
 	[_moviePlayer setFullscreen:NO animated:NO];
+    
 }
 
 -(IBAction)skipButtonPressed:(id)sender {
