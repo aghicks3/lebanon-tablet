@@ -265,16 +265,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-<<<<<<< HEAD
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" text="Label" id="Pe1-OL-Rfu">
                                 <rect key="frame" x="215" y="367" width="152" height="134"/>
-=======
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" text="Label" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-OL-Rfu">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="152" id="rRK-nx-cTO"/>
-                                    <constraint firstAttribute="height" constant="339" id="z3Y-g2-SJh"/>
-                                </constraints>
->>>>>>> 8c886b64881ffe44e3af354741926ea80a6cc08e
+
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -333,15 +326,9 @@
                                 <rect key="frame" x="10" y="115" width="1004" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="24o-LA-CK2">
                                 <rect key="frame" x="589" y="193" width="290" height="220"/>
-=======
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24o-LA-CK2">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="290" id="tCT-d3-fgl"/>
-                                </constraints>
->>>>>>> 8c886b64881ffe44e3af354741926ea80a6cc08e
+
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="122" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Stay in Lebanon">
@@ -354,16 +341,8 @@
                                     <action selector="stayButtonPressed:" destination="Uj1-Qo-1oP" eventType="touchUpInside" id="XvS-Vw-OWI"/>
                                 </connections>
                             </button>
-<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="headTruncation" id="bo3-bG-SyV">
                                 <rect key="frame" x="146" y="193" width="282" height="220"/>
-=======
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bo3-bG-SyV">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="282" id="DCa-cI-mew"/>
-                                    <constraint firstAttribute="height" constant="219" id="Wnu-Bp-E9H"/>
-                                </constraints>
->>>>>>> 8c886b64881ffe44e3af354741926ea80a6cc08e
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="0.0" minY="122" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Emigrate to America">
@@ -444,8 +423,6 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.53725490200000003" green="0.58823529409999997" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
-<<<<<<< HEAD
-=======
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="fC4-ex-A79" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0jD-cF-QXK"/>
                             <constraint firstItem="24o-LA-CK2" firstAttribute="bottom" secondItem="bo3-bG-SyV" secondAttribute="bottom" type="default" id="10q-23-lNv"/>
@@ -468,7 +445,6 @@
                             <constraint firstItem="IOh-e3-QpH" firstAttribute="centerX" secondItem="Hzy-kJ-dEY" secondAttribute="centerX" type="default" id="kRx-CI-Ky1"/>
                             <constraint firstItem="bo3-bG-SyV" firstAttribute="leading" secondItem="mOV-ZF-my0" secondAttribute="leading" constant="135" id="z99-fC-Mty"/>
                         </constraints>
->>>>>>> 8c886b64881ffe44e3af354741926ea80a6cc08e
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="VFY-SO-Cdy"/>
@@ -488,11 +464,7 @@
                         <outlet property="nextButton" destination="fC4-ex-A79" id="vwF-lh-ha4"/>
                         <outlet property="yearLabel" destination="IOh-e3-QpH" id="KNx-Sd-lT9"/>
                         <segue destination="eLb-jF-rM0" kind="modal" identifier="ConclusionSegue" modalTransitionStyle="crossDissolve" id="pdb-uI-9ld"/>
-<<<<<<< HEAD
                         <segue destination="k4D-bS-zJI" kind="modal" identifier="characterSelectionSegue" id="S6t-FF-rcU"/>
-=======
-                        <segue destination="2" kind="modal" identifier="RESET" id="nwm-Jj-whe"/>
->>>>>>> 8c886b64881ffe44e3af354741926ea80a6cc08e
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQr-AZ-aTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -676,7 +648,6 @@
         <image name="youssef_portrait.png" width="500" height="500"/>
         <image name="zahiyee_portrait.png" width="500" height="500"/>
     </resources>
-<<<<<<< HEAD
     <classes>
         <class className="CharacterDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CharacterDetailViewController.h"/>
@@ -770,19 +741,12 @@
             </relationships>
         </class>
     </classes>
-=======
->>>>>>> 8c886b64881ffe44e3af354741926ea80a6cc08e
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
         <segue reference="S6t-FF-rcU"/>
-=======
-        <segue reference="nwm-Jj-whe"/>
-        <segue reference="s50-7g-2LW"/>
->>>>>>> 8c886b64881ffe44e3af354741926ea80a6cc08e
     </inferredMetricsTieBreakers>
 </document>
