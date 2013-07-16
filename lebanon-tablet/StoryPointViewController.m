@@ -132,11 +132,7 @@
 	self.yearLabel.text = [NSString stringWithFormat:@"%i", [GameStateManager instance].currentStoryPoint.year];
     self.ncPopulationLabel.text =[NSString stringWithFormat:@"%i", [GameStateManager instance].currentStoryPoint.nCPop];
     self.lebanonPopulationLabel.text = [NSString stringWithFormat:@"%i", [GameStateManager instance].currentStoryPoint.hammanaPop];
-<<<<<<< HEAD
     [self bright:[NSNumber numberWithInt:0.0]];
-=======
-    
->>>>>>> 8c886b64881ffe44e3af354741926ea80a6cc08e
 }
 - (void) transition
 {
@@ -178,10 +174,5 @@
         [GameStateManager instance].currentStoryPoint = [GameStateManager instance].currentStoryPoint.emigrationStoryPoint;
         [self performSegueWithIdentifier:@"ConclusionSegue" sender:sender];
     }
-
-<<<<<<< HEAD
-    
-=======
->>>>>>> 8c886b64881ffe44e3af354741926ea80a6cc08e
 }
 @end
