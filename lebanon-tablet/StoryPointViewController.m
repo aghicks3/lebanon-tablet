@@ -158,8 +158,6 @@
 }
 
 
-
-
 - (IBAction)continueButtonPressed:(id)sender {
 		[self transition];
     

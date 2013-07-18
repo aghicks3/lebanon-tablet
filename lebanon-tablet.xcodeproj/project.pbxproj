@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1968188817982A9F003D121D /* Stick Figure 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1968188717982A9F003D121D /* Stick Figure 1.png */; };
 		6B217CA616DD3783005FBEA6 /* asad_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B217C9E16DD3783005FBEA6 /* asad_portrait.png */; };
 		6B217CA716DD3783005FBEA6 /* asad_portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B217C9F16DD3783005FBEA6 /* asad_portrait@2x.png */; };
 		6B217CA816DD3783005FBEA6 /* hind_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B217CA016DD3783005FBEA6 /* hind_portrait.png */; };
@@ -94,7 +95,6 @@
 		6B762F81170B3F4C0099E745 /* zahiyee_s_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B762F55170B3F4C0099E745 /* zahiyee_s_5.png */; };
 		6B762F82170B3F4C0099E745 /* zahiyee_s_5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B762F56170B3F4C0099E745 /* zahiyee_s_5@2x.png */; };
 		6BC012F816D3E51800149DD9 /* Journey.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6BC012F716D3E51800149DD9 /* Journey.sqlite */; };
-		B3F8B4D4177AFE9E008BFFE6 /* Stick Figure 1.png in Resources */ = {isa = PBXBuildFile; fileRef = B3F8B4D3177AFE9E008BFFE6 /* Stick Figure 1.png */; };
 		B40F282B16EBB462007649E9 /* Garamond.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B40F282A16EBB462007649E9 /* Garamond.ttf */; };
 		B40F282D16EBBBC5007649E9 /* asad_full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40F282C16EBBBC5007649E9 /* asad_full@2x.png */; };
 		B43B7FD916BA00EE00311DC3 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B7FD816BA00EE00311DC3 /* Character.m */; };
@@ -161,6 +161,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1968188717982A9F003D121D /* Stick Figure 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stick Figure 1.png"; sourceTree = "<group>"; };
 		6B217C9E16DD3783005FBEA6 /* asad_portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asad_portrait.png; sourceTree = "<group>"; };
 		6B217C9F16DD3783005FBEA6 /* asad_portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "asad_portrait@2x.png"; sourceTree = "<group>"; };
 		6B217CA016DD3783005FBEA6 /* hind_portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hind_portrait.png; sourceTree = "<group>"; };
@@ -247,7 +248,6 @@
 		6B762F55170B3F4C0099E745 /* zahiyee_s_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zahiyee_s_5.png; sourceTree = "<group>"; };
 		6B762F56170B3F4C0099E745 /* zahiyee_s_5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zahiyee_s_5@2x.png"; sourceTree = "<group>"; };
 		6BC012F716D3E51800149DD9 /* Journey.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Journey.sqlite; sourceTree = "<group>"; };
-		B3F8B4D3177AFE9E008BFFE6 /* Stick Figure 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stick Figure 1.png"; path = "../../Downloads/Stick Figure 1.png"; sourceTree = "<group>"; };
 		B40F282A16EBB462007649E9 /* Garamond.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Garamond.ttf; sourceTree = "<group>"; };
 		B40F282C16EBBBC5007649E9 /* asad_full@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "asad_full@2x.png"; sourceTree = "<group>"; };
 		B43B7FD716BA00EE00311DC3 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
@@ -523,7 +523,7 @@
 		B4F9442116B0A1F90092EFFF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B3F8B4D3177AFE9E008BFFE6 /* Stick Figure 1.png */,
+				1968188717982A9F003D121D /* Stick Figure 1.png */,
 				B4F9442C16B0A1F90092EFFF /* Default.png */,
 				B4F9443016B0A1F90092EFFF /* Default-568h@2x.png */,
 				B4F9442E16B0A1F90092EFFF /* Default@2x.png */,
@@ -795,7 +795,7 @@
 				6B6A102F17204ED400C40424 /* titleScreen@2x.png in Resources */,
 				6B6A103017204ED400C40424 /* howTo.png in Resources */,
 				6B6A103117204ED400C40424 /* howTo@2x.png in Resources */,
-				B3F8B4D4177AFE9E008BFFE6 /* Stick Figure 1.png in Resources */,
+				1968188817982A9F003D121D /* Stick Figure 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
