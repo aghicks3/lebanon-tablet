@@ -17,6 +17,7 @@
 @property (nonatomic, retain) AVAudioPlayer *audioPlayer;
 @property (nonatomic, retain) StoryPoint *currentStoryPoint;
 @property (nonatomic, retain) Character *currentCharacter;
+@property (nonatomic, assign) Boolean *isJourney; //True if JourneyDB is used, false if BelongingDB is used.
 @property (nonatomic, retain) UIFont *buttonFont;
 
 @end

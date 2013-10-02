@@ -303,10 +303,13 @@
     _econTitle.alpha -= 0.1;
     _familyTitle.alpha -= 0.1;
     _occTitle.alpha -= 0.1;
-    _btnCharA.alpha += 0.1;
+    if([GameStateManager instance].isJourney)
+    {
+        _btnCharA.alpha += 0.1;
+        _btnCharD.alpha += 0.1;
+    }
     _btnCharB.alpha += 0.1;
     _btnCharC.alpha += 0.1;
-    _btnCharD.alpha += 0.1;
     _chooseLabel.alpha += 0.1;
     _backButton.alpha -= 0.1;
     _continueButton.alpha -= 0.1;
@@ -377,6 +380,7 @@
                 NSString *economicStatus = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 7)];
                 NSString *occupation = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 8)];
                 NSString *portrait = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 9)];
+                NSString *fullbody = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 10)];
                 /*NSString *story1 = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 11)];
                 NSString *emigrate1 = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 12)];
                 NSString *story2 = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 13)];
@@ -399,6 +403,7 @@
                 [character setEconomicStatus:economicStatus];
                 [character setOccupation:occupation];
                 [character setPortrait:[UIImage imageNamed:portrait]];
+                [character setFullBodyImage:[UIImage imageNamed:fullbody]];
                 /*[character setStory1:[UIImage imageNamed:story1]];
                 [character setEmigration1:[UIImage imageNamed:emigrate1]];
                 [character setStory2:[UIImage imageNamed:story2]];
@@ -419,27 +424,71 @@
     	
     if(characters.count == 4)
     {
+        [GameStateManager instance].isJourney = true;
+        
         [_btnCharA setTitle:[[characters objectAtIndex:0] name] forState:UIControlStateNormal];
         [_btnCharA setTitle:[[characters objectAtIndex:0] name] forState:UIControlStateSelected];
         [_btnCharA setTitle:[[characters objectAtIndex:0] name] forState:UIControlStateHighlighted];
+        [_btnCharA setImage:[[characters objectAtIndex:0] fullBodyImage] forState:UIControlStateNormal];
+        [_btnCharA setImage:[[characters objectAtIndex:0] fullBodyImage] forState:UIControlStateSelected];
+        [_btnCharA setImage:[[characters objectAtIndex:0] fullBodyImage] forState:UIControlStateHighlighted];
+        [_btnCharA setImage:[[characters objectAtIndex:0] fullBodyImage] forState:UIControlStateDisabled];
         
         [_btnCharB setTitle:[[characters objectAtIndex:1] name] forState:UIControlStateNormal];
         [_btnCharB setTitle:[[characters objectAtIndex:1] name] forState:UIControlStateSelected];
         [_btnCharB setTitle:[[characters objectAtIndex:1] name] forState:UIControlStateHighlighted];
+        [_btnCharB setImage:[[characters objectAtIndex:1] fullBodyImage] forState:UIControlStateNormal];
+        [_btnCharB setImage:[[characters objectAtIndex:1] fullBodyImage] forState:UIControlStateSelected];
+        [_btnCharB setImage:[[characters objectAtIndex:1] fullBodyImage] forState:UIControlStateHighlighted];
+        [_btnCharB setImage:[[characters objectAtIndex:1] fullBodyImage] forState:UIControlStateDisabled];
         
         [_btnCharC setTitle:[[characters objectAtIndex:2] name] forState:UIControlStateNormal];
         [_btnCharC setTitle:[[characters objectAtIndex:2] name] forState:UIControlStateSelected];
         [_btnCharC setTitle:[[characters objectAtIndex:2] name] forState:UIControlStateHighlighted];
+        [_btnCharC setImage:[[characters objectAtIndex:2] fullBodyImage] forState:UIControlStateNormal];
+        [_btnCharC setImage:[[characters objectAtIndex:2] fullBodyImage] forState:UIControlStateSelected];
+        [_btnCharC setImage:[[characters objectAtIndex:2] fullBodyImage] forState:UIControlStateHighlighted];
+        [_btnCharC setImage:[[characters objectAtIndex:2] fullBodyImage] forState:UIControlStateDisabled];
         
         [_btnCharD setTitle:[[characters objectAtIndex:3] name] forState:UIControlStateNormal];
         [_btnCharD setTitle:[[characters objectAtIndex:3] name] forState:UIControlStateSelected];
         [_btnCharD setTitle:[[characters objectAtIndex:3] name] forState:UIControlStateHighlighted];
+        [_btnCharD setImage:[[characters objectAtIndex:3] fullBodyImage] forState:UIControlStateNormal];
+        [_btnCharD setImage:[[characters objectAtIndex:3] fullBodyImage] forState:UIControlStateSelected];
+        [_btnCharD setImage:[[characters objectAtIndex:3] fullBodyImage] forState:UIControlStateHighlighted];
+        [_btnCharD setImage:[[characters objectAtIndex:3] fullBodyImage] forState:UIControlStateDisabled];
 		
 		_btnCharA.titleLabel.font = [GameStateManager instance].buttonFont;
 		_btnCharB.titleLabel.font = [GameStateManager instance].buttonFont;
 		_btnCharC.titleLabel.font = [GameStateManager instance].buttonFont;
 		_btnCharD.titleLabel.font = [GameStateManager instance].buttonFont;
         
+    }
+    else if(characters.count == 2)
+    {
+        [GameStateManager instance].isJourney = false;
+        
+        [_btnCharB setTitle:[[characters objectAtIndex:0] name] forState:UIControlStateNormal];
+        [_btnCharB setTitle:[[characters objectAtIndex:0] name] forState:UIControlStateSelected];
+        [_btnCharB setTitle:[[characters objectAtIndex:0] name] forState:UIControlStateHighlighted];
+        [_btnCharB setImage:[[characters objectAtIndex:0] fullBodyImage] forState:UIControlStateNormal];
+        [_btnCharB setImage:[[characters objectAtIndex:0] fullBodyImage] forState:UIControlStateSelected];
+        [_btnCharB setImage:[[characters objectAtIndex:0] fullBodyImage] forState:UIControlStateHighlighted];
+        [_btnCharB setImage:[[characters objectAtIndex:0] fullBodyImage] forState:UIControlStateDisabled];
+        
+        [_btnCharC setTitle:[[characters objectAtIndex:1] name] forState:UIControlStateNormal];
+        [_btnCharC setTitle:[[characters objectAtIndex:1] name] forState:UIControlStateSelected];
+        [_btnCharC setTitle:[[characters objectAtIndex:1] name] forState:UIControlStateHighlighted];
+        [_btnCharC setImage:[[characters objectAtIndex:1] fullBodyImage] forState:UIControlStateNormal];
+        [_btnCharC setImage:[[characters objectAtIndex:1] fullBodyImage] forState:UIControlStateSelected];
+        [_btnCharC setImage:[[characters objectAtIndex:1] fullBodyImage] forState:UIControlStateHighlighted];
+        [_btnCharC setImage:[[characters objectAtIndex:1] fullBodyImage] forState:UIControlStateDisabled];
+        
+		_btnCharB.titleLabel.font = [GameStateManager instance].buttonFont;
+		_btnCharC.titleLabel.font = [GameStateManager instance].buttonFont;
+        
+        _btnCharA.alpha = 0.0;
+        _btnCharD.alpha = 0.0;
     }
 
 }

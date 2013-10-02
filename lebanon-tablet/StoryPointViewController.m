@@ -61,6 +61,17 @@
     [self.illustrationImageView addGestureRecognizer:tap];
     [self performSelector:@selector(transition) withObject:nil afterDelay: TIMEOUT];
     [self performSelector:@selector(restart:) withObject:nil afterDelay: TIMER];
+    
+    if(! [GameStateManager instance].isJourney)
+    {
+        CGPoint stayCenter = _stayButton.center;
+        _stayButton.center = _leaveButton.center;
+        _leaveButton.center = stayCenter;
+        
+        self.stayButton.titleLabel.text = @"Stay In America";
+        self.leaveButton.titleLabel.text = @"Return to Lebanon";
+        
+    }
 }
 
 -(void)restart:(id)sender {
