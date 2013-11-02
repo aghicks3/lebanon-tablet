@@ -429,7 +429,7 @@
         [_btnCharA setTitle:[[characters objectAtIndex:0] name] forState:UIControlStateNormal];
         [_btnCharA setTitle:[[characters objectAtIndex:0] name] forState:UIControlStateSelected];
         [_btnCharA setTitle:[[characters objectAtIndex:0] name] forState:UIControlStateHighlighted];
-        [_btnCharA setImage:[[characters objectAtIndex:0] fullBodyImage] forState:UIControlStateNormal];
+        //[_btnCharA setImage:[[characters objectAtIndex:0] fullBodyImage] forState:UIControlStateNormal];
         [_btnCharA setImage:[[characters objectAtIndex:0] fullBodyImage] forState:UIControlStateSelected];
         [_btnCharA setImage:[[characters objectAtIndex:0] fullBodyImage] forState:UIControlStateHighlighted];
         [_btnCharA setImage:[[characters objectAtIndex:0] fullBodyImage] forState:UIControlStateDisabled];
@@ -437,7 +437,7 @@
         [_btnCharB setTitle:[[characters objectAtIndex:1] name] forState:UIControlStateNormal];
         [_btnCharB setTitle:[[characters objectAtIndex:1] name] forState:UIControlStateSelected];
         [_btnCharB setTitle:[[characters objectAtIndex:1] name] forState:UIControlStateHighlighted];
-        [_btnCharB setImage:[[characters objectAtIndex:1] fullBodyImage] forState:UIControlStateNormal];
+        //[_btnCharB setImage:[[characters objectAtIndex:1] fullBodyImage] forState:UIControlStateNormal];
         [_btnCharB setImage:[[characters objectAtIndex:1] fullBodyImage] forState:UIControlStateSelected];
         [_btnCharB setImage:[[characters objectAtIndex:1] fullBodyImage] forState:UIControlStateHighlighted];
         [_btnCharB setImage:[[characters objectAtIndex:1] fullBodyImage] forState:UIControlStateDisabled];
@@ -445,7 +445,7 @@
         [_btnCharC setTitle:[[characters objectAtIndex:2] name] forState:UIControlStateNormal];
         [_btnCharC setTitle:[[characters objectAtIndex:2] name] forState:UIControlStateSelected];
         [_btnCharC setTitle:[[characters objectAtIndex:2] name] forState:UIControlStateHighlighted];
-        [_btnCharC setImage:[[characters objectAtIndex:2] fullBodyImage] forState:UIControlStateNormal];
+        //[_btnCharC setImage:[[characters objectAtIndex:2] fullBodyImage] forState:UIControlStateNormal];
         [_btnCharC setImage:[[characters objectAtIndex:2] fullBodyImage] forState:UIControlStateSelected];
         [_btnCharC setImage:[[characters objectAtIndex:2] fullBodyImage] forState:UIControlStateHighlighted];
         [_btnCharC setImage:[[characters objectAtIndex:2] fullBodyImage] forState:UIControlStateDisabled];
@@ -453,7 +453,7 @@
         [_btnCharD setTitle:[[characters objectAtIndex:3] name] forState:UIControlStateNormal];
         [_btnCharD setTitle:[[characters objectAtIndex:3] name] forState:UIControlStateSelected];
         [_btnCharD setTitle:[[characters objectAtIndex:3] name] forState:UIControlStateHighlighted];
-        [_btnCharD setImage:[[characters objectAtIndex:3] fullBodyImage] forState:UIControlStateNormal];
+        //[_btnCharD setImage:[[characters objectAtIndex:3] fullBodyImage] forState:UIControlStateNormal];
         [_btnCharD setImage:[[characters objectAtIndex:3] fullBodyImage] forState:UIControlStateSelected];
         [_btnCharD setImage:[[characters objectAtIndex:3] fullBodyImage] forState:UIControlStateHighlighted];
         [_btnCharD setImage:[[characters objectAtIndex:3] fullBodyImage] forState:UIControlStateDisabled];
