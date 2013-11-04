@@ -33,6 +33,7 @@
 		2280B34B180C6E3A005C45D6 /* leila_s_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2280B34A180C6E3A005C45D6 /* leila_s_3.png */; };
 		2280B34D180C6E67005C45D6 /* bashir_s_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2280B34C180C6E67005C45D6 /* bashir_s_4.png */; };
 		2280B34F18200461005C45D6 /* Belonging.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2280B34E18200461005C45D6 /* Belonging.sqlite */; };
+		2280B351182763B2005C45D6 /* survey.png in Resources */ = {isa = PBXBuildFile; fileRef = 2280B350182763B2005C45D6 /* survey.png */; };
 		6B217CA616DD3783005FBEA6 /* asad_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B217C9E16DD3783005FBEA6 /* asad_portrait.png */; };
 		6B217CA716DD3783005FBEA6 /* asad_portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B217C9F16DD3783005FBEA6 /* asad_portrait@2x.png */; };
 		6B217CA816DD3783005FBEA6 /* hind_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B217CA016DD3783005FBEA6 /* hind_portrait.png */; };
@@ -211,6 +212,7 @@
 		2280B34A180C6E3A005C45D6 /* leila_s_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leila_s_3.png; sourceTree = "<group>"; };
 		2280B34C180C6E67005C45D6 /* bashir_s_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bashir_s_4.png; sourceTree = "<group>"; };
 		2280B34E18200461005C45D6 /* Belonging.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Belonging.sqlite; sourceTree = "<group>"; };
+		2280B350182763B2005C45D6 /* survey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = survey.png; sourceTree = "<group>"; };
 		6B217C9E16DD3783005FBEA6 /* asad_portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asad_portrait.png; sourceTree = "<group>"; };
 		6B217C9F16DD3783005FBEA6 /* asad_portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "asad_portrait@2x.png"; sourceTree = "<group>"; };
 		6B217CA016DD3783005FBEA6 /* hind_portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hind_portrait.png; sourceTree = "<group>"; };
@@ -608,6 +610,7 @@
 		B4F9442116B0A1F90092EFFF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2280B350182763B2005C45D6 /* survey.png */,
 				2280B34E18200461005C45D6 /* Belonging.sqlite */,
 				1968188717982A9F003D121D /* Stick Figure 1.png */,
 				B4F9442C16B0A1F90092EFFF /* Default.png */,
@@ -907,6 +910,7 @@
 				2280B34B180C6E3A005C45D6 /* leila_s_3.png in Resources */,
 				2280B34D180C6E67005C45D6 /* bashir_s_4.png in Resources */,
 				2280B34F18200461005C45D6 /* Belonging.sqlite in Resources */,
+				2280B351182763B2005C45D6 /* survey.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

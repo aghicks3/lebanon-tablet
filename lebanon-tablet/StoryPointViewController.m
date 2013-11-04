@@ -13,7 +13,11 @@
 #define TIMER 150
 
 @interface StoryPointViewController ()
-
+{
+    sqlite3 *storyPointLog;
+    NSString *dbPathString, *previousTime;
+    int currentStoryID;
+}
 @end
 
 @implementation StoryPointViewController
@@ -31,10 +35,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    previousTime = [NSDate date];
+    [self createOrOpenDB];
 	// Do any additional setup after loading the view.
 	//get the current StoryPoint from the GameStateManager
 	StoryPoint *currentStoryPoint = [[GameStateManager instance] currentStoryPoint];
 	
+    currentStoryID = currentStoryPoint.idNum;
 	NSLog(@"%i", currentStoryPoint.year);
 	
 	//populate the interface elements with the current story point's info
@@ -74,7 +82,65 @@
     }
 }
 
+- (void)createOrOpenDB
+{
+    //dbPathString = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Journey"];
+    dbPathString = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
+    
+    char *error;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSError *resourceError;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    NSString *txtPath = [documentsDirectory stringByAppendingPathComponent:@"Journey"];
+    
+    if ([fileManager fileExistsAtPath:txtPath]) {
+        [fileManager removeItemAtPath:txtPath error:&resourceError];
+    } else {
+        NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
+        [fileManager copyItemAtPath:resourcePath toPath:txtPath error:&resourceError];
+    }
+    
+    if(![fileManager fileExistsAtPath:dbPathString])
+    {
+        const char *dbPath = [dbPathString UTF8String];
+        
+        //create db here
+        if(sqlite3_open(dbPath, &storyPointLog)== SQLITE_OK) {
+            const char *sql_stmt = "CREATE TABLE IF NOT EXISTS StoryPointLog (id INTEGER PRIMARY KEY, playerID NUMERIC, startTime TEXT, storyPointID NUMERIC, endTime TEXT, timeout NUMERIC";
+            sqlite3_exec(storyPointLog, sql_stmt, NULL, NULL, &error);
+            sqlite3_close(storyPointLog);
+        }
+    }
+}
+
 -(void)restart:(id)sender {
+    
+    if(sqlite3_open_v2([dbPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+    {
+        int player = [GameStateManager instance].playerID;
+        
+        NSString *query = [ NSString stringWithFormat:@"INSERT INTO StoryPointLog VALUES ( NULL, %d, '%@', %d, '%@', 1)", player, previousTime, currentStoryID, [NSDate date] ];
+        const char *query_sql = [query UTF8String];
+        sqlite3_stmt *statement;
+        if(sqlite3_prepare_v2(storyPointLog, query_sql, -1, &statement, NULL) == SQLITE_OK)
+        {
+            if(sqlite3_step(statement) == SQLITE_DONE)
+            {
+                NSLog(@"Insert successful");
+            }
+            else
+            {
+                NSLog(@"Save Error: %d", sqlite3_errcode(storyPointLog));
+            }
+        }
+        sqlite3_finalize(statement);
+        sqlite3_close(storyPointLog);
+        previousTime = [NSDate date];
+        
+    }
 	[self performSegueWithIdentifier:@"RESET" sender:self];    
 }
 
@@ -122,6 +188,32 @@
 }
 
 - (IBAction)stayButtonPressed:(id)sender {
+    //Log
+    if(sqlite3_open_v2([dbPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+    {
+        int player = [GameStateManager instance].playerID;
+        
+        NSString *query = [ NSString stringWithFormat:@"INSERT INTO StoryPointLog VALUES ( NULL, %d, '%@', %d, '%@', 0)", player, previousTime, currentStoryID, [NSDate date] ];
+        const char *query_sql = [query UTF8String];
+        sqlite3_stmt *statement;
+        if(sqlite3_prepare_v2(storyPointLog, query_sql, -1, &statement, NULL) == SQLITE_OK)
+        {
+            if(sqlite3_step(statement) == SQLITE_DONE)
+            {
+                NSLog(@"Insert successful");
+            }
+            else
+            {
+                NSLog(@"Save Error: %d", sqlite3_errcode(storyPointLog));
+            }
+        }
+        sqlite3_finalize(statement);
+        sqlite3_close(storyPointLog);
+        previousTime = [NSDate date];
+        
+    }
+    
+    
     _leaveButton.alpha = 0.0;
     _stayButton.alpha = 0.0;
     _characterButton.alpha = 0.0;
@@ -132,7 +224,34 @@
 	StoryPoint *storyPoint = [GameStateManager instance].currentStoryPoint;
 	
 	[GameStateManager instance].currentStoryPoint = storyPoint.nextStoryPoint;
+    currentStoryID = [GameStateManager instance].currentStoryPoint.idNum;
     if([GameStateManager instance].currentStoryPoint.nextStoryPoint == NULL) {
+        
+        //Log
+        if(sqlite3_open_v2([dbPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+        {
+            int player = [GameStateManager instance].playerID;
+            
+            NSString *query = [ NSString stringWithFormat:@"INSERT INTO StoryPointLog VALUES ( NULL, %d, '%@', %d, '%@', 0)", player, previousTime, currentStoryID, [NSDate date] ];
+            const char *query_sql = [query UTF8String];
+            sqlite3_stmt *statement;
+            if(sqlite3_prepare_v2(storyPointLog, query_sql, -1, &statement, NULL) == SQLITE_OK)
+            {
+                if(sqlite3_step(statement) == SQLITE_DONE)
+                {
+                    NSLog(@"Insert successful");
+                }
+                else
+                {
+                    NSLog(@"Save Error: %d", sqlite3_errcode(storyPointLog));
+                }
+            }
+            sqlite3_finalize(statement);
+            sqlite3_close(storyPointLog);
+            previousTime = [NSDate date];
+            
+        }
+        
         [self performSegueWithIdentifier:@"ConclusionSegue" sender:sender];
     }
     
@@ -147,7 +266,7 @@
 {
     _leaveButton.alpha += 0.1;
     _stayButton.alpha += 0.1;
-    _characterButton.alpha += 0.1;
+    //_characterButton.alpha += 0.1; //start over button
     _lebanonLabel.alpha +=0.1;
     _ncLabel.alpha +=0.1;
 	_continueButton.alpha -= 0.1;
@@ -168,6 +287,7 @@
 
 
 - (IBAction)continueButtonPressed:(id)sender {
+    
 		[self transition];
     
 }
@@ -178,7 +298,60 @@
 
 - (IBAction)leaveButtonPressed:(id)sender {
     if(_leaveButton.alpha >= 1.0) {
+        
+        //Log current
+        if(sqlite3_open_v2([dbPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+        {
+            int player = [GameStateManager instance].playerID;
+            
+            NSString *query = [ NSString stringWithFormat:@"INSERT INTO StoryPointLog VALUES ( NULL, %d, '%@', %d, '%@', 0)", player, previousTime, currentStoryID, [NSDate date] ];
+            const char *query_sql = [query UTF8String];
+            sqlite3_stmt *statement;
+            if(sqlite3_prepare_v2(storyPointLog, query_sql, -1, &statement, NULL) == SQLITE_OK)
+            {
+                if(sqlite3_step(statement) == SQLITE_DONE)
+                {
+                    NSLog(@"Insert successful");
+                }
+                else
+                {
+                    NSLog(@"Save Error: %d", sqlite3_errcode(storyPointLog));
+                }
+            }
+            sqlite3_finalize(statement);
+            sqlite3_close(storyPointLog);
+            previousTime = [NSDate date];
+            
+        }
+        
         [GameStateManager instance].currentStoryPoint = [GameStateManager instance].currentStoryPoint.emigrationStoryPoint;
+        
+        //Log final
+        if(sqlite3_open_v2([dbPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+        {
+            int player = [GameStateManager instance].playerID;
+            
+            NSString *query = [ NSString stringWithFormat:@"INSERT INTO StoryPointLog VALUES ( NULL, %d, '%@', %d, '%@', 0)", player, previousTime, [GameStateManager instance].currentStoryPoint.idNum, [NSDate date] ];
+            const char *query_sql = [query UTF8String];
+            sqlite3_stmt *statement;
+            if(sqlite3_prepare_v2(storyPointLog, query_sql, -1, &statement, NULL) == SQLITE_OK)
+            {
+                if(sqlite3_step(statement) == SQLITE_DONE)
+                {
+                    NSLog(@"Insert successful");
+                }
+                else
+                {
+                    NSLog(@"Save Error: %d", sqlite3_errcode(storyPointLog));
+                }
+            }
+            sqlite3_finalize(statement);
+            sqlite3_close(storyPointLog);
+            previousTime = [NSDate date];
+            
+        }
+        
+        
         [self performSegueWithIdentifier:@"ConclusionSegue" sender:sender];
     }
 }

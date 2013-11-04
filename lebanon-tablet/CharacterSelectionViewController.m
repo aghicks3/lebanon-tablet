@@ -11,13 +11,15 @@
 #import "Character.h"
 #import "StoryPoint.h"
 
-#define TIME_BEFORE_RESET 150
+#define TIME_BEFORE_RESET 120
+//#define TIME_BEFORE_RESET 10
 
 @interface CharacterSelectionViewController ()
 {
     NSMutableArray *characters, *stories;
-    sqlite3 *characterDB, *storyDB;
-    NSString *dbPathString, *dbdetailsString; //sets two different NSStrings to avoid confusion. One for the characterDB and another for the storyDB
+    sqlite3 *characterDB, *storyDB, *charSelectLog;
+    NSString *dbPathString, *dbdetailsString, *dblogString, *previousTime; //sets two different NSStrings to avoid confusion. One for the characterDB and another for the storyDB
+    int characterID;
 }
 @end
 
@@ -93,14 +95,45 @@
         
         //create db here
         if(sqlite3_open(dbdetails, &storyDB)== SQLITE_OK) {
-            const char *sql_stmt = "CREATE TABLE IF NOT EXISTS CHARACTER (nCPop NUMERIC, hammanaPop NUMERIC, year NUMERIC, id INTEGER PRIMARY KEY, owner NUMERIC, image TEXT, type TEXT, parent NUMERIC";
+            const char *sql_stmt = "CREATE TABLE IF NOT EXISTS Story (nCPop NUMERIC, hammanaPop NUMERIC, year NUMERIC, id INTEGER PRIMARY KEY, owner NUMERIC, image TEXT, type TEXT, parent NUMERIC";
             sqlite3_exec(storyDB, sql_stmt, NULL, NULL, &error);
             sqlite3_close(storyDB);
         }
     }
 }
 
-
+-(void)createOrOpenCharSelectLog //Opens the database for logging of character selection
+{
+    dblogString = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
+    
+    char *error;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSError *resourceError;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    NSString *txtPath = [documentsDirectory stringByAppendingPathComponent:@"Journey"];
+    
+    if ([fileManager fileExistsAtPath:txtPath]) {
+        [fileManager removeItemAtPath:txtPath error:&resourceError];
+    } else {
+        NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
+        [fileManager copyItemAtPath:resourcePath toPath:txtPath error:&resourceError];
+    }
+    
+    if(![fileManager fileExistsAtPath:dblogString])
+    {
+        const char *dbdetails = [dblogString UTF8String];
+        
+        //create db here
+        if(sqlite3_open(dbdetails, &charSelectLog)== SQLITE_OK) {
+            const char *sql_stmt = "CREATE TABLE IF NOT EXISTS CharSelectLog (id INTEGER PRIMARY KEY, playerID NUMERIC, startTime TEXT, characterID NUMERIC, endTime TEXT, confirmed NUMERIC, timeout NUMERIC";
+            sqlite3_exec(charSelectLog, sql_stmt, NULL, NULL, &error);
+            sqlite3_close(charSelectLog);
+        }
+    }
+}
 
 //handles the user touching a character selection button
 -(IBAction)characterIconTouched:(id)sender
@@ -135,15 +168,68 @@
     if(_chooseLabel.alpha > 0.0)
     {
         [self moveButton:[NSNumber numberWithInt:0.0]];
+        //calls the function that fetches all the details of the character button that was touched
+        [self loadDetails];
+        
+        //Log
+        if(sqlite3_open_v2([dbPathString UTF8String], &(charSelectLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+        {
+            int player = [GameStateManager instance].playerID;
+            NSString *charString = (characterID == 0) ? @"NULL":[NSString stringWithFormat:@"%d",characterID];
+            
+            NSString *query = [ NSString stringWithFormat:@"INSERT INTO CharSelectLog VALUES ( NULL, %d, '%@', %@, '%@', 0, 0)", player, previousTime, charString, [NSDate date] ];
+            const char *query_sql = [query UTF8String];
+            sqlite3_stmt *statement;
+            if(sqlite3_prepare_v2(charSelectLog, query_sql, -1, &statement, NULL) == SQLITE_OK)
+            {
+                if(sqlite3_step(statement) == SQLITE_DONE)
+                {
+                    NSLog(@"Insert successful");
+                }
+                else
+                {
+                    NSLog(@"Save Error: %d", sqlite3_errcode(charSelectLog));
+                }
+            }
+            sqlite3_finalize(statement);
+            sqlite3_close(charSelectLog);
+            previousTime = [NSDate date];
+        }
     }
     else
     {
         [self moveButtonBack:[NSNumber numberWithInt:0.0]]; //original function
         [self inverseTransition];
+        
+        //Log
+        if(sqlite3_open_v2([dbPathString UTF8String], &(charSelectLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+        {
+            int player = [GameStateManager instance].playerID;
+            NSString *charString = (characterID == 0) ? @"NULL":[NSString stringWithFormat:@"%d",characterID];
+            
+            NSString *query = [ NSString stringWithFormat:@"INSERT INTO CharSelectLog VALUES ( NULL, %d, '%@', %@, '%@', 0, 0)", player, previousTime, charString, [NSDate date] ];
+            const char *query_sql = [query UTF8String];
+            sqlite3_stmt *statement;
+            if(sqlite3_prepare_v2(charSelectLog, query_sql, -1, &statement, NULL) == SQLITE_OK)
+            {
+                if(sqlite3_step(statement) == SQLITE_DONE)
+                {
+                    NSLog(@"Insert successful");
+                }
+                else
+                {
+                    NSLog(@"Save Error: %d", sqlite3_errcode(charSelectLog));
+                }
+            }
+            sqlite3_finalize(statement);
+            sqlite3_close(charSelectLog);
+            previousTime = [NSDate date];
+        }
+        characterID = 0;
+        
     }
     
-    //calls the function that fetches all the details of the character button that was touched
-    [self loadDetails];
+    
 
 }
 
@@ -154,6 +240,30 @@
 }
 -(IBAction)continueButton:(id)sender
 {
+    //Log
+    if(sqlite3_open_v2([dbPathString UTF8String], &(charSelectLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+    {
+        int player = [GameStateManager instance].playerID;
+        NSString *charString = (characterID == 0) ? @"NULL":[NSString stringWithFormat:@"%d",characterID];
+        
+        NSString *query = [ NSString stringWithFormat:@"INSERT INTO CharSelectLog VALUES ( NULL, %d, '%@', %@, '%@', 1, 0)", player, previousTime, charString, [NSDate date] ];
+        const char *query_sql = [query UTF8String];
+        sqlite3_stmt *statement;
+        if(sqlite3_prepare_v2(charSelectLog, query_sql, -1, &statement, NULL) == SQLITE_OK)
+        {
+            if(sqlite3_step(statement) == SQLITE_DONE)
+            {
+                NSLog(@"Insert successful");
+            }
+            else
+            {
+                NSLog(@"Save Error: %d", sqlite3_errcode(charSelectLog));
+            }
+        }
+        sqlite3_finalize(statement);
+        sqlite3_close(charSelectLog);
+        previousTime = [NSDate date];
+    }
     [self performSegueWithIdentifier:@"Story" sender:sender];
     
 }
@@ -332,6 +442,7 @@
     //when the view loads, fetches the data of both databases. Avoids confusion in the program. It calls everytime it loads the view.
     [self createOrOpenDB];
     [self createOrOpenDBdetails];
+    [self createOrOpenCharSelectLog];
     
     //calls the timer function
     [self performSelector:@selector(restart:) withObject:nil afterDelay:TIME_BEFORE_RESET];
@@ -419,9 +530,14 @@
                 
             }
         }
-        
+        sqlite3_finalize(statement);
+        sqlite3_close(characterDB);
+        /*if(result != SQLITE_OK)
+        {
+            NSLog(@"Close character error: %d", sqlite3_errcode(result));
+        }*/
     }
-    	
+    
     if(characters.count == 4)
     {
         [GameStateManager instance].isJourney = true;
@@ -499,12 +615,39 @@
         _btnCharA.alpha = 0.0;
         _btnCharD.alpha = 0.0;
     }
+    
+    sqlite3_stmt *statement2;
 
+    if(sqlite3_open([dblogString UTF8String], &(charSelectLog))==SQLITE_OK)
+    {
+        const char *query_sql = "SELECT MAX(playerID) FROM CharSelectLog";
+        //const char *query_sql = "SELECT * FROM CHARSELECTLOG";
+    
+        if(sqlite3_prepare_v2(charSelectLog, query_sql, -1, &statement2, NULL) == SQLITE_OK)
+        {
+            
+            if(sqlite3_step(statement2) == SQLITE_ROW)
+            {
+                if((char *)sqlite3_column_text(statement2,0))
+                {
+                    NSString *player = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement2, 0)];
+                    [GameStateManager instance].playerID = [player intValue] + 1;
+                }
+            }
+        }
+        
+        sqlite3_finalize(statement2);
+        sqlite3_close(charSelectLog);
+        
+    }
+    characterID = 0;
+    previousTime = [NSDate date];
 }
 
 //if a character button is touched, loads the corrsponding details.
 -(void) loadDetails 
 {
+    
     Character *selectedCharacter = [[GameStateManager instance] currentCharacter];
     stories = [[NSMutableArray alloc]init];
     sqlite3_stmt *statement;
@@ -550,9 +693,13 @@
         }
         
         free(query);
+        sqlite3_finalize(statement);
+        sqlite3_close(storyDB);
     }
     
-	
+    
+    characterID = selectedCharacter.idNum;
+    
 	self.lblName.text = selectedCharacter.name;
     self.lblAge.text = [NSString stringWithFormat:@"%d",selectedCharacter.age];
     self.lblDoB.text = selectedCharacter.dateOfBirth;
@@ -631,6 +778,32 @@
 }
 
 -(void)restart:(id)sender {
+    //if(sqlite3_open([dbPathString UTF8String], &(charSelectLog))==SQLITE_OK)
+    if(sqlite3_open_v2([dbPathString UTF8String], &(charSelectLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+    {
+        int player = [GameStateManager instance].playerID;
+        NSString *charString = (characterID == 0) ? @"NULL":[NSString stringWithFormat:@"%d",characterID];
+        
+        NSString *query = [ NSString stringWithFormat:@"INSERT INTO CharSelectLog VALUES ( NULL, %d, '%@', %@, '%@', 0, 1)", player, previousTime, charString, [NSDate date] ];
+        const char *query_sql = [query UTF8String];
+        sqlite3_stmt *statement;
+        if(sqlite3_prepare_v2(charSelectLog, query_sql, -1, &statement, NULL) == SQLITE_OK)
+        {
+            if(sqlite3_step(statement) == SQLITE_DONE)
+            {
+                NSLog(@"Insert successful");
+            }
+            else
+            {
+                NSLog(@"Save Error: %d", sqlite3_errcode(charSelectLog));
+            }
+        }
+        sqlite3_finalize(statement);
+        sqlite3_close(charSelectLog);
+        previousTime = [NSDate date];
+        
+    }
+    
 	[self performSegueWithIdentifier:@"RESET" sender:self];
 }
 
