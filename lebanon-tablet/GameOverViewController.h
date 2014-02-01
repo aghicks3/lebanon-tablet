@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *endLabel;
 @property (strong, nonatomic) IBOutlet UILabel *playAgainLabel;
+@property (strong, nonatomic) IBOutlet UILabel *playAgainLabel2;
+@property (strong, nonatomic) IBOutlet UILabel *playAgainLabel3;
 - (IBAction)PlayAgainButton:(id)sender;
 
 @end

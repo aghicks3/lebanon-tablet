@@ -18,7 +18,7 @@
 {
     NSMutableArray *characters, *stories;
     sqlite3 *characterDB, *storyDB, *charSelectLog;
-    NSString *dbPathString, *dbdetailsString, *dblogString, *previousTime; //sets two different NSStrings to avoid confusion. One for the characterDB and another for the storyDB
+    NSString *dbPathString, *dbdetailsString, *dblogString, *docPathString, *previousTime; //sets two different NSStrings to avoid confusion. One for the characterDB and another for the storyDB
     int characterID;
 }
 @end
@@ -36,8 +36,16 @@
 
 - (void)createOrOpenDB
 {
-    //dbPathString = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Journey"];
-    dbPathString = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
+    if([GameStateManager instance].isJourney)
+    {
+        dbPathString = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Journey"];
+    }
+    else
+    {
+        dbPathString = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Belonging"];
+    }
+    
+    //dbPathString = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
     
     char *error;
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -46,18 +54,39 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     
-    NSString *txtPath = [documentsDirectory stringByAppendingPathComponent:@"Journey"];
+    NSString *txtPath;
+    if([GameStateManager instance].isJourney)
+    {
+        txtPath = [documentsDirectory stringByAppendingPathComponent:@"Journey"];
+    }
+    else
+    {
+        txtPath = [documentsDirectory stringByAppendingPathComponent:@"Belonging"];
+    }
+        
+    dbPathString = txtPath;
     
     if ([fileManager fileExistsAtPath:txtPath]) {
-        [fileManager removeItemAtPath:txtPath error:&resourceError];
+        //[fileManager removeItemAtPath:txtPath error:&resourceError];
     } else {
-        NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
+        
+        NSString *resourcePath;
+        if([GameStateManager instance].isJourney)
+        {
+            resourcePath = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
+        }
+        else
+        {
+            resourcePath = [[NSBundle mainBundle] pathForResource:@"Belonging" ofType:@"sqlite"];
+        }
         [fileManager copyItemAtPath:resourcePath toPath:txtPath error:&resourceError];
     }
     
-    if(![fileManager fileExistsAtPath:dbPathString])
+    //if(![fileManager fileExistsAtPath:dbPathString])
+    if(![fileManager fileExistsAtPath:txtPath])
     {
-        const char *dbPath = [dbPathString UTF8String];
+        //const char *dbPath = [dbPathString UTF8String];
+        const char *dbPath = [docPathString UTF8String];
         
         //create db here
         if(sqlite3_open(dbPath, &characterDB)== SQLITE_OK) {
@@ -71,7 +100,16 @@
 - (void)createOrOpenDBdetails //Opens the database of Details of each character
 {
     //dbPathString = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Journey"];
-    dbdetailsString = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
+    if([GameStateManager instance].isJourney)
+    {
+        dbdetailsString = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
+    }
+    else
+    {
+        dbdetailsString = [[NSBundle mainBundle] pathForResource:@"Belonging" ofType:@"sqlite"];
+    }
+    
+    //dbdetailsString = dbPathString;
     
     char *error;
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -80,18 +118,36 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     
-    NSString *txtPath = [documentsDirectory stringByAppendingPathComponent:@"Journey"];
-    
+    NSString *txtPath;
+    if([GameStateManager instance].isJourney)
+    {
+        txtPath = [documentsDirectory stringByAppendingPathComponent:@"Journey"];
+    }
+    else
+    {
+        txtPath = [documentsDirectory stringByAppendingPathComponent:@"Belonging"];
+    }
+    docPathString =txtPath;
     if ([fileManager fileExistsAtPath:txtPath]) {
-        [fileManager removeItemAtPath:txtPath error:&resourceError];
+        //[fileManager removeItemAtPath:txtPath error:&resourceError];
     } else {
-        NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
+        NSString *resourcePath;
+        if([GameStateManager instance].isJourney)
+        {
+            resourcePath = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
+        }
+        else
+        {
+            resourcePath = [[NSBundle mainBundle] pathForResource:@"Belonging" ofType:@"sqlite"];
+        }
         [fileManager copyItemAtPath:resourcePath toPath:txtPath error:&resourceError];
     }
     
-    if(![fileManager fileExistsAtPath:dbdetailsString])
+    //if(![fileManager fileExistsAtPath:dbdetailsString])
+    if(![fileManager fileExistsAtPath:txtPath])
     {
-        const char *dbdetails = [dbdetailsString UTF8String];
+        //const char *dbdetails = [dbPathString UTF8String];
+        const char *dbdetails = [docPathString UTF8String];
         
         //create db here
         if(sqlite3_open(dbdetails, &storyDB)== SQLITE_OK) {
@@ -104,7 +160,15 @@
 
 -(void)createOrOpenCharSelectLog //Opens the database for logging of character selection
 {
-    dblogString = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
+    if([GameStateManager instance].isJourney)
+    {
+        dblogString = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
+    }
+    else
+    {
+        dblogString = [[NSBundle mainBundle] pathForResource:@"Belonging" ofType:@"sqlite"];
+    }
+    //dblogString = dbPathString;
     
     char *error;
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -114,17 +178,35 @@
     NSString *documentsDirectory = [paths objectAtIndex:0];
     
     NSString *txtPath = [documentsDirectory stringByAppendingPathComponent:@"Journey"];
+    if([GameStateManager instance].isJourney)
+    {
+        txtPath = [documentsDirectory stringByAppendingPathComponent:@"Journey"];
+    }
+    else
+    {
+        txtPath = [documentsDirectory stringByAppendingPathComponent:@"Belonging"];
+    }
     
     if ([fileManager fileExistsAtPath:txtPath]) {
-        [fileManager removeItemAtPath:txtPath error:&resourceError];
+        //[fileManager removeItemAtPath:txtPath error:&resourceError];
     } else {
-        NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
+        NSString *resourcePath;
+        if([GameStateManager instance].isJourney)
+        {
+            resourcePath = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
+        }
+        else
+        {
+            resourcePath = [[NSBundle mainBundle] pathForResource:@"Belonging" ofType:@"sqlite"];
+        }
         [fileManager copyItemAtPath:resourcePath toPath:txtPath error:&resourceError];
     }
     
-    if(![fileManager fileExistsAtPath:dblogString])
+    //if(![fileManager fileExistsAtPath:dblogString])
+    if(![fileManager fileExistsAtPath:txtPath])
     {
-        const char *dbdetails = [dblogString UTF8String];
+        //const char *dbdetails = [dbPathString UTF8String];
+        const char *dbdetails = [docPathString UTF8String];
         
         //create db here
         if(sqlite3_open(dbdetails, &charSelectLog)== SQLITE_OK) {
@@ -172,7 +254,9 @@
         [self loadDetails];
         
         //Log
-        if(sqlite3_open_v2([dbPathString UTF8String], &(charSelectLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+        
+        //if(sqlite3_open_v2([dbPathString UTF8String], &(charSelectLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+        if(sqlite3_open_v2([docPathString UTF8String], &(charSelectLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
         {
             int player = [GameStateManager instance].playerID;
             NSString *charString = (characterID == 0) ? @"NULL":[NSString stringWithFormat:@"%d",characterID];
@@ -202,7 +286,9 @@
         [self inverseTransition];
         
         //Log
-        if(sqlite3_open_v2([dbPathString UTF8String], &(charSelectLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+        
+        //if(sqlite3_open_v2([dbPathString UTF8String], &(charSelectLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+        if(sqlite3_open_v2([docPathString UTF8String], &(charSelectLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
         {
             int player = [GameStateManager instance].playerID;
             NSString *charString = (characterID == 0) ? @"NULL":[NSString stringWithFormat:@"%d",characterID];
@@ -241,7 +327,8 @@
 -(IBAction)continueButton:(id)sender
 {
     //Log
-    if(sqlite3_open_v2([dbPathString UTF8String], &(charSelectLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+    //if(sqlite3_open_v2([dbPathString UTF8String], &(charSelectLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+    if(sqlite3_open_v2([docPathString UTF8String], &(charSelectLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
     {
         int player = [GameStateManager instance].playerID;
         NSString *charString = (characterID == 0) ? @"NULL":[NSString stringWithFormat:@"%d",characterID];
@@ -471,7 +558,8 @@
     
     sqlite3_stmt *statement;
     
-    if(sqlite3_open([dbPathString UTF8String], &(characterDB))==SQLITE_OK)
+    //if(sqlite3_open([dbPathString UTF8String], &(characterDB))==SQLITE_OK)
+    if(sqlite3_open([docPathString UTF8String], &(characterDB))==SQLITE_OK)
     {
         [characters removeAllObjects];
         const char *query_sql = "SELECT * FROM CHARACTER";
@@ -618,7 +706,8 @@
     
     sqlite3_stmt *statement2;
 
-    if(sqlite3_open([dblogString UTF8String], &(charSelectLog))==SQLITE_OK)
+    //if(sqlite3_open([dblogString UTF8String], &(charSelectLog))==SQLITE_OK)
+    if(sqlite3_open([docPathString UTF8String], &(charSelectLog))==SQLITE_OK)
     {
         const char *query_sql = "SELECT MAX(playerID) FROM CharSelectLog";
         //const char *query_sql = "SELECT * FROM CHARSELECTLOG";
@@ -651,7 +740,8 @@
     Character *selectedCharacter = [[GameStateManager instance] currentCharacter];
     stories = [[NSMutableArray alloc]init];
     sqlite3_stmt *statement;
-    if(sqlite3_open([dbdetailsString UTF8String], &(storyDB))==SQLITE_OK)
+    //if(sqlite3_open([dbdetailsString UTF8String], &(storyDB))==SQLITE_OK)
+    if(sqlite3_open([docPathString UTF8String], &(storyDB))==SQLITE_OK)
     {
         [stories removeAllObjects];
         /*const char *query_sql = [NSString  stringwithFormat:@"select * from story where owner = %i", selectedCharacter.idNum];*/
@@ -779,7 +869,8 @@
 
 -(void)restart:(id)sender {
     //if(sqlite3_open([dbPathString UTF8String], &(charSelectLog))==SQLITE_OK)
-    if(sqlite3_open_v2([dbPathString UTF8String], &(charSelectLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+    //if(sqlite3_open_v2([dbPathString UTF8String], &(charSelectLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+    if(sqlite3_open_v2([docPathString UTF8String], &(charSelectLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
     {
         int player = [GameStateManager instance].playerID;
         NSString *charString = (characterID == 0) ? @"NULL":[NSString stringWithFormat:@"%d",characterID];

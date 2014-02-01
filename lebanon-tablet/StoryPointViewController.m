@@ -9,13 +9,13 @@
 #import "StoryPointViewController.h"
 #import "StoryPoint.h"
 #import "GameStateManager.h"
-#define TIMEOUT 120
-#define TIMER 150
+#define TIMEOUT 210
+#define TIMER 210
 
 @interface StoryPointViewController ()
 {
     sqlite3 *storyPointLog;
-    NSString *dbPathString, *previousTime;
+    NSString *dbPathString,*docPathString, *previousTime;
     int currentStoryID;
 }
 @end
@@ -35,6 +35,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if(![GameStateManager instance].isJourney)
+    {
+        [_stayButton setTitle:@"Stay in America" forState:UIControlStateNormal];
+        [_stayButton setTitle:@"Stay in America" forState:UIControlStateSelected];
+        [_stayButton setTitle:@"Stay in America" forState:UIControlStateHighlighted];
+        
+        [_leaveButton setTitle:@"Return to Lebanon" forState:UIControlStateNormal];
+        [_leaveButton setTitle:@"Return to Lebanon" forState:UIControlStateSelected];
+        [_leaveButton setTitle:@"Return to Lebanon" forState:UIControlStateHighlighted];
+    }
     
     previousTime = [NSDate date];
     [self createOrOpenDB];
@@ -67,7 +78,7 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(lastStoryPoint)];
     self.illustrationImageView.userInteractionEnabled = YES;
     [self.illustrationImageView addGestureRecognizer:tap];
-    [self performSelector:@selector(transition) withObject:nil afterDelay: TIMEOUT];
+    //[self performSelector:@selector(transition) withObject:nil afterDelay: TIMEOUT];
     [self performSelector:@selector(restart:) withObject:nil afterDelay: TIMER];
     
     if(! [GameStateManager instance].isJourney)
@@ -95,18 +106,19 @@
     NSString *documentsDirectory = [paths objectAtIndex:0];
     
     NSString *txtPath = [documentsDirectory stringByAppendingPathComponent:@"Journey"];
-    
+    docPathString = txtPath;
     if ([fileManager fileExistsAtPath:txtPath]) {
-        [fileManager removeItemAtPath:txtPath error:&resourceError];
+        //[fileManager removeItemAtPath:txtPath error:&resourceError];
     } else {
         NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
         [fileManager copyItemAtPath:resourcePath toPath:txtPath error:&resourceError];
     }
     
-    if(![fileManager fileExistsAtPath:dbPathString])
+    //if(![fileManager fileExistsAtPath:dbPathString])
+    if(![fileManager fileExistsAtPath:docPathString])
     {
-        const char *dbPath = [dbPathString UTF8String];
-        
+        //const char *dbPath = [dbPathString UTF8String];
+        const char *dbPath = [docPathString UTF8String];
         //create db here
         if(sqlite3_open(dbPath, &storyPointLog)== SQLITE_OK) {
             const char *sql_stmt = "CREATE TABLE IF NOT EXISTS StoryPointLog (id INTEGER PRIMARY KEY, playerID NUMERIC, startTime TEXT, storyPointID NUMERIC, endTime TEXT, timeout NUMERIC";
@@ -118,7 +130,8 @@
 
 -(void)restart:(id)sender {
     
-    if(sqlite3_open_v2([dbPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+    //if(sqlite3_open_v2([dbPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+    if(sqlite3_open_v2([docPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
     {
         int player = [GameStateManager instance].playerID;
         
@@ -189,7 +202,8 @@
 
 - (IBAction)stayButtonPressed:(id)sender {
     //Log
-    if(sqlite3_open_v2([dbPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+    //if(sqlite3_open_v2([dbPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+    if(sqlite3_open_v2([docPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
     {
         int player = [GameStateManager instance].playerID;
         
@@ -228,7 +242,8 @@
     if([GameStateManager instance].currentStoryPoint.nextStoryPoint == NULL) {
         
         //Log
-        if(sqlite3_open_v2([dbPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+        //if(sqlite3_open_v2([dbPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+        if(sqlite3_open_v2([docPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
         {
             int player = [GameStateManager instance].playerID;
             
@@ -300,7 +315,8 @@
     if(_leaveButton.alpha >= 1.0) {
         
         //Log current
-        if(sqlite3_open_v2([dbPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+        //if(sqlite3_open_v2([dbPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+        if(sqlite3_open_v2([docPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
         {
             int player = [GameStateManager instance].playerID;
             
@@ -327,7 +343,8 @@
         [GameStateManager instance].currentStoryPoint = [GameStateManager instance].currentStoryPoint.emigrationStoryPoint;
         
         //Log final
-        if(sqlite3_open_v2([dbPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+        //if(sqlite3_open_v2([dbPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
+        if(sqlite3_open_v2([docPathString UTF8String], &(storyPointLog), SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, 0)==SQLITE_OK)
         {
             int player = [GameStateManager instance].playerID;
             

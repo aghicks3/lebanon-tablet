@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D55E21EF-D938-440E-89AC-02AC44894C50</string>
+	<key>IDESourceControlProjectName</key>
+	<string>lebanon-tablet</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>19ED1011-755B-48B2-AA97-4299A9A30F1E</key>
+		<string>https://github.com/jbmorgan/lebanon-tablet.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>lebanon-tablet.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>19ED1011-755B-48B2-AA97-4299A9A30F1E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jbmorgan/lebanon-tablet.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>19ED1011-755B-48B2-AA97-4299A9A30F1E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>19ED1011-755B-48B2-AA97-4299A9A30F1E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>lebanon-tablet</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -8,7 +8,7 @@
 
 #import "GameOverViewController.h"
 
-#define TIME_BEFORE_RESET 150
+#define TIME_BEFORE_RESET 120
 
 @interface GameOverViewController ()
 
@@ -29,8 +29,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-	_endLabel.font = [UIFont fontWithName:@"Garamond" size:120.0f];
-	_playAgainLabel.font = [UIFont fontWithName:@"Garamond" size:50.0f];
+	_endLabel.font = [UIFont fontWithName:@"Garamond" size:34.0f];
+	_playAgainLabel.font = [UIFont fontWithName:@"Garamond" size:21.0f];
+    _playAgainLabel2.font = [UIFont fontWithName:@"Garamond" size:21.0f];
+    _playAgainLabel3.font = [UIFont fontWithName:@"Garamond" size:21.0f];
 	[self performSelector:@selector(restart:) withObject:nil afterDelay:TIME_BEFORE_RESET];
 }
 

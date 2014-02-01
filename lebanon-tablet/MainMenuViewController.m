@@ -14,6 +14,11 @@
 #define LOOP_FOREVER -1
 
 @interface MainMenuViewController ()
+{
+    NSString *dbPathString, *docPathString;
+    sqlite3 *characterDB;
+    
+}
 
 @end
 
@@ -28,12 +33,65 @@
     return self;
 }
 
+- (void)createOrOpenDB
+{
+    //dbPathString = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Journey"];
+    dbPathString = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Belonging"];
+    
+    char *error;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSError *resourceError;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    NSString *txtPath = [documentsDirectory stringByAppendingPathComponent:@"Journey"];
+    
+    dbPathString = txtPath;
+    
+    if ([fileManager fileExistsAtPath:txtPath]) {
+        //[fileManager removeItemAtPath:txtPath error:&resourceError];
+    } else {
+        NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"Journey" ofType:@"sqlite"];
+        [fileManager copyItemAtPath:resourcePath toPath:txtPath error:&resourceError];
+    }
+    
+    //if(![fileManager fileExistsAtPath:dbPathString])
+    if(![fileManager fileExistsAtPath:txtPath])
+    {
+        //const char *dbPath = [dbPathString UTF8String];
+        const char *dbPath = [docPathString UTF8String];
+        
+        //create db here
+        if(sqlite3_open(dbPath, &characterDB)== SQLITE_OK) {
+            const char *sql_stmt = "CREATE TABLE IF NOT EXISTS CHARACTER (id INTEGER PRIMARY KEY, name TEXT, dateOfBirth TEXT, gender TEXT, age NUMERIC, family TEXT, education TEXT, economicStatus TEXT, occupation TEXT, portrait TEXT, fullbody TEXT";
+            sqlite3_exec(characterDB, sql_stmt, NULL, NULL, &error);
+            sqlite3_close(characterDB);
+        }
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self createOrOpenDB];
+    
+    
+    
 	GameStateManager *gsm = [GameStateManager instance];
+    
+    //TOGGLE JOURNEY OR BELONGING
+    //gsm.isJourney = true;
+    gsm.isJourney = false;
 
+    
+    //If we're using the Belonging database, change the images.
+    if(!gsm.isJourney)
+    {
+        _imageView.image = [UIImage imageNamed:@"Belonging Title Screen.png"];
+    }
+    
 	howToDisplayed = NO;
 	
 	NSURL *songURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"laytana" ofType:@"m4a"]];

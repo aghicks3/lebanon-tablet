@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1968188817982A9F003D121D /* Stick Figure 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1968188717982A9F003D121D /* Stick Figure 1.png */; };
+		224269AD189C255800A20344 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 224269AC189C255800A20344 /* button.png */; };
+		224269AF189C280C00A20344 /* Belonging Title Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 224269AE189C280C00A20344 /* Belonging Title Screen.png */; };
 		2280B32517FC79B3005C45D6 /* bashir_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 2280B31A17FC79B3005C45D6 /* bashir_portrait.png */; };
 		2280B32617FC79B3005C45D6 /* bashir_r_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2280B31B17FC79B3005C45D6 /* bashir_r_1.png */; };
 		2280B32717FC79B3005C45D6 /* bashir_r_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2280B31C17FC79B3005C45D6 /* bashir_r_2.png */; };
@@ -187,6 +189,8 @@
 
 /* Begin PBXFileReference section */
 		1968188717982A9F003D121D /* Stick Figure 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stick Figure 1.png"; sourceTree = "<group>"; };
+		224269AC189C255800A20344 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		224269AE189C280C00A20344 /* Belonging Title Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Belonging Title Screen.png"; sourceTree = "<group>"; };
 		2280B31A17FC79B3005C45D6 /* bashir_portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bashir_portrait.png; sourceTree = "<group>"; };
 		2280B31B17FC79B3005C45D6 /* bashir_r_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bashir_r_1.png; sourceTree = "<group>"; };
 		2280B31C17FC79B3005C45D6 /* bashir_r_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bashir_r_2.png; sourceTree = "<group>"; };
@@ -679,6 +683,8 @@
 		B4FD9D43170DAF6B0050EC15 /* Miscellaneous */ = {
 			isa = PBXGroup;
 			children = (
+				224269AC189C255800A20344 /* button.png */,
+				224269AE189C280C00A20344 /* Belonging Title Screen.png */,
 				6B6A102A17204ED400C40424 /* titleScreen.png */,
 				6B6A102B17204ED400C40424 /* titleScreen@2x.png */,
 				6B6A102C17204ED400C40424 /* howTo.png */,
@@ -730,6 +736,11 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = SeriousGamesLebanon;
+				TargetAttributes = {
+					B4F9441516B0A1F90092EFFF = {
+						DevelopmentTeam = AE42W35362;
+					};
+				};
 			};
 			buildConfigurationList = B4F9441016B0A1F90092EFFF /* Build configuration list for PBXProject "lebanon-tablet" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -769,6 +780,7 @@
 				B482F18516C554C700A42760 /* asad_full.png in Resources */,
 				B444836116C9BB3F00495A08 /* blank_portrait.png in Resources */,
 				DC80597B16CC7B7F00174441 /* As'ad.png in Resources */,
+				224269AD189C255800A20344 /* button.png in Resources */,
 				6BC012F816D3E51800149DD9 /* Journey.sqlite in Resources */,
 				6B217CA616DD3783005FBEA6 /* asad_portrait.png in Resources */,
 				6B217CA716DD3783005FBEA6 /* asad_portrait@2x.png in Resources */,
@@ -788,6 +800,7 @@
 				6B217CCA16DD3AA9005FBEA6 /* asad_s_4@2x.png in Resources */,
 				6B217CCB16DD3AA9005FBEA6 /* asad_s_5.png in Resources */,
 				6B217CCC16DD3AA9005FBEA6 /* asad_s_5@2x.png in Resources */,
+				224269AF189C280C00A20344 /* Belonging Title Screen.png in Resources */,
 				6B217CCD16DD3AA9005FBEA6 /* asad_e_3.png in Resources */,
 				6B217CCE16DD3AA9005FBEA6 /* asad_e_3@2x.png in Resources */,
 				6B217CCF16DD3AA9005FBEA6 /* asad_e_4.png in Resources */,
@@ -1012,10 +1025,14 @@
 		B4F9443B16B0A1F90092EFFF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "lebanon-tablet/lebanon-tablet-Prefix.pch";
 				INFOPLIST_FILE = "lebanon-tablet/lebanon-tablet-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1023,10 +1040,14 @@
 		B4F9443C16B0A1F90092EFFF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "lebanon-tablet/lebanon-tablet-Prefix.pch";
 				INFOPLIST_FILE = "lebanon-tablet/lebanon-tablet-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

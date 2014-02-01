@@ -10,7 +10,7 @@
 #import "GameStateManager.h"
 #import "StoryPoint.h"
 
-#define TIME_BEFORE_RESET 150
+#define TIME_BEFORE_RESET 120
 
 @interface ConclusionViewController ()
 
